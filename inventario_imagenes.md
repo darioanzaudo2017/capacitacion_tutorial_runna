@@ -120,12 +120,11 @@ Este documento detalla todas las capturas de pantalla disponibles en la carpeta 
 - `assets/mpjbandejaactividadesdirectorpendientevisadoJZ.png`: Pendientes de revisión por Jefatura de Zona (JZ).
 - `assets/mpjmodaldevisadojz.png`: Panel de visado final por la Jefatura.
 
-## 9. Extras e Imágenes Genéricas
-- `assets/bandeja.png`: Vista general de mesa de trabajo.
-- `assets/legajoconMPI.png`: Perfil de legajo con medida activa.
-- `assets/nuevademanda.png`: Formulario de carga genérico.
-- `assets/Bandejadeentrada.png`: Alternativa de bandeja de trabajo.
-- `assets/Screenshot 2026-03-23 123036.png`: Posible captura contextual.
+## 10. Creación de Legajo Manual
+- `assets/crear-legajo-paso1.png`: Paso 1 — Buscar NNyA Existente.
+- `assets/crear-legajo-paso2.png`: Paso 2 — Datos del NNyA.
+- `assets/crear-legajo-paso3.png`: Paso 3 — Asignación de Legajo.
+- `assets/crear-legajo-paso4.png`: Paso 4 — Confirmar Creación de Legajo.
 
 ---
-*Inventario sincronizado el 25 de marzo de 2026.*
+*Inventario sincronizado el 30 de marzo de 2026.*

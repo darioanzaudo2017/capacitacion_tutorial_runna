@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'proceso-mpj',
         'interfaz-mesa-entrada',
         'interfaz-legajos',
+        'creacion-legajo-manual',
         'plan-trabajo'
     ];
 
@@ -229,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const matches = [];
-        
+
         // Búsqueda en el objeto SECTIONS
         for (const id in SECTIONS) {
             const section = SECTIONS[id];
@@ -267,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
             matches.slice(0, 10).forEach(match => {
                 const item = document.createElement('div');
                 item.className = 'search-item';
-                
+
                 // Resaltado simple (usando negrita para el término buscado)
                 const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                 const highlightedTitle = match.title.replace(new RegExp(`(${safeQuery})`, 'gi'), '<strong>$1</strong>');
@@ -561,7 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="role-tag role-director">Director/a</span>
                             <h3>Supervisión Estratégica</h3>
                         </div>
-                        <p>Asigna casos según complejidad y zona. Supervisa la calidad técnica de las intervenciones, valida informes técnicos y otorga el primer aval institucional para las medidas de protección.</p>
+                        <p>Máxima autoridad institucional del sistema, por encima de las Jefaturas de Zona. Autoriza evaluaciones de medidas, aprueba aperturas, innovaciones, prórrogas y ceses ingresando la nota de aval correspondiente, valida actividades de control de legalidad y gestiona la asignación de responsables de legajos y actividades.</p>
                     </div>
 
                     <div class="role-card">
@@ -569,7 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="role-tag role-jz">Jefatura de Zona (JZ)</span>
                             <h3>Autoridad Regional</h3>
                         </div>
-                        <p>Máxima autoridad institucional en el territorio. Realiza el visado final de Medidas Excepcionales y de las respuestas a Oficios Judiciales antes de su elevación externa.</p>
+                        <p>Máxima autoridad institucional en el territorio. Autoriza decisiones de evaluación, aprueba aperturas de medidas excepcionales y de protección, valida actividades de control de legalidad y gestiona la asignación y transferencia de legajos y responsables.</p>
                     </div>
 
                     <div class="role-card">
@@ -577,7 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="role-tag role-legales">Legales</span>
                             <h3>Asesoría Jurídica</h3>
                         </div>
-                        <p>Analiza el encuadre normativo de las intervenciones. Su visado asegura que las Medidas Excepcionales y respuestas judiciales cumplan con los marcos legales y plazos vigentes.</p>
+                        <p>Gestiona los procesos jurídicos del sistema en dos áreas: Penal Juvenil, donde carga oficios judiciales, genera actividades y las visa una vez aprobadas; y Protección, donde elabora informes jurídicos y registra ratificaciones de Medidas de Excepción.</p>
                     </div>
                 </div>
 
@@ -790,6 +791,57 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
 
+        'creacion-legajo-manual': {
+            title: 'Creación de Legajo Manual',
+            html: `
+                <div class="page-header">
+                    <span class="module-tag">MODO MANUAL</span>
+                    <h1>Creación Manual de Legajo</h1>
+                    <p class="subtitle">Este módulo explica cómo registrar un legajo directamente cuando no proviene de una demanda previa en Mesa de Entrada.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-title">Paso 1: Buscar NNyA Existente</div>
+                    </div>
+                    <div class="step-content">
+                        <img src="assets/crear-legajo-paso1.png" alt="Paso 1" class="zoomable mb-3">
+                        <p>Antes de crear un legajo, es obligatorio verificar si el NNyA ya existe. Esto evita la duplicación de datos (LEG-01). Se puede buscar por DNI o por Nombre completo.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-title">Paso 2: Datos Personales</div>
+                    </div>
+                    <div class="step-content">
+                        <img src="assets/crear-legajo-paso2.png" alt="Paso 2" class="zoomable mb-3">
+                        <p>Carga los datos biográficos esenciales: Nombre, Apellido, DNI, Fecha de Nacimiento y Domicilio. El sistema valida automáticamente los campos obligatorios marcados con asterisco (*).</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-title">Paso 3: Asignación de Legajo</div>
+                    </div>
+                    <div class="step-content">
+                        <img src="assets/crear-legajo-paso3.png" alt="Paso 3" class="zoomable mb-3">
+                        <p>Define la urgencia y asigna el legajo a una zona y un responsable técnico. También es necesario registrar el <strong>Centro de Vida</strong> para garantizar la territorialidad de la intervención.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-title">Paso 4: Confirmación</div>
+                    </div>
+                    <div class="step-content">
+                        <img src="assets/crear-legajo-paso4.png" alt="Paso 4" class="zoomable mb-3">
+                        <p>Revisión final de los datos ingresados. Al hacer clic en "Crear Legajo", el sistema generará automáticamente el número de legajo único y lo dejará disponible en la bandeja de trabajo del responsable.</p>
+                    </div>
+                </div>
+            `
+        },
+
         'flujo-general': {
             title: 'Mapa del Sistema',
             html: `
@@ -806,6 +858,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="v-node root" onclick="navigateTo('intro')">
                             <span class="v-tag">Inicio</span>
                             Login e Introducción
+                        </div>
+
+                        <!-- Creación Manual -->
+                        <div class="v-node" onclick="navigateTo('creacion-legajo-manual')" style="border-style: dashed; background: rgba(59, 130, 246, 0.05);">
+                            <span class="v-tag">Opcional</span>
+                            Creación Manual de Legajo
                         </div>
 
                         <div class="v-node" onclick="navigateTo('mesa-entrada')">
