@@ -1510,7 +1510,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </ul>
                     <div class="callout warning">
                          <strong>⚠️ Atención</strong>
-                         <p>Las actividades vinculadas a Oficio Judicial tienen un color de fondo celeste diferenciado para que nunca pierdas de vista la prioridad y el origen de la demanda.</p>
+                         <p>Las actividades vinculadas a Oficio Judicial tienen un color de fondo celeste diferenciado para que nunca pierdas de vista la prioridad y el origen de la demanda. La carga del oficio judicial en MPI y MPE solo se utilizar siempre y cuando hay una Medida de este tipo vigente. (los oficios judiciales relacionados a MPI y MPI no abren ni cierran medidas solo pueden crear actividades pendientes en el plan de trabajo.</p>
                     </div>
                 </div>
 
