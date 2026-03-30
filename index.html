@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUNNA — Manual de Capacitación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-shell">
+
+        <!-- ═══════════════════════════════════════
+             SIDEBAR
+        ═══════════════════════════════════════ -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <span class="brand-sigla">RU</span><span class="brand-sigla accent">NN</span><span class="brand-sigla">A</span>
+                </div>
+                <p class="brand-subtitle">Registro Único Nominal<br>Niñez y Adolescencia</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="sidebar-progress">
+                <div class="progress-label">
+                    <span>Tu progreso</span>
+                    <span id="progress-pct">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav" id="main-nav">
+
+                <div class="nav-group">
+                    <span class="nav-group-label">Inicio</span>
+                    <a href="#intro" class="nav-item" data-section="intro">
+                        <span class="nav-icon">◈</span>
+                        <span class="nav-text">Introducción y Login</span>
+                        <span class="nav-check" id="check-intro">✓</span>
+                    </a>
+                    <a href="#flujo-general" class="nav-item" data-section="flujo-general">
+                        <span class="nav-icon">◉</span>
+                        <span class="nav-text">Mapa del Sistema</span>
+                        <span class="nav-check" id="check-flujo-general">✓</span>
+                    </a>
+                    <a href="#roles" class="nav-item" data-section="roles">
+                        <span class="nav-icon">👤</span>
+                        <span class="nav-text">Roles y Usuarios</span>
+                        <span class="nav-check" id="check-roles">✓</span>
+                    </a>
+                    <a href="#guia-modulos" class="nav-item" data-section="guia-modulos">
+                        <span class="nav-icon">📖</span>
+                        <span class="nav-text">Guía de Módulos</span>
+                        <span class="nav-check" id="check-guia-modulos">✓</span>
+                    </a>
+                    <a href="#equivalencias" class="nav-item" data-section="equivalencias">
+                        <span class="nav-icon">🔄</span>
+                        <span class="nav-text">Equivalencias (V vs N)</span>
+                        <span class="nav-check" id="check-equivalencias">✓</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <span class="nav-group-label">Flujo Principal</span>
+                    <a href="#mesa-entrada" class="nav-item" data-section="mesa-entrada">
+                        <span class="nav-icon">①</span>
+                        <span class="nav-text">Mesa de Entrada</span>
+                        <span class="nav-check" id="check-mesa-entrada">✓</span>
+                    </a>
+                    <a href="#asignacion" class="nav-item" data-section="asignacion">
+                        <span class="nav-icon">②</span>
+                        <span class="nav-text">Asignación</span>
+                        <span class="nav-check" id="check-asignacion">✓</span>
+                    </a>
+                    <a href="#constatacion" class="nav-item" data-section="constatacion">
+                        <span class="nav-icon">③</span>
+                        <span class="nav-text">Constatación</span>
+                        <span class="nav-check" id="check-constatacion">✓</span>
+                    </a>
+                    <a href="#evaluacion" class="nav-item" data-section="evaluacion">
+                        <span class="nav-icon">④</span>
+                        <span class="nav-text">Evaluación Técnica</span>
+                        <span class="nav-check" id="check-evaluacion">✓</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <span class="nav-group-label">Medidas de Protección</span>
+                    <a href="#proceso-mpi" class="nav-item" data-section="proceso-mpi">
+                        <span class="nav-icon">⑤</span>
+                        <span class="nav-text">Medida Integral (MPI)</span>
+                        <span class="nav-check" id="check-proceso-mpi">✓</span>
+                    </a>
+                    <a href="#proceso-mpe" class="nav-item" data-section="proceso-mpe">
+                        <span class="nav-icon">⑥</span>
+                        <span class="nav-text">Medida Excepcional (MPE)</span>
+                        <span class="nav-check" id="check-proceso-mpe">✓</span>
+                    </a>
+                    <a href="#proceso-mpj" class="nav-item" data-section="proceso-mpj">
+                        <span class="nav-icon">⑧</span>
+                        <span class="nav-text">Oficio Judicial (MPJ)</span>
+                        <span class="nav-check" id="check-proceso-mpj">✓</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <span class="nav-group-label">Guía de Interfaz</span>
+                    <a href="#interfaz-mesa-entrada" class="nav-item" data-section="interfaz-mesa-entrada">
+                        <span class="nav-icon">🖥️</span>
+                        <span class="nav-text">Mesa de Entrada</span>
+                        <span class="nav-check" id="check-interfaz-mesa-entrada">✓</span>
+                    </a>
+                    <a href="#interfaz-legajos" class="nav-item" data-section="interfaz-legajos">
+                        <span class="nav-icon">📁</span>
+                        <span class="nav-text">Pantalla de Legajos</span>
+                        <span class="nav-check" id="check-interfaz-legajos">✓</span>
+                    </a>
+                </div>
+
+
+
+                <div class="nav-group">
+                    <span class="nav-group-label">Seguimiento</span>
+                    <a href="#plan-trabajo" class="nav-item" data-section="plan-trabajo">
+                        <span class="nav-icon">⑦</span>
+                        <span class="nav-text">Plan de Trabajo</span>
+                        <span class="nav-check" id="check-plan-trabajo">✓</span>
+                    </a>
+                </div>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="reset-btn" id="reset-progress-btn" title="Reiniciar progreso">↺ Reiniciar progreso</button>
+                <span class="version-tag">v2.0 · Manual Interactivo</span>
+            </div>
+        </aside>
+
+        <!-- ═══════════════════════════════════════
+             MAIN AREA
+        ═══════════════════════════════════════ -->
+        <div class="main-wrapper">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="hamburger" id="hamburger" aria-label="Menú">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <nav class="breadcrumb" id="breadcrumb">
+                        <span class="breadcrumb-root">RUNNA</span>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current" id="breadcrumb-current">Introducción</span>
+                    </nav>
+                </div>
+                <div class="topbar-right">
+                    <div class="search-wrap">
+                        <span class="search-icon">⌕</span>
+                        <input type="text" id="search-input" placeholder="Buscar en el manual…" autocomplete="off">
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                    <a href="#flujo-general" class="topbar-map-btn" title="Ver Mapa del Sistema">
+                        <span>Mapa del Sistema</span>
+                        <span class="nav-icon">◉</span>
+                    </a>
+                    <div class="module-badge" id="module-badge">Módulo 1 / 8</div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <main class="content-area" id="content-area">
+                <!-- JS injects here -->
+            </main>
+
+            <!-- Bottom Nav -->
+            <footer class="bottom-nav" id="bottom-nav">
+                <button class="bnav-btn" id="btn-prev">← Anterior</button>
+                <button class="bnav-btn primary" id="btn-next">Siguiente →</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">✕</button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- Floating Button [New] -->
+    <a href="#flujo-general" class="fab-map" id="fab-map" title="Volver al Mapa del Sistema">
+        <span>◉</span>
+    </a>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
