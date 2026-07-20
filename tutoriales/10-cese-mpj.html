@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Cese de MPJ</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPJ</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 10c de 13</div>
+    <h1>⚖️ Cese de Medida Penal Juvenil (MPJ)</h1>
+    <p>El cese de una MPJ ocurre únicamente cuando el Poder Judicial emite un oficio de cese. No hay formulario técnico ni circuito de aprobaciones internas. Solo cuando el oficio es recibido y visado por Legales, la medida se cierra automáticamente.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 4</span>
+      <span>Cese de MPJ</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0029-medida-encabezado.png" alt="Medida MPJ activa en legajo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Abrir la Medida MPJ Activa</div>
+        </div>
+        <div class="step-content">
+          Desde el legajo, en la sección de <strong>Registro de Medidas Tomadas</strong>, localizá la MPJ que será cesada por orden judicial (ej: MED-2026-121). Hacé clic para entrar a su ficha completa.
+        </div>
+        <div class="capture-reference">📸 Captura: 0029-medida-encabezado.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0039-medida-navegacion.png" alt="Etapas de la MPJ - Cierre">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Verificar Estado "Pendiente Oficio de Cese"</div>
+        </div>
+        <div class="step-content">
+          En la ficha de la MPJ, verás las <strong>Etapas de la Medida</strong>:
+          <br>1. Registro de Intervención ✓
+          <br>2. Seguimiento ✓
+          <br>3. <strong>Cierre de Medida - "Pendiente Oficio de Cese"</strong>
+          <br>
+          En este estado, el sistema espera la llegada del oficio judicial de cese del Poder Judicial.
+        </div>
+        <div class="capture-reference">📸 Captura: 0039-medida-navegacion.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0143-oficio-mesa-entrada.png" alt="Mesa de Entrada - Nuevo Oficio">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Recepción del Oficio de Cese en Mesa de Entrada</div>
+        </div>
+        <div class="step-content">
+          El Poder Judicial emite el <strong>oficio de cese</strong> de la MPJ. Este documento llega a la institución y se registra en la <strong>Mesa de Entradas</strong>. El técnico de mesa:
+          <br>✓ Crea un nuevo registro de "Nueva Demanda"
+          <br>✓ Selecciona objetivo <strong>"Oficio Judicial"</strong>
+          <br>✓ Completa los datos del oficio
+        </div>
+        <div class="capture-reference">📸 Captura: 0143-oficio-mesa-entrada.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0145-oficio-clasificacion-circuito.png" alt="Clasificar oficio de cese">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Clasificar Oficio de Cese → Visado de Legales → CERRADA</div>
+        </div>
+        <div class="step-content">
+          En el formulario de carga del oficio, seleccionar:
+          <br><strong>• Circuito:</strong> MPJ (Medida Penal Juvenil)
+          <br><strong>• Tipo de Oficio:</strong> <strong>"CESE DE PLENO DERECHO A LA INTERVENCIÓN"</strong> (especifica que el juzgado ordena cesación)
+          <br><strong>• Fechas:</strong> Fecha del oficio, fecha de ingreso a SENAF
+          <br><strong>• Vínculos:</strong> Vincular a la Medida MPJ que será cesada
+          <br><strong>• Documentos:</strong> Adjuntar PDF del oficio firmado por el juzgado
+          <br><br>
+          Una vez registrado, <strong>Legales</strong> revisa y visa el oficio. En ese momento:
+          <br>✅ La <strong>Medida MPJ</strong> cambia automáticamente a estado <strong>"CERRADA"</strong>
+          <br>✅ <strong>NO hay</strong> pasos intermedios ni circuito de aprobaciones internas
+          <br>✅ El oficio judicial del juzgado es el único fundamento necesario
+        </div>
+        <div class="capture-reference">📸 Captura: 0145-oficio-clasificacion-circuito.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+          <span class="tag success">Éxito</span>
+          <span class="tag legal">Legal</span>
+        </div>
+        <div class="success-badge">✅ Medida Penal Juvenil cesada por orden judicial del Poder Judicial.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA INTERACTIVA -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Simulá la recepción de un oficio de cese del Poder Judicial para una MPJ y el registro en el sistema.</p>
+
+    <div class="practice-wrap">
+      <div class="login-sim-outer">
+        <div class="login-sim-card" style="max-width:500px;">
+          <h3>Cese de MPJ por Oficio Judicial</h3>
+
+          <!-- PASO 1: SELECCIÓN DE OFICIO -->
+          <div id="pasoCeseMPJ1">
+            <div class="sim-field">
+              <label>¿Qué tipo de oficio recibió? *</label>
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div class="sim-card-option" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;" onclick="selectTipoOficio('aprobacion')">
+                  <strong>✅ Aprobación</strong><br><small style="color:var(--texto-suave);">El juzgado aprueba la medida.</small>
+                </div>
+                <div class="sim-card-option" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;" onclick="selectTipoOficio('cese')">
+                  <strong>❌ Cese</strong><br><small style="color:var(--texto-suave);">El juzgado ordena cesar la medida.</small>
+                </div>
+                <div class="sim-card-option" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;" onclick="selectTipoOficio('prorroga')">
+                  <strong>⏱️ Prórroga</strong><br><small style="color:var(--texto-suave);">El juzgado extiende la medida.</small>
+                </div>
+              </div>
+            </div>
+            <button class="sim-submit" id="btnSiguiente1MPJ" disabled style="margin-top:15px;">SIGUIENTE →</button>
+          </div>
+
+          <!-- PASO 2: FORMULARIO DE CESE -->
+          <div id="pasoCeseMPJ2" style="display:none;">
+            <h4 style="color:#d32f2f; margin-bottom:15px;">⚖️ Registro de Oficio de Cese (Mesa de Entrada)</h4>
+
+            <div class="sim-field">
+              <label>Tipo de Oficio *</label>
+              <select id="tipoOficioMPJ">
+                <option value="">Seleccione una opción</option>
+                <option value="cese">Cese de Medida</option>
+                <option value="aprobacion">Aprobación de Medida</option>
+                <option value="prorroga">Prórroga de Medida</option>
+              </select>
+            </div>
+
+            <div class="sim-field">
+              <label>Juzgado Interviniente *</label>
+              <input type="text" id="juzgadoMPJ" placeholder="Ej: Juzgado Penal Juvenil N°1" />
+            </div>
+
+            <div class="sim-field">
+              <label>Fecha del Oficio *</label>
+              <input type="date" id="fechaOficioMPJ" />
+            </div>
+
+            <div class="sim-field">
+              <label>Número de Expediente *</label>
+              <input type="text" id="expedienteMPJ" placeholder="Ej: 2026-12345-PJ" />
+            </div>
+
+            <div class="sim-field">
+              <label>Medida MPJ a Vincular *</label>
+              <select id="medidaMPJ">
+                <option value="">Seleccione una medida</option>
+                <option value="MED-2026-121">MED-2026-121 (MPJ - VIGENTE)</option>
+                <option value="MED-2026-122">MED-2026-122 (MPJ - VIGENTE)</option>
+              </select>
+            </div>
+
+            <div class="sim-field">
+              <label>Adjuntar Oficio (PDF) *</label>
+              <div id="dropZoneMPJ" style="border:2px dashed #bbb; border-radius:6px; padding:20px; text-align:center; cursor:pointer; background:#fafafa;">
+                <span id="dropTextMPJ">📎 Haz clic para adjuntar oficio firmado</span>
+              </div>
+            </div>
+
+            <button class="sim-submit" id="btnRegistrarCeseMPJ" disabled>REGISTRAR OFICIO</button>
+          </div>
+
+          <!-- PASO 3: VISADO Y CIERRE -->
+          <div id="pasoCeseMPJ3" style="display:none;">
+            <div style="background:#e8f5e9; border:1px solid #c8e6c9; border-radius:6px; padding:15px; margin-bottom:15px;">
+              <strong style="color:#2e7d32;">✅ Oficio recibido y clasificado</strong><br>
+              <small style="color:var(--texto-suave);">Juzgado: <span id="displayJuzgado"></span><br>Fecha: <span id="displayFecha"></span></small>
+            </div>
+
+            <div class="sim-field">
+              <label>Ahora Legales debe visar el oficio</label>
+              <p style="font-size:0.9rem; color:var(--texto-suave); margin-bottom:12px;">El área legal revisa y valida que el oficio sea auténtico y esté correctamente fundamentado. Una vez visado, la medida se cierra automáticamente.</p>
+              <button class="sim-submit" id="btnVisarLegales" style="background:#673ab7; color:#fff;">⚖️ VISAR OFICIO (LEGALES)</button>
+            </div>
+
+            <div class="sim-success" id="mpjSuccess"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h4>Checklist de la práctica</h4>
+        <ul>
+          <li id="chk1"><span class="check-icon">✓</span> Seleccionó oficio de cese</li>
+          <li id="chk2"><span class="check-icon">✓</span> Completó formulario y adjuntó PDF</li>
+          <li id="chk3"><span class="check-icon">✓</span> Legales visó el oficio (MPJ Cerrada)</li>
+        </ul>
+        <span class="reset-link" onclick="resetSimMPJ()">↺ Reiniciar práctica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="10-cese-mpe.html">← Anterior: Cese de MPE</a>
+    <a class="btn btn-primary" href="11-oficio-judicial-mpj.html">Siguiente: Carga de Oficios →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 4;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica interactiva
+  let selectedTipo = "";
+  let fileAttachedMPJ = false;
+
+  const pasoCeseMPJ1 = document.getElementById('pasoCeseMPJ1');
+  const pasoCeseMPJ2 = document.getElementById('pasoCeseMPJ2');
+  const pasoCeseMPJ3 = document.getElementById('pasoCeseMPJ3');
+
+  const btnSiguiente1MPJ = document.getElementById('btnSiguiente1MPJ');
+  const tipoOficioMPJ = document.getElementById('tipoOficioMPJ');
+  const juzgadoMPJ = document.getElementById('juzgadoMPJ');
+  const fechaOficioMPJ = document.getElementById('fechaOficioMPJ');
+  const expedienteMPJ = document.getElementById('expedienteMPJ');
+  const medidaMPJ = document.getElementById('medidaMPJ');
+  const dropZoneMPJ = document.getElementById('dropZoneMPJ');
+  const dropTextMPJ = document.getElementById('dropTextMPJ');
+  const btnRegistrarCeseMPJ = document.getElementById('btnRegistrarCeseMPJ');
+  const btnVisarLegales = document.getElementById('btnVisarLegales');
+  const mpjSuccess = document.getElementById('mpjSuccess');
+
+  function setChecked(id, on) {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('done', on);
+  }
+
+  function selectTipoOficio(tipo) {
+    selectedTipo = tipo;
+    const opciones = document.querySelectorAll('.sim-card-option');
+    opciones.forEach(op => {
+      op.style.borderColor = '#ddd';
+      op.style.background = '#fff';
+    });
+    event.currentTarget.style.borderColor = '#d32f2f';
+    event.currentTarget.style.background = '#ffebee';
+    btnSiguiente1MPJ.disabled = false;
+  }
+
+  btnSiguiente1MPJ.addEventListener('click', () => {
+    if (selectedTipo === 'cese') {
+      setChecked('chk1', true);
+      pasoCeseMPJ1.style.display = 'none';
+      pasoCeseMPJ2.style.display = 'block';
+    } else {
+      alert('Para este tutorial, seleccione la opción "Cese" correspondiente a oficios de cierre judicial.');
+    }
+  });
+
+  function checkFormMPJ() {
+    const ok = tipoOficioMPJ.value !== "" &&
+               juzgadoMPJ.value !== "" &&
+               fechaOficioMPJ.value !== "" &&
+               expedienteMPJ.value !== "" &&
+               medidaMPJ.value !== "" &&
+               fileAttachedMPJ;
+    btnRegistrarCeseMPJ.disabled = !ok;
+  }
+
+  tipoOficioMPJ.addEventListener('change', checkFormMPJ);
+  juzgadoMPJ.addEventListener('input', checkFormMPJ);
+  fechaOficioMPJ.addEventListener('change', checkFormMPJ);
+  expedienteMPJ.addEventListener('input', checkFormMPJ);
+  medidaMPJ.addEventListener('change', checkFormMPJ);
+
+  dropZoneMPJ.addEventListener('click', () => {
+    fileAttachedMPJ = true;
+    dropZoneMPJ.style.background = '#e8f5e9';
+    dropZoneMPJ.style.borderColor = '#81c784';
+    dropTextMPJ.textContent = '📄 Oficio_Cese_Firmado.pdf (Adjunto)';
+    checkFormMPJ();
+  });
+
+  btnRegistrarCeseMPJ.addEventListener('click', () => {
+    setChecked('chk2', true);
+    document.getElementById('displayJuzgado').textContent = juzgadoMPJ.value;
+    document.getElementById('displayFecha').textContent = fechaOficioMPJ.value;
+    pasoCeseMPJ2.style.display = 'none';
+    pasoCeseMPJ3.style.display = 'block';
+  });
+
+  btnVisarLegales.addEventListener('click', () => {
+    setChecked('chk3', true);
+    btnVisarLegales.disabled = true;
+    mpjSuccess.className = 'sim-success show';
+    mpjSuccess.innerHTML = '✅ Oficio visado por Legales. <strong>MPJ cerrada automáticamente</strong> en el sistema. Estado: CERRADA en el legajo.';
+  });
+
+  function resetSimMPJ() {
+    selectedTipo = "";
+    fileAttachedMPJ = false;
+
+    const opciones = document.querySelectorAll('.sim-card-option');
+    opciones.forEach(op => {
+      op.style.borderColor = '#ddd';
+      op.style.background = '#fff';
+    });
+
+    btnSiguiente1MPJ.disabled = true;
+    pasoCeseMPJ1.style.display = 'block';
+    pasoCeseMPJ2.style.display = 'none';
+    pasoCeseMPJ3.style.display = 'none';
+
+    tipoOficioMPJ.value = '';
+    juzgadoMPJ.value = '';
+    fechaOficioMPJ.value = '';
+    expedienteMPJ.value = '';
+    medidaMPJ.value = '';
+
+    dropZoneMPJ.style.background = '#fafafa';
+    dropZoneMPJ.style.borderColor = '#bbb';
+    dropTextMPJ.textContent = '📎 Haz clic para adjuntar oficio firmado';
+
+    btnRegistrarCeseMPJ.disabled = true;
+    btnVisarLegales.disabled = false;
+
+    mpjSuccess.className = 'sim-success';
+    mpjSuccess.innerHTML = '';
+
+    ['chk1','chk2','chk3'].forEach(id => setChecked(id, false));
+  }
+</script>
+
+</body>
+</html>

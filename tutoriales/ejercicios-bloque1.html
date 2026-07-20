@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Ejercicios: Mesa de Entrada</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">← Ejercicios</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">🔵 Bloque 1 · Ejercicios prácticos</div>
+    <h1>Mesa de Entrada</h1>
+    <p>Flujo completo: desde la demanda hasta la creación del legajo. En este bloque vas a recorrer el ciclo completo de una demanda de protección: desde que ingresa por primera vez al sistema hasta que queda admitida y se genera automáticamente el legajo con la medida. Todos los ejercicios usan el mismo caso simulado.</p>
+  </div>
+
+  <div class="block-progress-wrap">
+    <div class="bp-label">
+      <span>Progreso del bloque</span>
+      <strong id="blockProgressText">0 de 25 verificaciones completadas (0%)</strong>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="blockProgressFill" style="width:0%"></div></div>
+    <span class="reset-progress-link" onclick="resetBlockProgress()">↺ Reiniciar progreso de este bloque</span>
+  </div>
+
+  <div class="caso-simulado">
+    <h3>Caso Simulado — M. Perez</h3>
+    <div class="sit-label">📋 Situación</div>
+    <p>El área local de infancia de Villa Nueva, mediante nota de fecha 12/03/2026, solicita orientación y articulación frente a la situación de la niña M. Perez porque se presenta con algún grado de complejidad. Sobre M. el centro de salud local solicitó al organismo local intervenir con medidas de protección dado que la niña padece pediculosis con lesiones secundarias, originada en posible negligencia o falta de cuidados, además de que como consecuencia del tratamiento la niña M. tuvo que ser rapada para realizar las curaciones, impactando en su vida social, escolar y emocional. A su vez el servicio local pudo relevar que la mamá de la niña M. no convive con sus hijos, tiene vigente una restricción de contacto por una denuncia que sus hijos le realizaron por violencia.</p>
+
+    <div class="ex-section-label">📝 Datos para cargar en el sistema</div>
+    <table class="datos-table">
+      <tr><td class="dt-label">NNyA</td><td class="dt-value">M. Perez <button class="copy-btn" onclick="copyText(this,'M. Perez')">copiar</button></td></tr>
+      <tr><td class="dt-label">DNI</td><td class="dt-value">00000001 <button class="copy-btn" onclick="copyText(this,'00000001')">copiar</button></td></tr>
+      <tr><td class="dt-label">Fecha de nacimiento</td><td class="dt-value">14/03/2018 (8 años)</td></tr>
+      <tr><td class="dt-label">Domicilio</td><td class="dt-value">Las Acacias 552, Barrio Norte, Villa Nueva</td></tr>
+      <tr><td class="dt-label">Adulto Responsable</td><td class="dt-value">H. Fuentes — Progenitor Afín (conviviente)</td></tr>
+      <tr><td class="dt-label">DNI adulto</td><td class="dt-value">00000002</td></tr>
+      <tr><td class="dt-label">Adulto Responsable</td><td class="dt-value">G. Perez — Progenitora — No conviviente (con restricción de contacto con M. y hermanos por denuncia de violencia), domicilio Juncal 56, Barrio Los Álamos, Villa María</td></tr>
+      <tr><td class="dt-label">Hermano conviviente</td><td class="dt-value">A. Fuentes — DNI 00000003 — 02/09/2021 (4 años) — hermano unilateral</td></tr>
+      <tr><td class="dt-label">Origen de la demanda</td><td class="dt-value">Área Local de Infancia</td></tr>
+      <tr><td class="dt-label">Fecha / Hora</td><td class="dt-value">Fecha del día / 09:30 hs</td></tr>
+      <tr><td class="dt-label">Vulneraciones</td><td class="dt-value">Salud · Cuidados personales · Educación</td></tr>
+      <tr><td class="dt-label">Motivo principal</td><td class="dt-value">Descuido · Trato negligente</td></tr>
+    </table>
+  </div>
+
+  <!-- 1.1 -->
+  <details class="exercise-card" open>
+    <summary>
+      <span class="ex-num">1.1</span>
+      <span class="ex-title">Cargar una demanda institucional</span>
+      <span class="ex-done-badge">✓ Completo</span>
+      <span class="ex-chevron">▾</span>
+    </summary>
+    <div class="ex-body">
+      <div class="ex-section-label">🔢 Pasos en el sistema</div>
+      <ol class="pasos-ol">
+        <li>Ingresá al sistema con tu usuario administrador.</li>
+        <li>Accedé al módulo Mesa de Entrada desde el menú principal.</li>
+        <li>Hacé clic en "Nueva Demanda".</li>
+        <li>En Objetivo seleccioná "Protección" (Canal A).</li>
+        <li>Completá Información de Origen: origen "Área/servicio local de NNyA", fecha y hora según los datos del caso.</li>
+        <li>Escribí el motivo de la demanda: copiá la situación descripta arriba con tus propias palabras.</li>
+        <li>En Adultos Referentes cargá los datos del progenitor afín y la progenitora.</li>
+        <li>En datos del NNyA completá todos los campos de M.: identidad, domicilio, educación, salud y vulneraciones. Y de su hermano A.</li>
+        <li>Revisá el resumen final y confirmá la creación de la demanda.</li>
+      </ol>
+      <div class="ex-section-label">✅ Checklist de verificación</div>
+      <ul class="verif-list">
+        <li><input type="checkbox" id="b1-1.1-1" data-ex="1.1" data-idx="1"><label for="b1-1.1-1">¿Se generó un número de demanda único?</label></li>
+        <li><input type="checkbox" id="b1-1.1-2" data-ex="1.1" data-idx="2"><label for="b1-1.1-2">¿El origen figura como "Área/Servicio Local de NNyA"?</label></li>
+        <li><input type="checkbox" id="b1-1.1-3" data-ex="1.1" data-idx="3"><label for="b1-1.1-3">¿Los datos de M. Perez están completos (DNI, fecha de nacimiento, domicilio)?</label></li>
+        <li><input type="checkbox" id="b1-1.1-4" data-ex="1.1" data-idx="4"><label for="b1-1.1-4">¿Los derechos vulnerados están marcados?</label></li>
+        <li><input type="checkbox" id="b1-1.1-5" data-ex="1.1" data-idx="5"><label for="b1-1.1-5">¿El principal motivo también?</label></li>
+        <li><input type="checkbox" id="b1-1.1-6" data-ex="1.1" data-idx="6"><label for="b1-1.1-6">¿La demanda aparece en la bandeja de Mesa de Entrada?</label></li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- 1.2 -->
+  <details class="exercise-card">
+    <summary>
+      <span class="ex-num">1.2</span>
+      <span class="ex-title">Asignar el caso a un usuario</span>
+      <span class="ex-done-badge">✓ Completo</span>
+      <span class="ex-chevron">▾</span>
+    </summary>
+    <div class="ex-body">
+      <div class="ex-section-label">🔢 Pasos en el sistema</div>
+      <ol class="pasos-ol">
+        <li>Desde la bandeja de Mesa de Entrada localizá la demanda de M.</li>
+        <li>Hacé clic en el botón "Asignar" de la fila correspondiente.</li>
+        <li>En el modal de asignación seleccioná un equipo de trabajo disponible.</li>
+        <li>Confirmá la asignación.</li>
+      </ol>
+      <div class="ex-section-label">✅ Checklist de verificación</div>
+      <ul class="verif-list">
+        <li><input type="checkbox" id="b1-1.2-1" data-ex="1.2" data-idx="1"><label for="b1-1.2-1">¿La demanda cambió de estado a "Constatación"?</label></li>
+        <li><input type="checkbox" id="b1-1.2-2" data-ex="1.2" data-idx="2"><label for="b1-1.2-2">¿Aparece el nombre del equipo asignado en la fila?</label></li>
+        <li><input type="checkbox" id="b1-1.2-3" data-ex="1.2" data-idx="3"><label for="b1-1.2-3">¿La demanda ya no figura como pendiente de asignación?</label></li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- 1.3 -->
+  <details class="exercise-card">
+    <summary>
+      <span class="ex-num">1.3</span>
+      <span class="ex-title">Buscar el caso con filtros y buscador</span>
+      <span class="ex-done-badge">✓ Completo</span>
+      <span class="ex-chevron">▾</span>
+    </summary>
+    <div class="ex-body">
+      <div class="ex-section-label">🔢 Pasos en el sistema</div>
+      <ol class="pasos-ol">
+        <li>Desde la bandeja de Mesa de Entrada usá el buscador global y escribí "Perez".</li>
+        <li>Verificá que aparece la demanda de "M." en los resultados.</li>
+        <li>Ahora probá buscar por el número de demanda generado en el ejercicio 1.1.</li>
+        <li>Usá el panel de filtros lateral: filtrá por estado "Constatación" y verificá que el caso aparece.</li>
+        <li>Explorá las columnas disponibles y ordená la bandeja por fecha de ingreso.</li>
+      </ol>
+      <div class="ex-section-label">✅ Checklist de verificación</div>
+      <ul class="verif-list">
+        <li><input type="checkbox" id="b1-1.3-1" data-ex="1.3" data-idx="1"><label for="b1-1.3-1">¿Encontraste la demanda buscando por apellido?</label></li>
+        <li><input type="checkbox" id="b1-1.3-2" data-ex="1.3" data-idx="2"><label for="b1-1.3-2">¿Encontraste la demanda buscando por número de demanda?</label></li>
+        <li><input type="checkbox" id="b1-1.3-3" data-ex="1.3" data-idx="3"><label for="b1-1.3-3">¿El filtro por estado "Constatación" muestra el caso correctamente?</label></li>
+        <li><input type="checkbox" id="b1-1.3-4" data-ex="1.3" data-idx="4"><label for="b1-1.3-4">¿Pudiste reordenar la bandeja por fecha?</label></li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- 1.4 -->
+  <details class="exercise-card">
+    <summary>
+      <span class="ex-num">1.4</span>
+      <span class="ex-title">Completar información, agregar adulto, hermano y registrar actividades de constatación</span>
+      <span class="ex-done-badge">✓ Completo</span>
+      <span class="ex-chevron">▾</span>
+    </summary>
+    <div class="ex-body">
+      <div class="ex-section-label">🔢 Pasos en el sistema</div>
+      <ol class="pasos-ol">
+        <li>Ingresá a la demanda de M. Perez desde la bandeja.</li>
+        <li>En la sección Adultos Convivientes agregá un segundo adulto: cualquier nombre ficticio, parentesco "Tía/o", sin datos de contacto.</li>
+        <li>En la sección NNyA agregá al hermano: A. Perez, DNI 00000003, 02/09/2021 (4 años), hermano unilateral conviviente.</li>
+        <li>Guardá los cambios.</li>
+        <li>En Acciones disponibles hacé clic en "Registrar Actividad".</li>
+        <li>Cargá la primera actividad de constatación — Tipo: Visita domiciliaria. Descripción: "Se realiza visita al domicilio familiar. Se constata vivienda con condiciones habitacionales en buen estado".</li>
+        <li>Guardá y registrá la segunda actividad — Tipo: Entrevista con los niños y el adulto responsable conviviente: "los niños manifiestan sentirse cuidados y protegidos por el Sr. H.F., que no quieren que su mamá vuelva al hogar. El Sr. H.F. manifiesta voluntad de continuar asumiendo los cuidados, solicitando más apoyo social y comunitario para lograr que la niña M. culmine su tratamiento de salud física y psicológica, su continuidad educativa, etc.".</li>
+      </ol>
+      <div class="ex-section-label">✅ Checklist de verificación</div>
+      <ul class="verif-list">
+        <li><input type="checkbox" id="b1-1.4-1" data-ex="1.4" data-idx="1"><label for="b1-1.4-1">¿El adulto adicional quedó registrado en la sección Adultos Convivientes?</label></li>
+        <li><input type="checkbox" id="b1-1.4-2" data-ex="1.4" data-idx="2"><label for="b1-1.4-2">¿A. Perez aparece como NNyA conviviente vinculado al caso?</label></li>
+        <li><input type="checkbox" id="b1-1.4-3" data-ex="1.4" data-idx="3"><label for="b1-1.4-3">¿Las dos actividades de constatación aparecen en la cronología?</label></li>
+        <li><input type="checkbox" id="b1-1.4-4" data-ex="1.4" data-idx="4"><label for="b1-1.4-4">¿Cada actividad tiene fecha, tipo y descripción completos?</label></li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- 1.5 -->
+  <details class="exercise-card">
+    <summary>
+      <span class="ex-num">1.5</span>
+      <span class="ex-title">Completar la evaluación técnica y seleccionar la medida</span>
+      <span class="ex-done-badge">✓ Completo</span>
+      <span class="ex-chevron">▾</span>
+    </summary>
+    <div class="ex-body">
+      <div class="ex-section-label">🔢 Pasos en el sistema</div>
+      <ol class="pasos-ol">
+        <li>Desde la demanda de M. Perez hacé clic en "Pasar a Evaluación".</li>
+        <li>En Chequeo de Información revisá que todos los datos cargados estén correctos.</li>
+        <li>En Descripción e Indicadores escribí: "Al momento de la presente evaluación el adulto responsable conviviente está pudiendo sostener la reproducción cotidiana de la familia, pero necesita fortalecer sus recursos para efectivizar los tratamientos de salud física y psicológica, la continuidad educativa y el acompañamiento de la niña, quedando pendiente supervisar este proceso. Por otro lado, evaluar y en su caso orientar a los adultos H.F. y G. Perez sobre la posibilidad de impulsar la regularización de la situación legal del cuidado personal del Sr. H.F. de los niños M. Perez y A. Fuentes en los Tribunales de Familia, todo en el marco de un proyecto de restitución de derechos de segundo nivel, siendo necesario entonces adoptar una Medida de Protección Integral a cargo de este equipo en articulación con el Área Local de VN".</li>
+        <li>Marcá los indicadores de riesgo correspondientes.</li>
+        <li>En Valoración y Justificación seleccioná "Riesgo moderado" y justificá la medida propuesta.</li>
+        <li>En Selección de Medida elegí MPI (o MPE según lo que indique tu facilitador).</li>
+        <li>Guardá. El sistema generará automáticamente el Informe 100 en PDF.</li>
+        <li>Descargá el Informe 100 generado.</li>
+        <li>Adjuntá el PDF descargado al campo correspondiente.</li>
+        <li>Hacé clic en "Solicitar Autorización".</li>
+      </ol>
+      <div class="ex-section-label">✅ Checklist de verificación</div>
+      <ul class="verif-list">
+        <li><input type="checkbox" id="b1-1.5-1" data-ex="1.5" data-idx="1"><label for="b1-1.5-1">¿La evaluación quedó en estado "Pendiente de aprobación"?</label></li>
+        <li><input type="checkbox" id="b1-1.5-2" data-ex="1.5" data-idx="2"><label for="b1-1.5-2">¿El Informe 100 se generó y descargó correctamente?</label></li>
+        <li><input type="checkbox" id="b1-1.5-3" data-ex="1.5" data-idx="3"><label for="b1-1.5-3">¿El PDF está adjunto en la evaluación?</label></li>
+        <li><input type="checkbox" id="b1-1.5-4" data-ex="1.5" data-idx="4"><label for="b1-1.5-4">¿La medida seleccionada (MPI o MPE) aparece registrada?</label></li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- 1.6 -->
+  <details class="exercise-card">
+    <summary>
+      <span class="ex-num">1.6</span>
+      <span class="ex-title">Aprobar la evaluación y verificar la creación del legajo</span>
+      <span class="ex-done-badge">✓ Completo</span>
+      <span class="ex-chevron">▾</span>
+    </summary>
+    <div class="ex-body">
+      <div class="ex-section-label">🔢 Pasos en el sistema</div>
+      <ol class="pasos-ol">
+        <li>Volvé a ingresar a la evaluación del caso de M. Perez.</li>
+        <li>Hacé clic en "Aprobar evaluación" y confirmá.</li>
+        <li>Verificá que el estado de la demanda cambió a "Admitida".</li>
+        <li>Navegá al módulo de Legajos.</li>
+        <li>Buscá el legajo de M. Perez por nombre o DNI.</li>
+        <li>Ingresá al legajo y verificá que la medida seleccionada aparece creada y en estado activo.</li>
+      </ol>
+      <div class="ex-section-label">✅ Checklist de verificación</div>
+      <ul class="verif-list">
+        <li><input type="checkbox" id="b1-1.6-1" data-ex="1.6" data-idx="1"><label for="b1-1.6-1">¿La demanda figura como "Admitida"?</label></li>
+        <li><input type="checkbox" id="b1-1.6-2" data-ex="1.6" data-idx="2"><label for="b1-1.6-2">¿El legajo de M. Perez existe en la bandeja de Legajos?</label></li>
+        <li><input type="checkbox" id="b1-1.6-3" data-ex="1.6" data-idx="3"><label for="b1-1.6-3">¿La medida (MPI o MPE) aparece activa dentro del legajo?</label></li>
+        <li><input type="checkbox" id="b1-1.6-4" data-ex="1.6" data-idx="4"><label for="b1-1.6-4">¿Los datos del legajo coinciden con los cargados en Mesa de Entrada?</label></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="ejercicios-index.html">← Ejercicios</a>
+    <a class="btn btn-primary" href="ejercicios-bloque2.html">Siguiente bloque: Legajos MPI →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez y Familia · Provincia de Córdoba · RUNNA v2.0 · 2026
+</footer>
+
+<script>
+  const BLOCK_ID = 'b1';
+
+  function persistKey(exId, idx) { return `runna-ej-${BLOCK_ID}-${exId}-${idx}`; }
+
+  function toggleLi(cb) {
+    cb.closest('li').classList.toggle('checked', cb.checked);
+  }
+
+  function updateBadges() {
+    document.querySelectorAll('.exercise-card').forEach(card => {
+      const boxes = [...card.querySelectorAll('input[type=checkbox]')];
+      const badge = card.querySelector('.ex-done-badge');
+      if (!badge) return;
+      const done = boxes.length > 0 && boxes.every(b => b.checked);
+      badge.classList.toggle('show', done);
+    });
+  }
+
+  function updateProgress() {
+    const all = document.querySelectorAll('.verif-list input[type=checkbox]');
+    const done = document.querySelectorAll('.verif-list input[type=checkbox]:checked');
+    const total = all.length;
+    const doneCount = done.length;
+    const pct = total ? Math.round(doneCount / total * 100) : 0;
+    const fill = document.getElementById('blockProgressFill');
+    const text = document.getElementById('blockProgressText');
+    if (fill) fill.style.width = pct + '%';
+    if (text) text.textContent = `${doneCount} de ${total} verificaciones completadas (${pct}%)`;
+    localStorage.setItem('runna-ej-progress-' + BLOCK_ID, JSON.stringify({ done: doneCount, total }));
+  }
+
+  function initChecklists() {
+    document.querySelectorAll('.verif-list input[type=checkbox]').forEach(cb => {
+      const key = persistKey(cb.dataset.ex, cb.dataset.idx);
+      cb.checked = localStorage.getItem(key) === '1';
+      toggleLi(cb);
+      cb.addEventListener('change', () => {
+        localStorage.setItem(key, cb.checked ? '1' : '0');
+        toggleLi(cb);
+        updateBadges();
+        updateProgress();
+      });
+    });
+    updateBadges();
+    updateProgress();
+  }
+
+  function resetBlockProgress() {
+    document.querySelectorAll('.verif-list input[type=checkbox]').forEach(cb => {
+      localStorage.removeItem(persistKey(cb.dataset.ex, cb.dataset.idx));
+    });
+    location.reload();
+  }
+
+  function copyText(btn, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const original = btn.textContent;
+      btn.textContent = '✓';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1200);
+    });
+  }
+
+  initChecklists();
+</script>
+
+</body>
+</html>

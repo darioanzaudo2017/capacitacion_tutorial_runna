@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Plan de Trabajo</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 9 de 12</div>
+    <h1>📝 Plan de Trabajo</h1>
+    <p>Acá se organizan todas las actividades de una medida: quién las hace, qué derecho atienden, y en qué estado están. Primero vamos a ver cómo se crean y se siguen, y después vamos a entrar al detalle de una actividad puntual: comentarios, archivos, cambios de estado e historial.</p>
+  </div>
+
+  <!-- ============ PARTE 1: CREAR Y ORGANIZAR ACTIVIDADES ============ -->
+  <div class="section-block" id="sectionA">
+    <div class="section-heading">
+      <h2><span class="section-badge">Parte 1</span> Crear y organizar actividades</h2>
+      <p>El sistema jerárquico para agregar actividades y cómo seguirlas de forma global.</p>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFillA"></div></div>
+      <div class="progress-label">
+        <span id="progressTextA">Paso 1 de 5</span>
+        <span>Crear y organizar actividades</span>
+      </div>
+    </div>
+
+    <div class="stepper" id="stepperA">
+
+      <div class="step-view active" data-step="1">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0039-medida-navegacion.png" alt="El Plan de Trabajo dentro de la medida">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-title">El Plan de Trabajo dentro de la medida</div>
+          </div>
+          <div class="step-content">
+            Todas las actividades de una medida viven en la sección <strong>"Plan de Trabajo"</strong>. Arriba se ve el progreso general (Pendientes, En Progreso, Realizadas, Vencidas, Canceladas) y debajo, la tabla con cada actividad: tipo, equipo, responsables, fecha planificada, estado y plazo.
+          </div>
+          <div class="capture-reference">📸 Captura: 0039-medida-navegacion.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="2">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0057-apertura-modal-inicial.png" alt="Agregar una actividad nueva">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">Agregar una actividad nueva</div>
+          </div>
+          <div class="step-content">
+            El botón <strong>"Agregar actividad"</strong> abre el modal <strong>"Plan de Acción MPE"</strong>, organizado en 4 pestañas según quién la va a hacer: <strong>Equipo técnico</strong>, <strong>Equipos residenciales</strong>, <strong>Adultos responsables/Institución</strong> y <strong>Equipo de Legales</strong>. El sistema es jerárquico: primero elegís el <strong>"Derecho Principal"</strong> y recién después la <strong>"Actividad Específica"</strong> que corresponde a ese derecho.
+          </div>
+          <div class="capture-reference">📸 Captura: 0057-apertura-modal-inicial.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="3">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0058-apertura-paso1-completo.png" alt="Completá los campos obligatorios">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-title">Completá los campos obligatorios</div>
+          </div>
+          <div class="step-content">
+            Si intentás guardar sin elegir Derecho Principal, Actividad Específica o Responsable Principal, el sistema marca cada campo en rojo con el motivo puntual. También podés escribir una Descripción y, si corresponde, un Referente Externo (una institución o persona de contacto) — el sistema aclara que la actividad aplica al NNyA de esa medida.
+          </div>
+          <div class="capture-reference">📸 Captura: 0058-apertura-paso1-completo.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="4">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0136-plan-accion-alcance.png" alt="Alcance: Grupal o NNyAs específicos">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-title">Si la medida es compartida: elegí el Alcance</div>
+          </div>
+          <div class="step-content">
+            Cuando el legajo pertenece a una medida compartida (por ejemplo, hermanos), el formulario suma una sección <strong>"Alcance"</strong>: por defecto es <strong>"Grupal — aplica a todos los NNyAs"</strong>, pero se puede cambiar a <strong>"Solo a NNyAs específicos"</strong> y elegir de una lista qué legajos puntuales quedan alcanzados por esa actividad y sus adjuntos. Esta misma opción de Alcance aparece también en los formularios de <strong>Apertura</strong>, <strong>Innovación</strong>, <strong>Prórroga</strong> y <strong>Cese</strong>: siempre que la medida esté vinculada a más de un legajo, se puede decidir si ese paso vale para todos o solo para algunos.
+          </div>
+          <div class="capture-reference">📸 Capturas: 0136-plan-accion-alcance.png, 0137-plan-accion-alcance-especificos.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="5">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0122-captura-0122.png" alt="Seguimiento global: Mis Actividades">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">5</div>
+            <div class="step-title">Seguimiento global: "Mis Actividades"</div>
+          </div>
+          <div class="step-content">
+            El botón <strong>"Mis Actividades"</strong> lleva a un panel con todas las actividades asignadas a vos o a tu equipo, sin importar de qué legajo son: contadores de Pendientes/En Progreso/Total/Vencidas, buscador, filtros por Equipo/Origen, y el estado real de cada una — <strong>Pendiente</strong>, <strong>En Progreso</strong>, <strong>Completada</strong>, <strong>Vencida</strong>, <strong>Pendiente de Visado JZ</strong>, <strong>Pendiente de Visado Legal</strong> o <strong>Visado Aprobado</strong>.
+          </div>
+          <div class="capture-reference">📸 Captura: 0122-captura-0122.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+          <div class="success-badge">✅ Ya sabés cómo crear y seguir actividades del Plan de Trabajo.</div>
+        </div>
+      </div>
+
+      <div class="stepper-controls">
+        <button class="btn btn-outline" id="prevBtnA">← Anterior</button>
+        <div class="dots" id="dotsA"></div>
+        <button class="btn btn-primary" id="nextBtnA">Siguiente →</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ PARTE 2: EL DETALLE DE UNA ACTIVIDAD ============ -->
+  <div class="section-block" id="sectionB">
+    <div class="section-heading">
+      <h2><span class="section-badge">Parte 2</span> El detalle de una actividad</h2>
+      <p>Al hacer clic en el nombre de una actividad se abre su ficha: acá es donde se documenta todo lo que se hizo para completarla.</p>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFillB"></div></div>
+      <div class="progress-label">
+        <span id="progressTextB">Paso 1 de 7</span>
+        <span>El detalle de una actividad</span>
+      </div>
+    </div>
+
+    <div class="stepper" id="stepperB">
+
+      <div class="step-view active" data-step="1">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0127-actividad-detalle-tab.png" alt="El detalle de la actividad">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-title">El detalle de la actividad</div>
+          </div>
+          <div class="step-content">
+            Al hacer clic en el nombre de una actividad (por ejemplo "Derecho a la educación") se abre un modal con 4 pestañas: <strong>Detalle</strong>, <strong>Actividad</strong>, <strong>Historial</strong> y <strong>Transferencias</strong>. La pestaña Detalle muestra "Enlaces Rápidos" (acceso directo a la Medida Proteccional y al Legajo), el "Contexto de la Actividad" (por ejemplo "Origen: Creación Manual") y el Tipo de Actividad.
+          </div>
+          <div class="capture-reference">📸 Captura: 0127-actividad-detalle-tab.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="2">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0128-actividad-tab-vacia.png" alt="La pestaña Actividad, vacía">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">La pestaña "Actividad", al principio vacía</div>
+          </div>
+          <div class="step-content">
+            Acá es donde se van a sumar todas las acciones, informes o intervenciones que se hagan para completar la tarea. Al principio dice <em>"No hay actividad registrada aún — ¡Comenzá agregando un comentario o subiendo un archivo!"</em>, con un botón <strong>"+"</strong> para empezar.
+          </div>
+          <div class="capture-reference">📸 Captura: 0128-actividad-tab-vacia.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="3">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0129-agregar-a-actividad-modal.png" alt="Elegí qué agregar">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-title">Elegí qué agregar</div>
+          </div>
+          <div class="step-content">
+            El botón "+" ofrece 3 opciones: <strong>Agregar Comentario</strong> (podés mencionar a otros usuarios con @usuario), <strong>Subir Archivo</strong> (evidencias, actas, informes, fotos u otros documentos) o <strong>Agregar Ambos</strong> en una sola acción.
+          </div>
+          <div class="capture-reference">📸 Captura: 0129-agregar-a-actividad-modal.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="4">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0130-agregar-comentario-archivo.png" alt="Completá el comentario y adjuntá el archivo">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-title">Completá el comentario y adjuntá el archivo</div>
+          </div>
+          <div class="step-content">
+            Se escribe el comentario (opcional) y se arrastra el archivo (PDF, JPG, PNG o DOCX, hasta 10MB). Cada archivo se puede clasificar por <strong>Tipo</strong> (por ejemplo "Evidencia") y llevar una breve descripción.
+          </div>
+          <div class="capture-reference">📸 Captura: 0130-agregar-comentario-archivo.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="5">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0131-actividad-tab-con-registros.png" alt="Ya queda todo documentado">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">5</div>
+            <div class="step-title">Ya queda todo documentado</div>
+          </div>
+          <div class="step-content">
+            La pestaña Actividad ahora lista cada registro por separado — el archivo adjunto y el comentario — con quién lo hizo y hace cuánto. Arriba, los contadores ("2 total", "1 comentarios", "1 archivos") resumen todo lo que se cargó.
+          </div>
+          <div class="capture-reference">📸 Captura: 0131-actividad-tab-con-registros.png</div>
+          <div class="step-tags">
+            <span class="tag success">Éxito</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="6">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0132-cambiar-estado-actividad.png" alt="Cambiar el estado de la actividad">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">6</div>
+            <div class="step-title">Cambiar el estado de la actividad</div>
+          </div>
+          <div class="step-content">
+            El botón <strong>"Cambiar Estado"</strong> (arriba de las pestañas) abre un modal simple: muestra el Estado Actual (por ejemplo "Pendiente") y un desplegable de Nuevo Estado con las opciones disponibles según en qué punto está la actividad (por ejemplo "En Progreso" o "Cancelada").
+          </div>
+          <div class="capture-reference">📸 Captura: 0132-cambiar-estado-actividad.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="7">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0133-actividad-historial-tab.png" alt="Historial de Cambios">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">7</div>
+            <div class="step-title">Historial de Cambios</div>
+          </div>
+          <div class="step-content">
+            La pestaña <strong>Historial</strong> es una auditoría completa e inmutable de todo lo que pasó con la actividad: cambios de estado (Pendiente → En Progreso), adjuntos agregados y comentarios, cada uno con la fecha, la hora y quién lo hizo.
+          </div>
+          <div class="capture-reference">📸 Captura: 0133-actividad-historial-tab.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+          <div class="success-badge">✅ Ya sabés cómo documentar y auditar una actividad de punta a punta.</div>
+        </div>
+      </div>
+
+      <div class="stepper-controls">
+        <button class="btn btn-outline" id="prevBtnB">← Anterior</button>
+        <div class="dots" id="dotsB"></div>
+        <button class="btn btn-primary" id="nextBtnB">Siguiente →</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICA INTERACTIVA -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Probá el sistema jerárquico: elegí primero el Derecho Principal y después la Actividad Específica que le corresponde.</p>
+
+    <div class="practice-wrap">
+      <div class="login-sim-outer">
+        <div class="login-sim-card" style="max-width:400px;">
+          <h3>Agregar Actividad</h3>
+          <div class="sim-field">
+            <label>1. Derecho Principal</label>
+            <select id="derechoPrincipal">
+              <option value="">Seleccioná una opción</option>
+              <option value="familia">Derecho a la familia</option>
+              <option value="salud">Derecho a la salud</option>
+              <option value="educacion">Derecho a la educación</option>
+            </select>
+          </div>
+          <div class="sim-field">
+            <label>2. Actividad Específica</label>
+            <select id="actividadEspecifica" disabled>
+              <option value="">Elegí primero el Derecho Principal</option>
+            </select>
+          </div>
+          <div class="sim-field">
+            <label>Responsable Principal</label>
+            <select id="responsablePrincipal">
+              <option value="">Seleccioná una opción</option>
+              <option value="tecnico">Equipo Técnico</option>
+              <option value="residencial">Equipo Residencial</option>
+            </select>
+          </div>
+          <button class="sim-submit" id="actividadSubmit" disabled>GUARDAR ACTIVIDAD</button>
+          <div class="sim-success" id="actividadSuccess">✅ Actividad agregada al Plan de Trabajo, en estado "Pendiente".</div>
+
+          <div class="sim-activity-list" id="actividadList"></div>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h4>Checklist de la práctica</h4>
+        <ul>
+          <li id="chk1"><span class="check-icon">✓</span> Elegiste el Derecho Principal</li>
+          <li id="chk2"><span class="check-icon">✓</span> Elegiste la Actividad Específica</li>
+          <li id="chk3"><span class="check-icon">✓</span> Asignaste un Responsable Principal</li>
+          <li id="chk4"><span class="check-icon">✓</span> Guardaste la actividad</li>
+        </ul>
+        <span class="reset-link" onclick="resetSim()">↺ Reiniciar práctica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="10-cese-mpi.html">Siguiente: Cese de MPI →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  function makeStepper(suffix, totalSteps) {
+    let currentStep = 1;
+    const stepperEl = document.getElementById('stepper' + suffix);
+    const dotsEl = document.getElementById('dots' + suffix);
+    const progressFill = document.getElementById('progressFill' + suffix);
+    const progressText = document.getElementById('progressText' + suffix);
+    const prevBtn = document.getElementById('prevBtn' + suffix);
+    const nextBtn = document.getElementById('nextBtn' + suffix);
+
+    function renderDots() {
+      dotsEl.innerHTML = '';
+      for (let i = 1; i <= totalSteps; i++) {
+        const d = document.createElement('div');
+        d.className = 'dot' + (i === currentStep ? ' active' : '');
+        d.onclick = () => { currentStep = i; render(); };
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function render() {
+      stepperEl.querySelectorAll('.step-view').forEach(el => {
+        el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+      });
+      progressFill.style.width = (currentStep / totalSteps * 100) + '%';
+      progressText.textContent = `Paso ${currentStep} de ${totalSteps}`;
+      prevBtn.disabled = currentStep === 1;
+      nextBtn.textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+      renderDots();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentStep = Math.max(1, currentStep - 1);
+      render();
+    });
+    nextBtn.addEventListener('click', () => {
+      currentStep = currentStep === totalSteps ? 1 : currentStep + 1;
+      render();
+    });
+
+    render();
+  }
+
+  makeStepper('A', 5);
+  makeStepper('B', 7);
+
+  // Practica interactiva: sistema jerarquico
+  const actividadesPorDerecho = {
+    familia: ['Entrevista con la familia', 'Visita domiciliaria'],
+    salud: ['Turno médico', 'Control de vacunación'],
+    educacion: ['Reunión con la escuela', 'Seguimiento de asistencia']
+  };
+  const derechoLabels = {
+    familia: 'Derecho a la familia',
+    salud: 'Derecho a la salud',
+    educacion: 'Derecho a la educación'
+  };
+
+  const derechoPrincipal = document.getElementById('derechoPrincipal');
+  const actividadEspecifica = document.getElementById('actividadEspecifica');
+  const responsablePrincipal = document.getElementById('responsablePrincipal');
+  const actividadSubmit = document.getElementById('actividadSubmit');
+  const actividadSuccess = document.getElementById('actividadSuccess');
+  const actividadList = document.getElementById('actividadList');
+
+  function setChecked(id, on) {
+    document.getElementById(id).classList.toggle('done', on);
+  }
+
+  function updateSubmit() {
+    const ok = derechoPrincipal.value && actividadEspecifica.value && responsablePrincipal.value;
+    actividadSubmit.disabled = !ok;
+  }
+
+  derechoPrincipal.addEventListener('change', () => {
+    const val = derechoPrincipal.value;
+    setChecked('chk1', !!val);
+    actividadEspecifica.innerHTML = '';
+    if (val) {
+      actividadEspecifica.disabled = false;
+      const opciones = actividadesPorDerecho[val];
+      const placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = 'Seleccioná una opción';
+      actividadEspecifica.appendChild(placeholder);
+      opciones.forEach(op => {
+        const opt = document.createElement('option');
+        opt.value = op;
+        opt.textContent = op;
+        actividadEspecifica.appendChild(opt);
+      });
+    } else {
+      actividadEspecifica.disabled = true;
+      const placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = 'Elegí primero el Derecho Principal';
+      actividadEspecifica.appendChild(placeholder);
+    }
+    setChecked('chk2', false);
+    updateSubmit();
+  });
+
+  actividadEspecifica.addEventListener('change', () => {
+    setChecked('chk2', !!actividadEspecifica.value);
+    updateSubmit();
+  });
+
+  responsablePrincipal.addEventListener('change', () => {
+    setChecked('chk3', !!responsablePrincipal.value);
+    updateSubmit();
+  });
+
+  actividadSubmit.addEventListener('click', () => {
+    setChecked('chk4', true);
+    actividadSuccess.classList.add('show');
+    const item = document.createElement('div');
+    item.className = 'sim-activity-item';
+    item.innerHTML = `<span class="sim-activity-tipo">${actividadEspecifica.value}</span>${derechoLabels[derechoPrincipal.value]} · Responsable: ${responsablePrincipal.options[responsablePrincipal.selectedIndex].text}<div class="sim-activity-fecha">Estado: Pendiente</div>`;
+    actividadList.prepend(item);
+  });
+
+  function resetSim() {
+    derechoPrincipal.value = '';
+    actividadEspecifica.innerHTML = '<option value="">Elegí primero el Derecho Principal</option>';
+    actividadEspecifica.disabled = true;
+    responsablePrincipal.value = '';
+    actividadSuccess.classList.remove('show');
+    actividadList.innerHTML = '';
+    ['chk1','chk2','chk3','chk4'].forEach(id => setChecked(id, false));
+    actividadSubmit.disabled = true;
+  }
+</script>
+
+</body>
+</html>

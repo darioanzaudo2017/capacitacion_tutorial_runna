@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Cese de MPI</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <center>Centro de Tutoriales · MPI</center>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 10a de 13</div>
+    <h1>❌ Cese de Medida de Protección Inmediata (MPI)</h1>
+    <p>El cierre de una MPI se realiza en 3 etapas: Registro de Intervención (Pendiente de Informe de Cierre) → Seguimiento (Completado) → Cierre de Medida (Registro del Informe Final). Sin aprobaciones adicionales, solo el técnico completa el modal y la medida se cierra automáticamente.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 5</span>
+      <span>Cese de MPI</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0157-cese-mpi-etapa1-registro-intervencion.png" alt="Etapa 1: Registro de Intervención - Pendiente de Informe de Cierre">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Paso 1 de 3: Registro de Intervención</div>
+        </div>
+        <div class="step-content">
+          En la ficha de la medida MPI, aparecen las <strong>Etapas de la Medida</strong>:
+          <br><strong>1. Registro de Intervención</strong> - Estado: <strong>"PENDIENTE_DE_INFORME_DE_CIERRE"</strong> ✓ 100% completado
+          <br><strong>2. Seguimiento</strong> - Bloqueado (gris)
+          <br><strong>3. Cierre de Medida</strong> - Pendiente
+          <br>
+          Verás la sección "Apertura" con información de la intervención. Hacé clic en <strong>"Continuar"</strong> para avanzar al Paso 2.
+        </div>
+        <div class="capture-reference">📸 Captura: 0157-cese-mpi-etapa1-registro-intervencion.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0158-cese-mpi-etapa2-seguimiento.png" alt="Etapa 2: Seguimiento - Completado">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Paso 2 de 3: Seguimiento</div>
+        </div>
+        <div class="step-content">
+          La etapa <strong>Seguimiento</strong> muestra: "Plan de trabajo y seguimiento de la medida"
+          <br>
+          <br>Aparece un mensaje informativo:
+          <br><em>"La apertura ha sido aprobada. Ahora puede realizar el seguimiento en la sección de 'Plan de Trabajo' debajo y luego proceder al cierre de la medida desde el siguiente paso."</em>
+          <br>
+          Hacé clic en el botón <strong>"Continuar al Informe de Cierre"</strong> para ir al Paso 3 donde se registra el cese.
+        </div>
+        <div class="capture-reference">📸 Captura: 0158-cese-mpi-etapa2-seguimiento.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0159-cese-mpi-etapa3-cierre-medida.png" alt="Etapa 3: Cierre de Medida - En Progreso">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Paso 3 de 3: Cierre de Medida</div>
+        </div>
+        <div class="step-content">
+          La etapa <strong>Cierre de Medida</strong> muestra:
+          <br><strong>"Registro del informe final y cierre administrativo"</strong>
+          <br>
+          Estado: <strong>"En Progreso"</strong> - 0% completado
+          <br>
+          Aparece el mensaje:
+          <br><em>"Esta medida está lista para cierre. Registre el informe de cierre para continuar con el proceso."</em>
+          <br>
+          Hacé clic en el botón <strong>"+ Registrar Informe de Cierre"</strong> para abrir el modal de cierre.
+        </div>
+        <div class="capture-reference">📸 Captura: 0159-cese-mpi-etapa3-cierre-medida.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0160-cese-mpi-modal-registrar-informe.png" alt="Modal: Registrar Informe de Cierre">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Completar Modal "Registrar Informe de Cierre"</div>
+        </div>
+        <div class="step-content">
+          Se abre el modal <strong>"Registrar Informe de Cierre"</strong>. Completá los siguientes campos:
+          <br>
+          <br><strong>• Tipo de Cese *:</strong> Dropdown obligatorio
+          <br>Opciones: "I. RESTITUCIÓN DE DERECHOS", "II. MAYORÍA DE EDAD", "III. CAMBIO DE SITUACIÓN", "IV. ARCHIVO DE MPI CESADA", etc.
+          <br>
+          <br><strong>• Observaciones *:</strong> Campo de texto (textarea)
+          <br>Descripción: "Complete la fundamentación del cierre de esta medida MPI. Describa los objetivos alcanzados, la situación estabilizada del NNyA y su familia, y las razones para el cierre de la intervención."
+          <br>Validación: Mínimo 20 caracteres (se muestra contador)
+          <br>
+          <br><strong>• Adjuntos (Opcional):</strong> Drag & drop
+          <br>Podés adjuntar documentación complementaria
+        </div>
+        <div class="capture-reference">📸 Captura: 0160-cese-mpi-modal-registrar-informe.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="5">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0161-cese-mpi-legajo-medida-cerrada.png" alt="Legajo: MPI con estado CERRADA">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">Finalización: MPI Estado CERRADA</div>
+        </div>
+        <div class="step-content">
+          Una vez que completaste el modal y hiciste clic en <strong>"Enviar Informe"</strong>, la MPI cambia inmediatamente a estado <strong>"CERRADA"</strong>.
+          <br>
+          Esto se refleja en:
+          <br>✓ La tabla de <strong>"Registro de Medidas Tomadas"</strong> del legajo
+          <br>✓ Estado de la medida aparece con fondo gris: **CERRADA**
+          <br>✓ La duración muestra "-1 días" (ya finalizada)
+          <br>
+          La medida ya no aparecerá en las pendientes de seguimiento.
+        </div>
+        <div class="capture-reference">📸 Captura: 0161-cese-mpi-legajo-medida-cerrada.png</div>
+        <div class="step-tags">
+          <span class="tag success">Éxito</span>
+        </div>
+        <div class="success-badge">✅ MPI cerrada exitosamente sin aprobaciones adicionales.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA INTERACTIVA -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Simulá el cierre de una MPI completando el modal de "Registrar Informe de Cierre".</p>
+
+    <div class="practice-wrap">
+      <div class="login-sim-outer">
+        <div class="login-sim-card" style="max-width:500px;">
+          <h3>📋 Registrar Informe de Cierre</h3>
+          <p style="font-size:0.9rem; color:var(--texto-suave); margin-bottom:15px;">Complete la fundamentación del cierre de esta medida MPI. Describa los objetivos alcanzados, la situación estabilizada del NNyA y su familia, y las razones para el cierre de la intervención.</p>
+
+          <div class="sim-field">
+            <label>Tipo de Cese *</label>
+            <select id="tipoCeseMPI">
+              <option value="">Seleccione una opción</option>
+              <option value="archivo">I. ARCHIVO DE MPI CESADA</option>
+              <option value="archivo-iv">IV. ARCHIVO DE MPI CESADA</option>
+              <option value="restitucion">II. RESTITUCIÓN DE DERECHOS</option>
+              <option value="cambio">III. CAMBIO DE SITUACIÓN</option>
+            </select>
+          </div>
+
+          <div class="sim-field">
+            <label>Observaciones *</label>
+            <textarea id="observacionesMPI" placeholder="Complete la fundamentación técnica del cierre... (mínimo 20 caracteres)"></textarea>
+            <small id="charCountMPI" style="color:var(--texto-suave);">0 / 20 caracteres</small>
+          </div>
+
+          <div class="sim-field">
+            <label>Adjuntos (Opcional)</label>
+            <div id="dropZoneMPI" style="border:2px dashed #bbb; border-radius:6px; padding:15px; text-align:center; cursor:pointer; background:#fafafa;">
+              <span id="dropTextMPI">📎 Haz clic para adjuntar documentación</span>
+            </div>
+          </div>
+
+          <button class="sim-submit" id="btnEnviarCeseMPI" disabled>ENVIAR INFORME</button>
+
+          <div class="sim-success" id="mpiSuccess"></div>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h4>Checklist de la práctica</h4>
+        <ul>
+          <li id="chk1"><span class="check-icon">✓</span> Motivo de cese seleccionado</li>
+          <li id="chk2"><span class="check-icon">✓</span> Justificación completada</li>
+          <li id="chk3"><span class="check-icon">✓</span> MPI cerrada exitosamente</li>
+        </ul>
+        <span class="reset-link" onclick="resetSimMPI()">↺ Reiniciar práctica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="10-cese-mpe.html">Siguiente: Cese de MPE →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 5;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica interactiva
+  const tipoCeseMPI = document.getElementById('tipoCeseMPI');
+  const observacionesMPI = document.getElementById('observacionesMPI');
+  const charCountMPI = document.getElementById('charCountMPI');
+  const dropZoneMPI = document.getElementById('dropZoneMPI');
+  const dropTextMPI = document.getElementById('dropTextMPI');
+  const btnEnviarCeseMPI = document.getElementById('btnEnviarCeseMPI');
+  const mpiSuccess = document.getElementById('mpiSuccess');
+
+  let fileAttachedMPI = false;
+
+  function setChecked(id, on) {
+    document.getElementById(id).classList.toggle('done', on);
+  }
+
+  function checkFormMPI() {
+    const ok = tipoCeseMPI.value !== "" &&
+               observacionesMPI.value.length >= 20;
+    btnEnviarCeseMPI.disabled = !ok;
+  }
+
+  observacionesMPI.addEventListener('input', () => {
+    const len = observacionesMPI.value.length;
+    charCountMPI.textContent = `${len} / 20 caracteres`;
+    checkFormMPI();
+  });
+
+  tipoCeseMPI.addEventListener('change', () => {
+    checkFormMPI();
+  });
+
+  dropZoneMPI.addEventListener('click', () => {
+    fileAttachedMPI = true;
+    dropZoneMPI.style.background = '#e8f5e9';
+    dropZoneMPI.style.borderColor = '#81c784';
+    dropTextMPI.textContent = '✅ PRE_VTA_X9999000233455_20052026.pdf adjunto';
+  });
+
+  btnEnviarCeseMPI.addEventListener('click', () => {
+    setChecked('chk1', true);
+    setChecked('chk2', true);
+    setChecked('chk3', true);
+    mpiSuccess.className = 'sim-success show';
+    mpiSuccess.innerHTML = '✅ Informe de Cierre enviado. MPI cambió a estado <strong>"CERRADA"</strong> en el legajo.';
+  });
+
+  function resetSimMPI() {
+    tipoCeseMPI.value = '';
+    observacionesMPI.value = '';
+    charCountMPI.textContent = '0 / 20 caracteres';
+    fileAttachedMPI = false;
+    btnEnviarCeseMPI.disabled = true;
+
+    dropZoneMPI.style.background = '#fafafa';
+    dropZoneMPI.style.borderColor = '#bbb';
+    dropTextMPI.textContent = '📎 Haz clic para adjuntar documentación';
+
+    mpiSuccess.className = 'sim-success';
+    mpiSuccess.innerHTML = '';
+    ['chk1','chk2','chk3'].forEach(id => setChecked(id, false));
+  }
+</script>
+
+</body>
+</html>

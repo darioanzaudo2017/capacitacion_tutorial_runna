@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Autorización del Director</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 5 de 10</div>
+    <h1>✅ Autorización del Director</h1>
+    <p>Cuando el técnico autoriza tomar una medida, la decisión no queda firme todavía: pasa a manos del <strong>Director/Jefe Zonal</strong>, que revisa lo actuado y da (o no) el visto bueno final. Recién ahí se crean los legajos.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 5</span>
+      <span>Autorización del Director</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0096-captura-0096.png" alt="Demanda pendiente de autorización">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">La demanda queda "Pendiente de Autorización"</div>
+        </div>
+        <div class="step-content">
+          Apenas el técnico autoriza tomar la medida en la pantalla de Evaluación, el estado de la demanda cambia en la Mesa de Entradas a <strong>"Pendiente Autori..."</strong> (Pendiente de Autorización). A partir de acá, la decisión queda en manos del Director.
+        </div>
+        <div class="capture-reference">📸 Captura: 0096-captura-0096.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag director">Director</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0098-captura-0098.png" alt="El Director revisa la solicitud del técnico">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">El Director revisa la solicitud del técnico</div>
+        </div>
+        <div class="step-content">
+          Es la misma pantalla de "Detalle de la Demanda" que completó el técnico, pero ahora aparece un badge junto a Justificaciones Internas: <strong>"Solicitud del técnico: TOMAR MEDIDA - MPE"</strong>. El Director puede revisar toda la información cargada (datos, NNyA, valoración profesional) y agregar su propia <strong>"Justificación del Director"</strong> (de uso interno, no va al informe PDF).
+        </div>
+        <div class="capture-reference">📸 Captura: 0098-captura-0098.png</div>
+        <div class="step-tags">
+          <span class="tag director">Director</span>
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0099-captura-0099.png" alt="La demanda pasa a Admitida">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Autoriza y la demanda pasa a "Admitida"</div>
+        </div>
+        <div class="step-content">
+          Con los botones <strong>"Autorizar"</strong> o <strong>"No autorizar"</strong>, el Director toma la decisión final. Si autoriza, el estado de la demanda cambia a <strong>"Admitida"</strong> en la Mesa de Entradas. Si no autoriza, la demanda vuelve para revisión.
+        </div>
+        <div class="capture-reference">📸 Captura: 0099-captura-0099.png</div>
+        <div class="step-tags">
+          <span class="tag director">Director</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0100-captura-0100.png" alt="Legajos creados automáticamente">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Se crean los legajos automáticamente</div>
+        </div>
+        <div class="step-content">
+          Al quedar "Admitida", RUNNA crea sin intervención manual un legajo por cada NNyA autorizado — en este caso <strong>LEG-2026-0078</strong> (ernesto) y <strong>LEG-2026-0079</strong> (gabriela) — y los deja vinculados a la medida recién creada. Todo esto aparece de inmediato en la Bandeja de Legajos.
+        </div>
+        <div class="capture-reference">📸 Captura: 0100-captura-0100.png</div>
+        <div class="step-tags">
+          <span class="tag success">Éxito</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="5">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0101-captura-0101.png" alt="El legajo listo para trabajar">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">El legajo ya está listo para trabajar</div>
+        </div>
+        <div class="step-content">
+          Al abrir el legajo (por ejemplo <strong>LEG-2026-0078</strong>) aparece la ficha completa del NNyA: datos personales, profesional asignado y las pestañas General, Asignaciones, Oficios, Demandas, Documentos, Plan de Trabajo e Historial. Este es el punto de partida del próximo módulo: la Bandeja de Legajos.
+        </div>
+        <div class="capture-reference">📸 Captura: 0101-captura-0101.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+          <span class="tag success">Éxito</span>
+        </div>
+        <div class="success-badge">✅ Ya sabés cómo el Director autoriza una medida y cómo se crea el legajo automáticamente.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA INTERACTIVA -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Ponete en el lugar del Director: revisá la solicitud del técnico y tomá la decisión final.</p>
+
+    <div class="practice-wrap">
+      <div class="login-sim-outer">
+        <div class="login-sim-card" style="max-width:400px;">
+          <h3>Autorización final</h3>
+          <div class="sim-field">
+            <label>Solicitud del técnico</label>
+            <input type="text" value="TOMAR MEDIDA · MPE" disabled style="background:#eef4fa; color:var(--texto-suave); font-weight:600;">
+          </div>
+          <div class="sim-field">
+            <label>Justificación del Director (opcional)</label>
+            <textarea id="dirJustificacion" placeholder="Ingrese la justificación del director (no aparecerá en el informe)"></textarea>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="sim-submit" id="btnAutorizar" style="background:linear-gradient(135deg,#123a61,#2f7bc4);">✔ AUTORIZAR</button>
+            <button class="sim-submit" id="btnNoAutorizar" style="background:linear-gradient(135deg,#a52020,#e53935);">✕ NO AUTORIZAR</button>
+          </div>
+          <div class="sim-success" id="dirSuccess"></div>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h4>Checklist de la práctica</h4>
+        <ul>
+          <li id="chk1"><span class="check-icon">✓</span> Revisaste la solicitud del técnico</li>
+          <li id="chk2"><span class="check-icon">✓</span> Tomaste una decisión final</li>
+        </ul>
+        <span class="reset-link" onclick="resetSim()">↺ Reiniciar práctica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="06-bandeja-legajos.html">Siguiente módulo: Bandeja de legajos →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 5;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica interactiva
+  const btnAutorizar = document.getElementById('btnAutorizar');
+  const btnNoAutorizar = document.getElementById('btnNoAutorizar');
+  const dirSuccess = document.getElementById('dirSuccess');
+
+  function setChecked(id, on) {
+    document.getElementById(id).classList.toggle('done', on);
+  }
+
+  document.getElementById('dirJustificacion').addEventListener('input', () => {
+    setChecked('chk1', true);
+  });
+
+  btnAutorizar.addEventListener('click', () => {
+    setChecked('chk1', true);
+    setChecked('chk2', true);
+    dirSuccess.className = 'sim-success show';
+    dirSuccess.innerHTML = '✅ Demanda Admitida. RUNNA crea automáticamente el legajo (LEG-2026-0078) y la medida vinculados a ernesto y gabriela tenenbaum.';
+  });
+
+  btnNoAutorizar.addEventListener('click', () => {
+    setChecked('chk1', true);
+    setChecked('chk2', true);
+    dirSuccess.className = 'sim-success show';
+    dirSuccess.style.background = '#fdeaea';
+    dirSuccess.style.borderColor = '#f0b8b8';
+    dirSuccess.style.color = '#a52020';
+    dirSuccess.innerHTML = '❌ Demanda no autorizada. Vuelve al técnico para revisar la evaluación.';
+  });
+
+  function resetSim() {
+    document.getElementById('dirJustificacion').value = '';
+    dirSuccess.className = 'sim-success';
+    dirSuccess.removeAttribute('style');
+    dirSuccess.innerHTML = '';
+    ['chk1','chk2'].forEach(id => setChecked(id, false));
+  }
+</script>
+
+</body>
+</html>

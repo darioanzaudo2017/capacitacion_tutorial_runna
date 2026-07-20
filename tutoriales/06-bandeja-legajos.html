@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Bandeja de Legajos</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 6 de 10</div>
+    <h1>📋 Bandeja de Legajos</h1>
+    <p>Acá viven todos los casos ya admitidos: cada NNyA tiene un <strong>legajo</strong> único, con sus medidas, actividades y alertas. Vamos a conocer las herramientas de búsqueda y, sobre todo, a aprender a leer los íconos e indicadores de la tabla.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 6</span>
+      <span>Bandeja de Legajos</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0012-legajo-mesa-vista-general.png" alt="Vista general de Gestión de Legajos">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Vista general de Gestión de Legajos</div>
+        </div>
+        <div class="step-content">
+          Al hacer clic en <strong>"Bandeja de legajos"</strong> en el encabezado se abre esta pantalla. Arriba hay accesos directos: <strong>+ Nuevo Legajo</strong>, <strong>Mis Actividades</strong>, <strong>Filtros</strong> (con un número que indica cuántos están aplicados), <strong>Avanzados</strong> y <strong>Exportar Excel</strong>. La tabla lista cada legajo con columnas como ID, Alertas, N° Legajo, Apellido, Nombre, Prioridad, Cant. Medidas, Actividades, Oficios y PI.
+        </div>
+        <div class="capture-reference">📸 Captura: 0012-legajo-mesa-vista-general.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+          <span class="tag nav">Navegación</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0012-legajo-mesa-vista-general.png" alt="Quién ve qué: permisos por zona">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Quién ve qué: permisos por zona</div>
+        </div>
+        <div class="step-content">
+          La Bandeja de Legajos no muestra lo mismo a todos: por defecto, cada usuario ve solo los legajos de <strong>su zona</strong>. Los <strong>Directores</strong> y el <strong>Equipo Legal</strong>, en cambio, ven <strong>todos</strong> los legajos, sin importar la zona. Además, el <strong>usuario técnico</strong> también puede ver los legajos donde tiene una actividad asignada bajo su responsabilidad, aunque ese legajo no sea de su zona.
+        </div>
+        <div class="capture-reference">📸 Captura: 0012-legajo-mesa-vista-general.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0014-legajo-mesa-busqueda.png" alt="Buscar un legajo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Buscar un legajo puntual</div>
+        </div>
+        <div class="step-content">
+          El buscador encuentra legajos por <strong>ID</strong>, <strong>Número</strong>, <strong>DNI</strong>, <strong>Nombre</strong>, <strong>Apellido</strong> o <strong>Zona</strong>. Al escribir (por ejemplo "santiago"), aparece un chip <strong>"Búsqueda: 'santiago'"</strong> con la cantidad de resultados y un botón <strong>"Limpiar todo"</strong> para sacar el filtro.
+        </div>
+        <div class="capture-reference">📸 Captura: 0014-legajo-mesa-busqueda.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0016-legajo-mesa-filtro-hover.png" alt="Íconos de indicadores">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Los íconos de indicadores</div>
+        </div>
+        <div class="step-content">
+          La tabla usa íconos y colores para que, de un vistazo, se entienda el estado de cada legajo: el triángulo <strong>⚠ Alertas</strong> muestra cuántas tareas pendientes o alertas tiene; <strong>Prioridad</strong> usa chips de color (rojo "Alta", naranja "Media", o "Seleccionar" en verde si todavía no se definió); el círculo azul de <strong>Cant. Medidas</strong> indica cuántas medidas tiene asociadas — al pasar el mouse por encima se despliega el detalle de cada una, con la posibilidad de entrar directamente a esa medida; y los contadores grises en <strong>Actividades</strong> y <strong>Oficios</strong> muestran cuántas hay registradas (con un guion "-" cuando no aplica).
+        </div>
+        <div class="capture-reference">📸 Captura: 0016-legajo-mesa-filtro-hover.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="5">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0134-legajo-tabla-columnas-acciones.png" alt="Explorá y ajustá las columnas">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">Explorá y ajustá las columnas</div>
+        </div>
+        <div class="step-content">
+          Desplazándote hacia la derecha aparecen más columnas: <strong>Medidas</strong> (el tipo, por ejemplo "MPE - Innovación" o "Apertura de la Medida"), <strong>Plan Trabajo</strong> (o "Sin PT" si todavía no tiene), <strong>Acciones</strong> (ver, asignar, más opciones) y <strong>Zona</strong>/<strong>Equipo</strong>. Usá la flecha <strong>"›"</strong> para desplazarte, o el botón <strong>"Avanzados"</strong> para más opciones de filtrado.
+        </div>
+        <div class="capture-reference">📸 Captura: 0134-legajo-tabla-columnas-acciones.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="6">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0135-asignar-legajo-modal.png" alt="Asigná un legajo a un equipo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <div class="step-title">Asigná un legajo a un equipo</div>
+        </div>
+        <div class="step-content">
+          El ícono de persona <strong>"Asignar"</strong>, en la columna Acciones, abre el modal <strong>"Asignar Legajo"</strong>. Ahí se define, por categoría (<strong>Equipo de Trabajo</strong>, <strong>Centro de Vida</strong>), qué <strong>Zonas/Equipos</strong> y qué <strong>Usuarios responsables</strong> quedan a cargo, con un comentario opcional. El aviso lo resume bien: <em>"Al guardar, el sistema dará de alta lo agregado y de baja lo quitado."</em> Esto es justo lo que después se ve reflejado en la pestaña "Asignaciones" del propio legajo.
+        </div>
+        <div class="capture-reference">📸 Captura: 0135-asignar-legajo-modal.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+        <div class="success-badge">✅ Ya sabés cómo buscar, leer los indicadores y asignar un legajo en la Bandeja de Legajos.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA INTERACTIVA: LEYENDA DE ICONOS -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Hacé clic en cada ícono para ver qué significa. Esta es la parte que más rápido te va a ayudar a "leer" la tabla de un vistazo.</p>
+
+    <div class="practice-wrap" style="grid-template-columns: 1fr;">
+      <div class="checklist" id="iconLegend">
+        <h4>Leyenda de íconos e indicadores</h4>
+        <div class="type-card-grid" id="iconGrid">
+          <div class="type-card" data-info="El triángulo ⚠ con un número muestra cuántas alertas activas tiene el legajo (por ejemplo, plazos vencidos o documentación faltante). Sin triángulo significa que no hay alertas.">
+            <div class="icon">⚠️</div>
+            <h4>Alertas</h4>
+            <p>Clic para ver qué significa</p>
+          </div>
+          <div class="type-card" data-info="Chip rojo con '!': prioridad Alta. Requiere atención más urgente que el resto de los legajos.">
+            <div class="icon">🔴</div>
+            <h4>Prioridad Alta</h4>
+            <p>Clic para ver qué significa</p>
+          </div>
+          <div class="type-card" data-info="Chip naranja: prioridad Media. Un escalón por debajo de Alta, pero igual a seguir de cerca.">
+            <div class="icon">🟠</div>
+            <h4>Prioridad Media</h4>
+            <p>Clic para ver qué significa</p>
+          </div>
+          <div class="type-card" data-info="Chip verde 'Seleccionar': todavía no se definió una prioridad para ese legajo.">
+            <div class="icon">🟢</div>
+            <h4>Sin prioridad definida</h4>
+            <p>Clic para ver qué significa</p>
+          </div>
+          <div class="type-card" data-info="Círculo azul con un número: cuántas medidas de protección tiene asociadas ese legajo (puede ser más de una si hubo Innovación o Prórroga).">
+            <div class="icon">🔵</div>
+            <h4>Cant. Medidas</h4>
+            <p>Clic para ver qué significa</p>
+          </div>
+          <div class="type-card" data-info="Contador gris: cantidad de actividades u oficios registrados para ese legajo. Un guion '-' significa que esa columna no aplica a este caso.">
+            <div class="icon">⚪</div>
+            <h4>Actividades / Oficios</h4>
+            <p>Clic para ver qué significa</p>
+          </div>
+        </div>
+        <div class="practice-note" id="iconInfo">👆 Elegí un ícono de arriba para ver su significado acá.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="07-detalle-legajo-medida.html">Siguiente módulo: Detalle de Legajo y Medida →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 6;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica: leyenda de iconos
+  const iconCards = document.querySelectorAll('#iconGrid .type-card');
+  const iconInfo = document.getElementById('iconInfo');
+
+  iconCards.forEach(card => {
+    card.addEventListener('click', () => {
+      iconCards.forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      iconInfo.innerHTML = card.dataset.info;
+    });
+  });
+</script>
+
+</body>
+</html>

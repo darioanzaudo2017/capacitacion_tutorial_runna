@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Login al sistema</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 1 de 10</div>
+    <h1>🔐 Login al sistema</h1>
+    <p>Todos los usuarios de RUNNA (técnicos, supervisores, directores y equipo legal) ingresan al sistema por la misma pantalla de autenticación. A continuación vas a ver los 3 pasos del proceso y después vas a poder practicarlo vos mismo/a.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 3</span>
+      <span>Login al sistema</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <!-- Paso 1 -->
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0001-login-vacio.png" alt="Pantalla de login vacía">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Accedé a la pantalla de inicio de sesión</div>
+        </div>
+        <div class="step-content">
+          Al entrar a RUNNA aparece la pantalla <strong>"Iniciar sesión"</strong>, con dos campos vacíos: <em>Nombre de usuario</em> y <em>Contraseña</em>, y el botón <strong>INGRESAR</strong>. No hace falta hacer nada más que esperar a que cargue esta pantalla.
+        </div>
+        <div class="capture-reference">📸 Captura: 0001-login-vacio.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+          <span class="tag nav">Navegación</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paso 2 -->
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0002-login-usuario-ingresado.png" alt="Usuario ingresado">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Ingresá tu nombre de usuario</div>
+        </div>
+        <div class="step-content">
+          Hacé clic en el campo <strong>"Nombre de usuario"</strong> y escribí el usuario que te asignó el administrador del sistema (por ejemplo <code>admin</code>). El campo se resalta en azul mientras lo estás completando.
+        </div>
+        <div class="capture-reference">📸 Captura: 0002-login-usuario-ingresado.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paso 3 -->
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0003-login-credenciales-completas.png" alt="Credenciales completas">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Completá la contraseña e ingresá</div>
+        </div>
+        <div class="step-content">
+          Escribí tu contraseña en el segundo campo (podés tocar el ícono del ojo 👁️ para mostrarla u ocultarla) y hacé clic en el botón <strong>INGRESAR</strong>. El sistema valida tus credenciales y te lleva a la Mesa de Entrada o a tu bandeja de trabajo.
+        </div>
+        <div class="capture-reference">📸 Captura: 0003-login-credenciales-completas.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+          <span class="tag success">Fin del proceso</span>
+        </div>
+        <div class="success-badge">✅ Con esto ya iniciaste sesión correctamente en RUNNA.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA INTERACTIVA -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Replicá el proceso de login en este simulador. Completá los campos como lo harías en el sistema real y confirmá que el botón se habilite antes de ingresar.</p>
+
+    <div class="practice-wrap">
+      <div class="login-sim-outer">
+        <div class="login-sim-card">
+          <h3>Iniciar sesión</h3>
+          <div class="sim-field">
+            <label>Nombre de usuario</label>
+            <input type="text" id="simUser" placeholder="Escribí tu usuario" autocomplete="off">
+          </div>
+          <div class="sim-field">
+            <label>Contraseña</label>
+            <div class="sim-input-wrap">
+              <input type="password" id="simPass" placeholder="Escribí tu contraseña" autocomplete="off">
+              <span class="eye-toggle" id="eyeToggle">👁️</span>
+            </div>
+          </div>
+          <button class="sim-submit" id="simSubmit" disabled onclick="doLogin()">INGRESAR</button>
+          <div class="sim-success" id="simSuccess">✅ ¡Sesión iniciada correctamente! Así se ve un login exitoso en RUNNA.</div>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h4>Checklist de la práctica</h4>
+        <ul>
+          <li id="chk1"><span class="check-icon">✓</span> Completaste el usuario</li>
+          <li id="chk2"><span class="check-icon">✓</span> Completaste la contraseña</li>
+          <li id="chk3"><span class="check-icon">✓</span> Probaste mostrar/ocultar la contraseña</li>
+          <li id="chk4"><span class="check-icon">✓</span> Hiciste clic en INGRESAR</li>
+        </ul>
+        <span class="reset-link" onclick="resetSim()">↺ Reiniciar práctica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="02-mesa-de-entrada.html">Siguiente módulo: Mesa de entrada →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 3;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica interactiva
+  const simUser = document.getElementById('simUser');
+  const simPass = document.getElementById('simPass');
+  const simSubmit = document.getElementById('simSubmit');
+  const simSuccess = document.getElementById('simSuccess');
+  const eyeToggle = document.getElementById('eyeToggle');
+
+  let eyeUsed = false;
+
+  function setChecked(id, on) {
+    document.getElementById(id).classList.toggle('done', on);
+  }
+
+  function updateChecklist() {
+    setChecked('chk1', simUser.value.trim().length > 0);
+    setChecked('chk2', simPass.value.trim().length > 0);
+    setChecked('chk3', eyeUsed);
+    simSubmit.disabled = !(simUser.value.trim().length > 0 && simPass.value.trim().length > 0);
+  }
+
+  simUser.addEventListener('input', updateChecklist);
+  simPass.addEventListener('input', updateChecklist);
+
+  eyeToggle.addEventListener('click', () => {
+    eyeUsed = true;
+    simPass.type = simPass.type === 'password' ? 'text' : 'password';
+    updateChecklist();
+  });
+
+  function doLogin() {
+    setChecked('chk4', true);
+    simSuccess.classList.add('show');
+  }
+
+  function resetSim() {
+    simUser.value = '';
+    simPass.value = '';
+    simPass.type = 'password';
+    eyeUsed = false;
+    simSuccess.classList.remove('show');
+    ['chk1','chk2','chk3','chk4'].forEach(id => setChecked(id, false));
+    simSubmit.disabled = true;
+  }
+</script>
+
+</body>
+</html>

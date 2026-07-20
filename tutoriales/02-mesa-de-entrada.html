@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Mesa de Entradas</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 2 de 10</div>
+    <h1>📥 Mesa de Entradas</h1>
+    <p>La Mesa de Entradas (también llamada "Gestión de Demandas") es la puerta de entrada de todos los casos: ahí llega cada demanda nueva, se busca, se filtra y se deriva a un técnico. Primero vamos a conocer la pantalla y sus herramientas de búsqueda, y después vamos a crear una demanda de tipo <strong>Protección</strong> de punta a punta.</p>
+    <div class="practice-note">💡 <strong>¿Para qué sirve esta pantalla?</strong> Acá se registra todo lo que entra a SENAF: demandas espontáneas, oficios o peticiones de informe sobre medidas vigentes, oficios de Penal Juvenil, llamadas al 102, etc. Sin importar de dónde venga el caso, todo arranca en la Mesa de Entradas.</div>
+  </div>
+
+  <!-- ============ SECCIÓN A: CONOCIENDO LA PANTALLA ============ -->
+  <div class="section-block" id="sectionA">
+    <div class="section-heading">
+      <h2><span class="section-badge">Parte 1</span> Conociendo la pantalla</h2>
+      <p>Estas son las herramientas que vas a usar todos los días para encontrar y organizar las demandas.</p>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFillA"></div></div>
+      <div class="progress-label">
+        <span id="progressTextA">Paso 1 de 5</span>
+        <span>Conociendo la pantalla</span>
+      </div>
+    </div>
+
+    <div class="stepper" id="stepperA">
+
+      <div class="step-view active" data-step="1">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0004-demandas-dashboard.png" alt="Gestión de demandas, vista general">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-title">Vista general de Gestión de Demandas</div>
+          </div>
+          <div class="step-content">
+            Al entrar por el botón <strong>"Mesa de Entradas"</strong> del encabezado se abre esta pantalla. Arriba hay accesos directos: <strong>+ Nueva Demanda</strong>, <strong>Filtros</strong>, <strong>Exportar Excel</strong> y un botón para refrescar. Debajo, la tabla lista todas las demandas con columnas Apellido, Nombre, Calificación, Actualización, Estado y Acciones.
+          </div>
+          <div class="capture-reference">📸 Captura: 0004-demandas-dashboard.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+            <span class="tag nav">Navegación</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="2">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0006-demandas-busqueda-activa.png" alt="Búsqueda activa de demandas">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">Buscar una demanda puntual</div>
+          </div>
+          <div class="step-content">
+            El buscador permite encontrar una demanda por <strong>ID</strong>, <strong>nombre/DNI del NNyA</strong>, <strong>legajo vinculado</strong>, <strong>localización</strong> (calle, localidad, barrio) o <strong>códigos de demanda</strong>. Mientras escribís, el sistema muestra un texto de ayuda con dónde está buscando y un ícono de carga hasta traer los resultados filtrados.
+          </div>
+          <div class="capture-reference">📸 Captura: 0006-demandas-busqueda-activa.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="3">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0007-demandas-filtro-pendientes-hover.png" alt="Vistas rápidas de demandas">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">Las 4 vistas rápidas</div>
+          </div>
+          <div class="step-content">
+            Arriba de la tabla hay 4 botones de vista que filtran automáticamente: <strong>Pendientes</strong> (las que faltan resolver), <strong>Sin asignar</strong> (todavía sin técnico), <strong>Con alertas</strong> y <strong>Vista completa</strong> (todas las demandas, sin filtrar).
+          </div>
+          <div class="capture-reference">📸 Captura: 0007-demandas-filtro-pendientes-hover.png</div>
+          <div class="step-tags">
+            <span class="tag nav">Navegación</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="4">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0008-demandas-modal-filtros.png" alt="Modal de filtros avanzados">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-title">Filtros avanzados</div>
+          </div>
+          <div class="step-content">
+            El botón <strong>"Filtros"</strong> abre un panel con dos grupos combinables: <strong>Envío de Respuesta</strong> (No Necesario / Pendiente / Enviado) y <strong>Estado Demanda</strong> (Sin Asignar / Constatación, entre otros). Un enlace <strong>"Limpiar"</strong> saca todos los filtros de una vez.
+          </div>
+          <div class="capture-reference">📸 Captura: 0008-demandas-modal-filtros.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="5">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0009-demandas-menu-columna.png" alt="Personalizar columnas de la tabla">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">5</div>
+            <div class="step-title">Personalizar columnas</div>
+          </div>
+          <div class="step-content">
+            Pasando el mouse sobre el encabezado de una columna (por ejemplo "Calificación") aparece un ícono de opciones para ordenar la tabla o para mostrar/ocultar esa columna. Así cada usuario arma la vista de tabla que más le sirve para su trabajo diario.
+          </div>
+          <div class="capture-reference">📸 Captura: 0009-demandas-menu-columna.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+          <div class="success-badge">✅ Ya conocés las herramientas de búsqueda y filtrado de la Mesa de Entradas.</div>
+        </div>
+      </div>
+
+      <div class="stepper-controls">
+        <button class="btn btn-outline" id="prevBtnA">← Anterior</button>
+        <div class="dots" id="dotsA"></div>
+        <button class="btn btn-primary" id="nextBtnA">Siguiente →</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ SECCIÓN B: NUEVA DEMANDA DE PROTECCIÓN ============ -->
+  <div class="section-block" id="sectionB">
+    <div class="section-heading">
+      <h2><span class="section-badge">Parte 2</span> Crear una demanda de Protección</h2>
+      <p>Vamos a recorrer el circuito completo: elegir el tipo de demanda, cargar los datos, confirmar la creación y derivarla a un equipo responsable.</p>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFillB"></div></div>
+      <div class="progress-label">
+        <span id="progressTextB">Paso 1 de 6</span>
+        <span>Nueva demanda de Protección</span>
+      </div>
+    </div>
+
+    <div class="stepper" id="stepperB">
+
+      <div class="step-view active" data-step="1">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0078-captura-0078.png" alt="Elegir el objetivo de la demanda">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-title">Elegí el objetivo de la demanda</div>
+          </div>
+          <div class="step-content">
+            Al hacer clic en <strong>"+ Nueva Demanda"</strong> se abre un asistente de 4 pasos. El primero pregunta <em>"¿Cuál es el objetivo de la demanda?"</em> con 3 opciones: <strong>Protección</strong> (medidas de protección integral de NNyA), <strong>Oficio Judicial de MPE, MPI vigente</strong> (oficios sobre medidas ya vigentes) y <strong>Carga de Oficios</strong> (formulario especializado para oficios judiciales y comunicaciones del Poder Judicial). Para este tutorial elegimos <strong>Protección</strong> y hacemos clic en <strong>Siguiente</strong>.
+          </div>
+          <div class="capture-reference">📸 Captura: 0078-captura-0078.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+            <span class="tag nav">Navegación</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="2">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0079-captura-0079.png" alt="Información general de la demanda">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">Completá la Información General</div>
+          </div>
+          <div class="step-content">
+            El paso 2 pide los datos base: información básica (fechas, etiqueta, envío de respuesta), tipo de organismo, códigos de demanda (SAC), clasificación (ámbito de vulneración, motivo de intervención), zona de asignación, datos de localización del grupo familiar y archivos adjuntos. Después siguen 2 pasos más del asistente, visibles en la barra de progreso: <strong>Adultos Convivientes</strong> y <strong>Niños y Adolescentes</strong>, donde se cargan las personas alcanzadas por la demanda.
+          </div>
+          <div class="capture-reference">📸 Captura: 0079-captura-0079.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="3">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0081-captura-0081.png" alt="Demanda creada exitosamente">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-title">Confirmación de creación</div>
+          </div>
+          <div class="step-content">
+            Al terminar los 4 pasos, el sistema muestra <strong>"Demanda Creada Exitosamente"</strong> con un resumen: número de demanda, estado ("Sin Asignar"), objetivo ("Protección"), zona asignada y la cantidad de NNyA, adultos y medidas vinculadas, además del listado de personas registradas.
+          </div>
+          <div class="capture-reference">📸 Captura: 0081-captura-0081.png</div>
+          <div class="step-tags">
+            <span class="tag success">Éxito</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="4">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0082-captura-0082.png" alt="Asignar la demanda">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-title">Asigná la demanda a un responsable</div>
+          </div>
+          <div class="step-content">
+            La demanda vuelve a aparecer en la Mesa de Entradas en estado <strong>"Sin Asignar"</strong>. Pasando el mouse sobre el ícono de persona en la columna Acciones aparece el tooltip <strong>"Asignar"</strong>: ahí es donde se deriva la demanda a un equipo.
+          </div>
+          <div class="capture-reference">📸 Captura: 0082-captura-0082.png</div>
+          <div class="step-tags">
+            <span class="tag nav">Navegación</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="5">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0083-captura-0083.png" alt="Modal derivar demanda">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">5</div>
+            <div class="step-title">Derivá la demanda</div>
+          </div>
+          <div class="step-content">
+            Se abre el modal <strong>"Derivar Demanda"</strong>: se elige la Zona, los Usuarios Responsables (con la opción de filtrar solo legales de protección), se confirma el Objetivo de la demanda y se puede dejar un comentario. Al hacer clic en <strong>"Asignar"</strong> la demanda queda derivada.
+          </div>
+          <div class="capture-reference">📸 Captura: 0083-captura-0083.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="6">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0084-captura-0084.png" alt="La demanda pasa a Constatación">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">6</div>
+            <div class="step-title">La demanda pasa a Constatación</div>
+          </div>
+          <div class="step-content">
+            Una vez asignada, el estado cambia automáticamente de <strong>"Sin Asignar"</strong> a <strong>"Constatación"</strong>. Ahí es donde el técnico investiga y documenta el caso — el tema del próximo tutorial.
+          </div>
+          <div class="capture-reference">📸 Captura: 0084-captura-0084.png</div>
+          <div class="step-tags">
+            <span class="tag success">Éxito</span>
+          </div>
+          <div class="success-badge">✅ Ya sabés cómo crear y derivar una demanda de Protección en RUNNA.</div>
+        </div>
+      </div>
+
+      <div class="stepper-controls">
+        <button class="btn btn-outline" id="prevBtnB">← Anterior</button>
+        <div class="dots" id="dotsB"></div>
+        <button class="btn btn-primary" id="nextBtnB">Siguiente →</button>
+      </div>
+
+    </div>
+
+    <!-- PRACTICA INTERACTIVA -->
+    <div class="practice-section">
+      <h2>🖐️ Practicá vos mismo/a</h2>
+      <p class="lead">Este es el primer paso real del asistente de Nueva Demanda. Elegí la opción correcta para iniciar el registro de una demanda de Protección.</p>
+
+      <div class="type-card-grid" id="typeCardGrid">
+        <div class="type-card" data-type="proteccion">
+          <div class="icon">🛡️</div>
+          <h4>Protección</h4>
+          <p>Registro de demanda para medidas de protección integral de niños, niñas y adolescentes.</p>
+          <span class="formulario-tag">→ Formulario estándar</span>
+        </div>
+        <div class="type-card" data-type="oficio-vigente">
+          <div class="icon">📄</div>
+          <h4>Oficio judicial de MPE, MPI vigente</h4>
+          <p>Registro de oficios judiciales relacionados a medidas de protección excepcional o integral vigentes.</p>
+          <span class="formulario-tag">→ Formulario oficio judicial</span>
+        </div>
+        <div class="type-card" data-type="carga-oficios">
+          <div class="icon">⚖️</div>
+          <h4>Carga de Oficios</h4>
+          <p>Registro de oficios judiciales, medidas tutelares y comunicaciones del poder judicial.</p>
+          <span class="formulario-tag">→ Formulario judicial (especializado)</span>
+        </div>
+      </div>
+
+      <div class="practice-note" id="typeHint">Hacé clic en la tarjeta <strong>Protección</strong> y después en "Siguiente" para continuar con el registro.</div>
+
+      <div class="button-group" style="margin-top:16px;">
+        <span></span>
+        <button class="btn btn-primary" id="typeSubmit" disabled>Siguiente →</button>
+      </div>
+
+      <div class="sim-success" id="typeSuccess">✅ ¡Elegiste el flujo correcto! Así arranca siempre una demanda de Protección: primero el objetivo, después la información general, adultos convivientes y niños y adolescentes.</div>
+    </div>
+
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="03-constatacion.html">Siguiente módulo: Constatación →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  function makeStepper(suffix, totalSteps) {
+    let currentStep = 1;
+    const stepperEl = document.getElementById('stepper' + suffix);
+    const dotsEl = document.getElementById('dots' + suffix);
+    const progressFill = document.getElementById('progressFill' + suffix);
+    const progressText = document.getElementById('progressText' + suffix);
+    const prevBtn = document.getElementById('prevBtn' + suffix);
+    const nextBtn = document.getElementById('nextBtn' + suffix);
+
+    function renderDots() {
+      dotsEl.innerHTML = '';
+      for (let i = 1; i <= totalSteps; i++) {
+        const d = document.createElement('div');
+        d.className = 'dot' + (i === currentStep ? ' active' : '');
+        d.onclick = () => { currentStep = i; render(); };
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function render() {
+      stepperEl.querySelectorAll('.step-view').forEach(el => {
+        el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+      });
+      progressFill.style.width = (currentStep / totalSteps * 100) + '%';
+      progressText.textContent = `Paso ${currentStep} de ${totalSteps}`;
+      prevBtn.disabled = currentStep === 1;
+      nextBtn.textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+      renderDots();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentStep = Math.max(1, currentStep - 1);
+      render();
+    });
+    nextBtn.addEventListener('click', () => {
+      currentStep = currentStep === totalSteps ? 1 : currentStep + 1;
+      render();
+    });
+
+    render();
+  }
+
+  makeStepper('A', 5);
+  makeStepper('B', 6);
+
+  // Práctica: selector de tipo de demanda
+  let selectedType = null;
+  const typeCards = document.querySelectorAll('.type-card');
+  const typeSubmit = document.getElementById('typeSubmit');
+  const typeSuccess = document.getElementById('typeSuccess');
+  const typeHint = document.getElementById('typeHint');
+
+  typeCards.forEach(card => {
+    card.addEventListener('click', () => {
+      typeCards.forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedType = card.dataset.type;
+      typeSubmit.disabled = false;
+      typeHint.innerHTML = selectedType === 'proteccion'
+        ? 'Elegiste <strong>Protección</strong>. Hacé clic en "Siguiente" para continuar.'
+        : 'Esa opción abre otro formulario (oficio judicial). Para este tutorial elegí <strong>Protección</strong>.';
+    });
+  });
+
+  typeSubmit.addEventListener('click', () => {
+    if (selectedType === 'proteccion') {
+      typeSuccess.classList.add('show');
+    } else {
+      typeHint.innerHTML = 'Para este tutorial necesitamos el flujo de <strong>Protección</strong>: elegí esa tarjeta antes de seguir.';
+    }
+  });
+</script>
+
+</body>
+</html>

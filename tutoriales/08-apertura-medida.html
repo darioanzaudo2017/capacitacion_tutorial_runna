@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Apertura de Medida</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .timeline-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .timeline-node {
+    flex: 1;
+    min-width: 150px;
+    cursor: pointer;
+    border: 2px solid var(--gris-borde);
+    background: var(--card-bg);
+    padding: 16px 14px;
+    text-align: center;
+    font-size: 0.85rem;
+    position: relative;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .timeline-node:not(:last-child)::after {
+    content: "›";
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--gris-borde);
+    z-index: 2;
+  }
+  .timeline-node .tl-num {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--gris-borde);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .timeline-node.selected { border-color: var(--azul-primario); background: #eaf2fb; }
+  .timeline-node.selected .tl-num { background: var(--azul-primario); }
+  .timeline-node strong { display: block; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 8 de 10</div>
+    <h1>🔓 Apertura de Medida</h1>
+    <p>Es el paso más largo del flujo: el técnico registra formalmente la intervención en 3 pasos, y recién queda firme después de pasar por <strong>Jefe Zonal</strong>, <strong>Equipo Legal</strong> y <strong>Ratificación Judicial</strong>.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 5</span>
+      <span>Apertura de Medida</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0066-final-paso1-inicio.png" alt="Paso 1: Información Básica">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Iniciá el registro de intervención</div>
+        </div>
+        <div class="step-content">
+          Desde la etapa <strong>"Apertura"</strong> de la medida, el botón <strong>"Nueva Intervención"</strong> abre el modal <strong>"Registro de Intervención MPE - Apertura"</strong>. El <strong>Paso 1 de 3, "Información Básica"</strong>, ya viene con el código autogenerado y los datos del legajo autocompletados (nombre, apellido, zona) — solo hay que confirmar la fecha de intervención.
+        </div>
+        <div class="capture-reference">📸 Captura: 0066-final-paso1-inicio.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0069-final-paso2-lleno.png" alt="Paso 2: Detalles de Intervención">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Detalles de la intervención</div>
+        </div>
+        <div class="step-content">
+          El <strong>Paso 2, "Detalles de Intervención"</strong>, pide la Categoría de intervención, una Intervención específica, una Descripción detallada y (opcional) el Motivo de vulneraciones. Es la parte más "narrativa" del registro: acá el técnico explica qué se hizo y por qué.
+        </div>
+        <div class="capture-reference">📸 Captura: 0069-final-paso2-lleno.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0079-interactiva-paso3-inicio.png" alt="Paso 3: Documentos y Configuración">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Documentos y envío para aprobación</div>
+        </div>
+        <div class="step-content">
+          El <strong>Paso 3, "Documentos y Configuración"</strong>, exige subir el <strong>Informe Obligatorio de Apertura</strong> (PDF, hasta 10MB) — es la pieza central de la intervención y debe cargarse antes de continuar. Desde acá se puede <strong>"Guardar Borrador"</strong> o <strong>"Enviar para Aprobación"</strong>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0079-interactiva-paso3-inicio.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0069-final-paso2-lleno.png" alt="El camino después de enviar">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">El camino después de enviar</div>
+        </div>
+        <div class="step-content">
+          El registro que hizo el técnico es apenas el <strong>Paso 1 de 4</strong> de la etapa Apertura. El propio sistema lo resume así: <em>"Técnico: completar y enviar la intervención para aprobación. Jefe Zonal (JZ): revisar y aprobar la intervención inicial. El paso se marca como completado tras la aprobación del JZ."</em> Después vienen, en orden y bloqueados hasta que se completa el anterior: <strong>Aprobación de Superior</strong>, <strong>Informe Jurídico</strong> y <strong>Ratificación Judicial</strong>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0069-final-paso2-lleno.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="5">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0142-etapa-cese-vacia.png" alt="Lo mismo aplica a Innovación, Prórroga y Cese">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">Lo mismo aplica a Innovación, Prórroga y Cese</div>
+        </div>
+        <div class="step-content">
+          Las otras 3 etapas de la medida siguen exactamente el mismo proceso que acabás de ver: técnico completa el registro → pide aprobación → nota de aval → informe jurídico → ratificación del Poder Judicial. Al principio cada una arranca vacía, con el mensaje <em>"No existe una etapa de [Innovación/Prórroga/Cese] para esta medida. Para comenzar a trabajar en esta etapa, debe iniciarla primero"</em> y un botón <strong>"+ Iniciar Etapa de..."</strong>.
+          <br><br>
+          Las diferencias son mínimas: cambia la plantilla del Informe Obligatorio y puede haber algún campo extra en el formulario (por ejemplo, en Cese hay que completar el <strong>Tipo de Cese</strong>). En <strong>Prórroga</strong>, al aprobarse se extiende el plazo de la medida (la barra de días). Y a diferencia de la Apertura, que es única, <strong>puede haber varias</strong> Innovaciones, Prórrogas o Ceses dentro de la misma medida — el Cese en particular puede repetirse si el Poder Judicial lo rechaza y hay que volver a presentarlo.
+        </div>
+        <div class="capture-reference">📸 Capturas: 0140-etapa-innovacion-vacia.png, 0141-etapa-prorroga-vacia.png, 0142-etapa-cese-vacia.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+        </div>
+        <div class="success-badge">✅ Ya sabés cómo funcionan todas las etapas de una medida: Apertura, Innovación, Prórroga y Cese.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA: LINEA DE TIEMPO DE APROBACIONES -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Hacé clic en cada etapa para ver quién la hace y qué desbloquea.</p>
+
+    <div class="timeline-row" id="timelineRow">
+      <div class="timeline-node" data-info="El técnico completa los 3 pasos (Información Básica, Detalles de Intervención, Documentos) y envía la intervención. Arranca en 30% completado.">
+        <div class="tl-num">1</div>
+        <strong>Registro de Intervención</strong>
+        Técnico
+      </div>
+      <div class="timeline-node" data-info="El Jefe Zonal (JZ) revisa lo que cargó el técnico y aprueba (o rechaza) la intervención inicial. Hasta que esto pase, el resto de los pasos permanece bloqueado.">
+        <div class="tl-num">2</div>
+        <strong>Aprobación de Superior</strong>
+        Jefe Zonal
+      </div>
+      <div class="timeline-node" data-info="El equipo legal elabora el informe jurídico de la apertura, el documento que sostiene formalmente la medida ante la Justicia.">
+        <div class="tl-num">3</div>
+        <strong>Informe Jurídico</strong>
+        Equipo Legal
+      </div>
+      <div class="timeline-node" data-info="El Juzgado ratifica la medida. Con esto la Apertura queda completa y la medida sigue su curso (Plan de Trabajo, informes mensuales, etc.).">
+        <div class="tl-num">4</div>
+        <strong>Ratificación Judicial</strong>
+        Juzgado
+      </div>
+    </div>
+
+    <div class="practice-note" id="timelineInfo" style="margin-top:16px;">👆 Elegí una etapa para ver quién la hace.</div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="09-plan-de-trabajo.html">Siguiente módulo: Plan de Trabajo →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 5;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica: linea de tiempo de aprobaciones
+  const timelineNodes = document.querySelectorAll('.timeline-node');
+  const timelineInfo = document.getElementById('timelineInfo');
+
+  timelineNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      timelineNodes.forEach(n => n.classList.remove('selected'));
+      node.classList.add('selected');
+      timelineInfo.innerHTML = node.dataset.info;
+    });
+  });
+</script>
+
+</body>
+</html>

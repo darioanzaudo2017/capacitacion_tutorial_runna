@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Cese de MPE</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 10b de 13</div>
+    <h1>❌ Cese de Medida de Protección Excepcional (MPE)</h1>
+    <p>El cierre de una MPE requiere aprobaciones institucionales: Técnico (3 pasos) → Director de Zona (aprobación) → Equipo Legal (informe jurídico). Cuando Legales envía el Informe Jurídico, la medida cambia a estado "CERRADA".</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 7</span>
+      <span>Cese de MPE</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0162-cese-mpe-etapa-cese-vacia.png" alt="Pestaña Cese vacía">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Acceder a Pestaña "Cese"</div>
+        </div>
+        <div class="step-content">
+          En la ficha de la medida MPE, localizá la pestaña <strong>"Cese"</strong> en el menú superior. Inicialmente está vacía con el mensaje: <em>"Esta medida ya tiene 1 etapa de Cese. Podés registrar una nueva"</em>
+          <br>
+          Hacé clic en el botón <strong>"+ Iniciar nueva etapa de Cese"</strong> para comenzar el proceso.
+        </div>
+        <div class="capture-reference">📸 Captura: 0162-cese-mpe-etapa-cese-vacia.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0163-cese-mpe-registro-intervencion.png" alt="Registro de Intervención - Pendiente Aprobación">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Sección "Registro de Intervención"</div>
+        </div>
+        <div class="step-content">
+          Aparece la sección <strong>"Registro de Intervención"</strong> con estado <strong>"PENDIENTE_APROBACION_REGISTRO"</strong> (30% completado).
+          <br>
+          Se muestra una subsección "Cese" con:
+          - Fecha: 20/07/2026
+          - Estado: PENDIENTE_APROBACION_REGISTRO
+          - Botones: "Ver y Aprobar Cese" y "Ver Informe Obligatorio (PDF)"
+          <br>
+          Hacé clic en <strong>"+ Nueva Intervención"</strong> para abrir el modal de 3 pasos.
+        </div>
+        <div class="capture-reference">📸 Captura: 0163-cese-mpe-registro-intervencion.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0164-cese-mpe-modal-paso1-tipo-cese.png" alt="Modal Paso 1 - Información Personal + Tipo de Cese">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Modal Paso 1/3: Información Personal + Tipo de Cese</div>
+        </div>
+        <div class="step-content">
+          Se abre el modal <strong>"Registro de Intervención MPE - Cese"</strong> con 3 pasos:
+          <br><strong>Paso 1:</strong> Información Básica
+          - Código, Fecha, Legajo, Nombre, Apellido, Zona/UDER
+          - <strong>Tipo de Cese</strong> (dropdown): Seleccionar opción
+          - <strong>Subtipo de cese</strong> (dropdown): Opciones según el tipo seleccionado
+          <br>Botón: "Siguiente"
+        </div>
+        <div class="capture-reference">📸 Captura: 0164-cese-mpe-modal-paso1-tipo-cese.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0165-cese-mpe-modal-paso2-detalles.png" alt="Modal Paso 2 - Detalles de Intervención">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Modal Paso 2/3: Detalles de Intervención</div>
+        </div>
+        <div class="step-content">
+          <strong>Paso 2:</strong> Detalles de la Intervención
+          - <strong>Categoría de intervención</strong> (dropdown)
+          - <strong>Intervención específica</strong> (textarea)
+          - <strong>Descripción detallada del cese</strong> (textarea)
+          - <strong>Motivo de Cese</strong> (textarea)
+          <br>Botones: "Anterior", "Siguiente"
+        </div>
+        <div class="capture-reference">📸 Captura: 0165-cese-mpe-modal-paso2-detalles.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="5">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0166-cese-mpe-modal-paso3-documentos.png" alt="Modal Paso 3 - Documentos y Configuración">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">Modal Paso 3/3: Documentos y Envío para Aprobación</div>
+        </div>
+        <div class="step-content">
+          <strong>Paso 3:</strong> Documentos y Configuración
+          - <strong>1. Informe Obligatorio de Apertura</strong> (Cargado)
+          - <strong>2. Configuración Adicional</strong> - Informes ampliatorios (Sí/No)
+          - <strong>Estado actual</strong> - Muestra: "Enviado a Aprobación"
+          <br>Botones: "Anterior", "Rechazar Intervención", <strong>"Aprobar Intervención"</strong>
+          <br>Hacé clic en "Aprobar Intervención" para enviar la solicitud.
+        </div>
+        <div class="capture-reference">📸 Captura: 0166-cese-mpe-modal-paso3-documentos.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="6">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0167-cese-mpe-aprobacion-superior.png" alt="Etapa Aprobación de Superior - Director de Zona">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <div class="step-title">Aprobación de Superior (Director de Zona)</div>
+        </div>
+        <div class="step-content">
+          Aparece la etapa <strong>"Aprobación de Superior"</strong> - En Progreso.
+          <br>
+          Descripción: <em>"Aprobación por el Director de Zona"</em>
+          <br>
+          Subsección: "Aprobación por el Director de Zona" - Pendiente
+          - Mensaje: "Sin Aprobación de Superior"
+          - "Aún no se ha emitido ninguna Aprobación para esta medida"
+          <br>
+          Botón: <strong>"+ Emitir Aprobación"</strong> para que el Director apruebe el cese.
+        </div>
+        <div class="capture-reference">📸 Captura: 0167-cese-mpe-aprobacion-superior.png</div>
+        <div class="step-tags">
+          <span class="tag director">Director</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="7">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0168-cese-mpe-informe-juridico.png" alt="Etapa Informe Jurídico - Equipo Legal">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">7</div>
+          <div class="step-title">Informe Jurídico (Equipo Legal) → MEDIDA CERRADA</div>
+        </div>
+        <div class="step-content">
+          Aparece la etapa <strong>"Informe Jurídico"</strong> - En Progreso.
+          <br>
+          Descripción: <em>"Informe elaborado por el Equipo Legal"</em>
+          <br>
+          Subsección: "Informe Jurídico" - Pendiente
+          - Mensaje: "Sin Informe Jurídico"
+          - "El Equipo Legal debe cargar el informe jurídico para esta medida"
+          <br>
+          Botón: <strong>"+ Cargar Informe Jurídico"</strong>
+          <br>
+          <strong>🔴 IMPORTANTE:</strong> Cuando Legales envía el Informe Jurídico, la Medida MPE cambia automáticamente a estado <strong>"CERRADA"</strong>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0168-cese-mpe-informe-juridico.png</div>
+        <div class="step-tags">
+          <span class="tag legal">Legal</span>
+          <span class="tag action">Acción</span>
+          <span class="tag success">Éxito</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="7">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0162-cese-mpe-legajo-cerrada.png" alt="Medida MPE cerrada en legajo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">7</div>
+          <div class="step-title">Finalización: Medida Cerrada</div>
+        </div>
+        <div class="step-content">
+          ¡Cese completado! Una vez que Legales envía el Informe Jurídico, la Medida Excepcional cambia automáticamente a estado <strong>"CERRADA"</strong>. Esto se refleja:
+          <br>✓ En la tabla de "Registro de Medidas Tomadas" del legajo
+          <br>✓ Estado: <strong>CERRADA</strong> (fondo gris)
+          <br>✓ Duración: -1 días (indicando finalización)
+          <br>
+          <br><strong>Nota:</strong> La Ratificación Judicial es un paso adicional que puede estar Pendiente o Completado, pero la medida ya está CERRADA.
+        </div>
+        <div class="capture-reference">📸 Captura: 0162-cese-mpe-legajo-cerrada.png</div>
+        <div class="step-tags">
+          <span class="tag success">Éxito</span>
+        </div>
+        <div class="success-badge">✅ Circuito de cierre de MPE completado - Medida CERRADA.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA INTERACTIVA -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Simulá el proceso de Cese de MPE y el circuito de firmas. Completá la solicitud del técnico y aprueba como JZ, Director y Legales.</p>
+
+    <div class="practice-wrap">
+      <div class="login-sim-outer">
+        <div class="login-sim-card" style="max-width:420px;">
+          <h3>Circuito de Cese de MPE</h3>
+
+          <!-- FASE 1: TECNICO -->
+          <div id="faseTecnico">
+            <h4 style="margin-bottom:15px;">📋 Registrar Informe de Cierre</h4>
+            <div class="sim-field">
+              <label>Tipo de Cese *</label>
+              <select id="tipoCeseMPE">
+                <option value="">Seleccione una opción</option>
+                <option value="restitucion">I. RESTITUCIÓN DE DERECHOS</option>
+                <option value="mayoriaedad">II. MAYORÍA DE EDAD</option>
+                <option value="cambio">III. CAMBIO DE SITUACIÓN</option>
+                <option value="derivacion">IV. DERIVACIÓN A OTRO CIRCUITO</option>
+              </select>
+            </div>
+            <div class="sim-field">
+              <label>Observaciones *</label>
+              <textarea id="observacionesCeseMPE" placeholder="Complete la fundamentación técnica del cierre... Describa los objetivos alcanzados, la situación estabilizada del NNyA y familia, y las razones del cierre... (mínimo 20 caracteres)"></textarea>
+              <small id="charCountMPE" style="color:var(--texto-suave);">0 / 20 caracteres</small>
+            </div>
+            <button class="sim-submit" id="btnEnviarCeseMPE" disabled>ENVIAR SOLICITUD DE CESE</button>
+          </div>
+
+          <!-- FASE 2: APROBACIONES -->
+          <div id="faseCircuitoMPE" style="display:none;">
+            <div class="sim-field">
+              <label>Estado del Trámite</label>
+              <div id="statusBadgeMPE" style="padding:8px 12px; border-radius:4px; font-weight:600; text-align:center; background:#ff9800; color:#fff;">Pendiente Jefatura de Zona</div>
+            </div>
+
+            <div id="accionJZMPE" style="margin-top:15px;">
+              <p style="margin-bottom:8px; font-size:0.95rem;"><strong>Jefe Zonal:</strong> Revise los motivos y apruebe la solicitud.</p>
+              <button class="sim-submit" id="btnAprobarJZMPE" style="background:var(--verde);">✔ APROBAR CESE COMO JZ</button>
+            </div>
+
+            <div id="accionDirectorMPE" style="margin-top:15px; display:none;">
+              <p style="margin-bottom:8px; font-size:0.95rem;"><strong>Director:</strong> Adjunte la nota de aval firmada.</p>
+              <button class="sim-submit" id="btnAvalDirectorMPE" style="background:var(--azul-primario);">📎 SUBIR NOTA DE AVAL</button>
+            </div>
+
+            <div id="accionLegalMPE" style="margin-top:15px; display:none;">
+              <p style="margin-bottom:8px; font-size:0.95rem;"><strong>Legales:</strong> Firme e incorpore el informe jurídico.</p>
+              <button class="sim-submit" id="btnInformeLegalMPE" style="background:#673ab7; color:#fff;">⚖️ SUBIR INFORME JURÍDICO</button>
+            </div>
+          </div>
+
+          <div class="sim-success" id="ceseMPESuccess"></div>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h4>Checklist de la práctica</h4>
+        <ul>
+          <li id="chk1"><span class="check-icon">✓</span> Solicitud del Técnico enviada</li>
+          <li id="chk2"><span class="check-icon">✓</span> Aprobado por Jefatura de Zona</li>
+          <li id="chk3"><span class="check-icon">✓</span> Nota de Aval del Director subida</li>
+          <li id="chk4"><span class="check-icon">✓</span> Informe Jurídico cargado (Cerrada)</li>
+        </ul>
+        <span class="reset-link" onclick="resetSimMPE()">↺ Reiniciar práctica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="10-cese-mpi.html">← Anterior: Cese de MPI</a>
+    <a class="btn btn-primary" href="10-cese-mpj.html">Siguiente: Cese de MPJ →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 7;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica interactiva
+  const tipoCeseMPE = document.getElementById('tipoCeseMPE');
+  const observacionesCeseMPE = document.getElementById('observacionesCeseMPE');
+  const charCountMPE = document.getElementById('charCountMPE');
+  const btnEnviarCeseMPE = document.getElementById('btnEnviarCeseMPE');
+
+  const faseTecnico = document.getElementById('faseTecnico');
+  const faseCircuitoMPE = document.getElementById('faseCircuitoMPE');
+  const statusBadgeMPE = document.getElementById('statusBadgeMPE');
+
+  const accionJZMPE = document.getElementById('accionJZMPE');
+  const btnAprobarJZMPE = document.getElementById('btnAprobarJZMPE');
+
+  const accionDirectorMPE = document.getElementById('accionDirectorMPE');
+  const btnAvalDirectorMPE = document.getElementById('btnAvalDirectorMPE');
+
+  const accionLegalMPE = document.getElementById('accionLegalMPE');
+  const btnInformeLegalMPE = document.getElementById('btnInformeLegalMPE');
+
+  const ceseMPESuccess = document.getElementById('ceseMPESuccess');
+
+  function setChecked(id, on) {
+    document.getElementById(id).classList.toggle('done', on);
+  }
+
+  function checkFormMPE() {
+    const ok = tipoCeseMPE.value !== "" && observacionesCeseMPE.value.length >= 20;
+    btnEnviarCeseMPE.disabled = !ok;
+  }
+
+  observacionesCeseMPE.addEventListener('input', () => {
+    const len = observacionesCeseMPE.value.length;
+    charCountMPE.textContent = `${len} / 20 caracteres`;
+    checkFormMPE();
+  });
+
+  tipoCeseMPE.addEventListener('change', () => {
+    checkFormMPE();
+  });
+
+  btnEnviarCeseMPE.addEventListener('click', () => {
+    setChecked('chk1', true);
+    faseTecnico.style.display = 'none';
+    faseCircuitoMPE.style.display = 'block';
+  });
+
+  btnAprobarJZMPE.addEventListener('click', () => {
+    setChecked('chk2', true);
+    statusBadgeMPE.textContent = 'Pendiente Aval Director';
+    statusBadgeMPE.style.background = '#2196f3';
+    accionJZMPE.style.display = 'none';
+    accionDirectorMPE.style.display = 'block';
+  });
+
+  btnAvalDirectorMPE.addEventListener('click', () => {
+    setChecked('chk3', true);
+    statusBadgeMPE.textContent = 'Pendiente Informe Legal';
+    statusBadgeMPE.style.background = '#9c27b0';
+    accionDirectorMPE.style.display = 'none';
+    accionLegalMPE.style.display = 'block';
+  });
+
+  btnInformeLegalMPE.addEventListener('click', () => {
+    setChecked('chk4', true);
+    statusBadgeMPE.textContent = 'Medida Cerrada';
+    statusBadgeMPE.style.background = '#4caf50';
+    accionLegalMPE.style.display = 'none';
+    ceseMPESuccess.className = 'sim-success show';
+    ceseMPESuccess.innerHTML = '✅ Medida Excepcional cerrada formalmente en RUNNA. Notificación judicial enviada.';
+  });
+
+  function resetSimMPE() {
+    tipoCeseMPE.value = '';
+    observacionesCeseMPE.value = '';
+    charCountMPE.textContent = '0 / 20 caracteres';
+    btnEnviarCeseMPE.disabled = true;
+
+    faseTecnico.style.display = 'block';
+    faseCircuitoMPE.style.display = 'none';
+
+    statusBadgeMPE.textContent = 'Pendiente Jefatura de Zona';
+    statusBadgeMPE.style.background = '#ff9800';
+
+    accionJZMPE.style.display = 'block';
+    accionDirectorMPE.style.display = 'none';
+    accionLegalMPE.style.display = 'none';
+
+    ceseMPESuccess.className = 'sim-success';
+    ceseMPESuccess.innerHTML = '';
+
+    ['chk1','chk2','chk3','chk4'].forEach(id => setChecked(id, false));
+  }
+</script>
+
+</body>
+</html>

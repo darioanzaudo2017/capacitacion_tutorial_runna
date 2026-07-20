@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Detalle de Legajo y Medida</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .diagram-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .diagram-col { display: flex; flex-direction: column; gap: 12px; }
+  .diagram-arrow { font-size: 1.8rem; color: var(--azul-primario); }
+  .legajo-node {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid var(--gris-borde);
+    background: var(--card-bg);
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    transition: border-color .15s ease, transform .15s ease;
+    min-width: 200px;
+  }
+  .legajo-node:hover { transform: translateY(-2px); }
+  .legajo-node.selected { border-color: var(--azul-primario); background: #eaf2fb; }
+  .legajo-node strong { display: block; color: var(--texto); margin-bottom: 2px; }
+  .medida-node {
+    border-radius: 14px;
+    border: 2px solid var(--gris-borde);
+    background: var(--card-bg);
+    padding: 20px 24px;
+    font-size: 0.92rem;
+    min-width: 220px;
+    text-align: center;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .medida-node.highlight {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 4px rgba(47,168,79,0.15);
+  }
+  .medida-node strong { display: block; color: var(--azul-primario); font-size: 1rem; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 7 de 10</div>
+    <h1>📊 Detalle de Legajo y de Medida</h1>
+    <p>El <strong>legajo</strong> es la carpeta única de cada NNyA. La <strong>medida</strong> es el proceso legal (MPE, MPI, etc.) que se abre dentro de uno o más legajos — por eso conviene conocer las dos pantallas juntas.</p>
+  </div>
+
+  <!-- ============ PARTE 1: EL LEGAJO ============ -->
+  <div class="section-block" id="sectionA">
+    <div class="section-heading">
+      <h2><span class="section-badge">Parte 1</span> El Legajo</h2>
+      <p>La ficha completa del NNyA: datos personales, equipo asignado, demandas de origen y medidas tomadas.</p>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFillA"></div></div>
+      <div class="progress-label">
+        <span id="progressTextA">Paso 1 de 2</span>
+        <span>El Legajo</span>
+      </div>
+    </div>
+
+    <div class="stepper" id="stepperA">
+
+      <div class="step-view active" data-step="1">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0018-legajo-detalle-vista-general.png" alt="Encabezado y pestaña General del legajo">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-title">El encabezado y la pestaña General</div>
+          </div>
+          <div class="step-content">
+            Al abrir un legajo (por ejemplo <strong>LEG-2026-0071</strong>) aparece un encabezado fijo con el avatar, nombre, DNI, edad y zona del NNyA, y el botón <strong>"Ver todos los datos"</strong>. Debajo, la pestaña <strong>General</strong> muestra los Datos Personales completos y el bloque <strong>"Registro de medidas tomadas"</strong>: una tabla con Tipo (MPE/MPI), Número, Fecha de Apertura, Estado y Duración. El botón <strong>"+ Tomar Medida"</strong> permite abrir una nueva medida sobre ese mismo legajo.
+          </div>
+          <div class="capture-reference">📸 Captura: 0018-legajo-detalle-vista-general.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="2">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0021-legajo-detalle-tab-asignaciones.png" alt="Las demás pestañas del legajo">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">Las demás pestañas del legajo</div>
+          </div>
+          <div class="step-content">
+            <strong>Asignaciones</strong> muestra el equipo a cargo (Centro de Vida, Equipo de Trabajo) con sus responsables y una línea de tiempo de cambios. <strong>Oficios</strong> lista los oficios judiciales recibidos. <strong>Demandas</strong> muestra el origen del legajo (por ejemplo <em>DEM-183, Admitida</em>, con el motivo y el tipo de medida evaluado). <strong>Documentos</strong> guarda los archivos adjuntos, y <strong>Plan de Trabajo</strong> e <strong>Historial</strong> se comparten con la medida vigente.
+          </div>
+          <div class="capture-reference">📸 Captura: 0021-legajo-detalle-tab-asignaciones.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+          <div class="success-badge">✅ Ya conocés la ficha completa del legajo.</div>
+        </div>
+      </div>
+
+      <div class="stepper-controls">
+        <button class="btn btn-outline" id="prevBtnA">← Anterior</button>
+        <div class="dots" id="dotsA"></div>
+        <button class="btn btn-primary" id="nextBtnA">Siguiente →</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ PARTE 2: LA MEDIDA ============ -->
+  <div class="section-block" id="sectionB">
+    <div class="section-heading">
+      <h2><span class="section-badge">Parte 2</span> La Medida</h2>
+      <p>El proceso legal en sí: sus etapas, sus módulos activos y el plan de trabajo que lo acompaña.</p>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFillB"></div></div>
+      <div class="progress-label">
+        <span id="progressTextB">Paso 1 de 4</span>
+        <span>La Medida</span>
+      </div>
+    </div>
+
+    <div class="stepper" id="stepperB">
+
+      <div class="step-view active" data-step="1">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0038-medida-elementos-hover.png" alt="Encabezado de la medida">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-title">El encabezado de la medida</div>
+          </div>
+          <div class="step-content">
+            Desde "Registro de medidas tomadas" se entra a la Medida (por ejemplo <strong>MED-2026-137</strong>). Arriba, un aviso recuerda: <em>"Si hay hermanos u otros NNyAs alcanzados por el mismo SAC, podés vincularlos a esta medida en vez de crear medidas separadas"</em>, con el botón <strong>"Vincular legajo"</strong>. El encabezado muestra el tipo de medida, si está <strong>Vigente</strong>, y contadores de actividades (Pendientes, En Progreso, Realizadas, Vencidas, Canceladas). También podés alternar entre <strong>"Vista nueva"</strong> y <strong>"Vista clásica"</strong>.
+          </div>
+          <div class="capture-reference">📸 Captura: 0038-medida-elementos-hover.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="2">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0040-medida-tabla.png" alt="Etapas, módulos activos y plan de trabajo">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">Etapas, módulos activos y plan de trabajo</div>
+          </div>
+          <div class="step-content">
+            La sección <strong>"Etapas"</strong> muestra el recorrido completo de la medida: <strong>Apertura, Innovación, Prórroga y Cese</strong>, cada una con su estado. Innovación, Prórroga y Cese arrancan vacías, con un botón <strong>"+ Iniciar Etapa de..."</strong> — y a diferencia de la Apertura (única), puede haber <strong>varias</strong> Innovaciones, Prórrogas o Ceses dentro de la misma medida (más detalle en el próximo módulo). Los <strong>"Módulos Activos"</strong> (Plan de trabajo, Control de legalidad, Informes mensuales) organizan el trabajo del día a día, y la tabla de <strong>Plan de Trabajo</strong> lista cada actividad con su equipo, responsable, fecha y plazo.
+          </div>
+          <div class="capture-reference">📸 Captura: 0040-medida-tabla.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="3">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0138-medida-compartida-banner.png" alt="La medida compartida, en la práctica">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-title">La medida compartida, en la práctica</div>
+          </div>
+          <div class="step-content">
+            Cuando la medida sí está compartida, arriba de todo aparece un banner: <strong>"Medida compartida · 2 NNyAs alcanzados"</strong>, aclarando <em>"Estás trabajando desde ernesto tenenbaum (Legajo LEG-2026-0078 · primario)"</em> y mostrando un chip por cada otro NNyA cubierto (por ejemplo, gabriela tenenbaum, con su DNI). El aviso es directo: <em>"Esta medida también cubre a este NNyA (mismo SAC). Cualquier cambio grupal impacta a todos."</em>
+          </div>
+          <div class="capture-reference">📸 Captura: 0138-medida-compartida-banner.png</div>
+          <div class="step-tags">
+            <span class="tag info">Información</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-view" data-step="4">
+        <div class="step-media">
+          <div class="browser-frame">
+            <div class="bf-bar"><span></span><span></span><span></span></div>
+            <img src="../0139-vincular-legajo-modal.png" alt="Vincular un legajo a la medida">
+          </div>
+        </div>
+        <div class="step-info">
+          <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-title">Vincular un legajo a la medida</div>
+          </div>
+          <div class="step-content">
+            El botón <strong>"Vincular legajo"</strong> abre un buscador por <strong>DNI, nombre o apellido</strong> — solo aparecen NNyA que ya tengan un legajo abierto. Si ese legajo ya está vinculado a la medida, el sistema lo aclara ("Ya vinculado a esta medida"); si no, se puede sumar con un Motivo opcional y el botón <strong>"Vincular"</strong>.
+          </div>
+          <div class="capture-reference">📸 Captura: 0139-vincular-legajo-modal.png</div>
+          <div class="step-tags">
+            <span class="tag action">Acción</span>
+          </div>
+          <div class="success-badge">✅ Ya sabés cómo leer el detalle completo de una medida y cómo vincular legajos compartidos.</div>
+        </div>
+      </div>
+
+      <div class="stepper-controls">
+        <button class="btn btn-outline" id="prevBtnB">← Anterior</button>
+        <div class="dots" id="dotsB"></div>
+        <button class="btn btn-primary" id="nextBtnB">Siguiente →</button>
+      </div>
+
+    </div>
+
+    <!-- PRACTICA: DIAGRAMA LEGAJO <-> MEDIDA -->
+    <div class="practice-section">
+      <h2>🖐️ Practicá vos mismo/a</h2>
+      <p class="lead">Hacé clic en cualquiera de los dos legajos para ver cómo se conectan con la medida.</p>
+
+      <div class="diagram-row">
+        <div class="diagram-col">
+          <div class="legajo-node" data-legajo="1">🗂️ <strong>LEG-2026-0078</strong>ernesto tenenbaum</div>
+          <div class="legajo-node" data-legajo="2">🗂️ <strong>LEG-2026-0079</strong>gabriela tenenbaum</div>
+        </div>
+        <div class="diagram-arrow">→</div>
+        <div class="medida-node" id="medidaNode">⚖️ <strong>MED-2026-148</strong>Medida de Protección Excepcional (MPE)</div>
+      </div>
+
+      <div class="practice-note" id="diagramInfo" style="margin-top:18px; text-align:center;">👆 Elegí un legajo para ver la conexión.</div>
+    </div>
+
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="08-apertura-medida.html">Siguiente módulo: Apertura de medida →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  function makeStepper(suffix, totalSteps) {
+    let currentStep = 1;
+    const stepperEl = document.getElementById('stepper' + suffix);
+    const dotsEl = document.getElementById('dots' + suffix);
+    const progressFill = document.getElementById('progressFill' + suffix);
+    const progressText = document.getElementById('progressText' + suffix);
+    const prevBtn = document.getElementById('prevBtn' + suffix);
+    const nextBtn = document.getElementById('nextBtn' + suffix);
+
+    function renderDots() {
+      dotsEl.innerHTML = '';
+      for (let i = 1; i <= totalSteps; i++) {
+        const d = document.createElement('div');
+        d.className = 'dot' + (i === currentStep ? ' active' : '');
+        d.onclick = () => { currentStep = i; render(); };
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function render() {
+      stepperEl.querySelectorAll('.step-view').forEach(el => {
+        el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+      });
+      progressFill.style.width = (currentStep / totalSteps * 100) + '%';
+      progressText.textContent = `Paso ${currentStep} de ${totalSteps}`;
+      prevBtn.disabled = currentStep === 1;
+      nextBtn.textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+      renderDots();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentStep = Math.max(1, currentStep - 1);
+      render();
+    });
+    nextBtn.addEventListener('click', () => {
+      currentStep = currentStep === totalSteps ? 1 : currentStep + 1;
+      render();
+    });
+
+    render();
+  }
+
+  makeStepper('A', 2);
+  makeStepper('B', 4);
+
+  // Practica: diagrama legajo <-> medida
+  const legajoNodes = document.querySelectorAll('.legajo-node');
+  const medidaNode = document.getElementById('medidaNode');
+  const diagramInfo = document.getElementById('diagramInfo');
+
+  legajoNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      legajoNodes.forEach(n => n.classList.remove('selected'));
+      node.classList.add('selected');
+      medidaNode.classList.add('highlight');
+      const nombre = node.dataset.legajo === '1' ? 'ernesto' : 'gabriela';
+      diagramInfo.innerHTML = `✅ El legajo de <strong>${nombre}</strong> apunta a la <strong>misma medida MED-2026-148</strong> que su hermano/a. Como comparten la misma medida, el Plan de Trabajo y la Apertura se gestionan una sola vez para los dos, aunque cada uno tenga su legajo individual.`;
+    });
+  });
+</script>
+
+</body>
+</html>

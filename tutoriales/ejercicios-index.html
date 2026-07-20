@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Guía de Ejercicios Prácticos</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="exercise-cover">
+    <h1>📘 Guía de Ejercicios Prácticos</h1>
+    <p>Registro Único Nominal de Niñez y Adolescencia · Capacitación Interior Provincial · 2026</p>
+  </div>
+
+  <div class="how-to-box">
+    <h3>Cómo usar esta guía</h3>
+    <p style="margin:0; color:var(--texto-suave); line-height:1.6;">Esta guía contiene ejercicios prácticos para aprender el sistema RUNNA trabajando con casos simulados. Todos los ejercicios se realizan con tu usuario administrador y datos ficticios preparados para la capacitación.</p>
+    <p style="margin:14px 0 0; color:var(--texto); font-weight:600;">Cada ejercicio tiene tres partes:</p>
+    <ul>
+      <li><strong>Situación:</strong> el contexto del caso en lenguaje cotidiano, como lo recibirías en la realidad.</li>
+      <li><strong>Pasos en el sistema:</strong> instrucciones detalladas de qué hacer y dónde.</li>
+      <li><strong>Checklist de verificación:</strong> para confirmar que completaste cada paso correctamente. Tu progreso se guarda automáticamente en este navegador.</li>
+    </ul>
+  </div>
+
+  <div class="block-grid">
+    <a class="block-card b1" href="ejercicios-bloque1.html">
+      <div class="block-label">🔵 Bloque 1</div>
+      <h3>Mesa de Entrada</h3>
+      <p>Flujo completo: desde la demanda hasta la creación del legajo.</p>
+      <div class="block-progress-text" id="progress-b1">0/25 completados</div>
+    </a>
+    <a class="block-card b2" href="ejercicios-bloque2.html">
+      <div class="block-label">🟢 Bloque 2</div>
+      <h3>Legajos — MPI</h3>
+      <p>Apertura, plan de acción y cese de una Medida de Protección Integral.</p>
+      <div class="block-progress-text" id="progress-b2">0/15 completados</div>
+    </a>
+    <a class="block-card b3" href="ejercicios-bloque3.html">
+      <div class="block-label">🟠 Bloque 3</div>
+      <h3>Legajos — MPE</h3>
+      <p>Circuito completo: apertura, prórroga y cese con todos los visados.</p>
+      <div class="block-progress-text" id="progress-b3">0/21 completados</div>
+    </a>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez y Familia · Provincia de Córdoba · RUNNA v2.0 · 2026
+</footer>
+
+<script>
+  const fallbackTotals = { b1: 25, b2: 15, b3: 21 };
+  ['b1', 'b2', 'b3'].forEach(id => {
+    const raw = localStorage.getItem('runna-ej-progress-' + id);
+    const el = document.getElementById('progress-' + id);
+    if (!el) return;
+    if (raw) {
+      const { done, total } = JSON.parse(raw);
+      el.textContent = `${done}/${total} completados`;
+    } else {
+      el.textContent = `0/${fallbackTotals[id]} completados`;
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Carga de Oficios Judiciales (MPJ)</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* Estilos específicos para simular la tabla y modal de asignación masiva */
+  .sim-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9rem; }
+  .sim-table th, .sim-table td { padding: 8px; border: 1px solid #ddd; text-align: left; }
+  .sim-table th { background: #f5f5f5; }
+  .sim-badge-team { background: #9c27b0; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+  .sim-tab-header { display: flex; border-bottom: 2px solid #ddd; margin-bottom: 12px; }
+  .sim-tab-btn { padding: 8px 16px; border: none; background: none; cursor: pointer; font-weight: bold; color: var(--texto-suave); }
+  .sim-tab-btn.active { border-bottom: 2px solid var(--azul-primario); color: var(--azul-primario); }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE / MPJ</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Etapa 11 de 11</div>
+    <h1>⚖️ Carga de Oficios Judiciales (MPJ)</h1>
+    <p>El ingreso de solicitudes e informes del Poder Judicial se canaliza a través de un formulario especializado en la Mesa de Entradas. Aprenderemos cómo registrar un Oficio Judicial para el circuito Penal Juvenil (MPJ), vincularlo a un Legajo existente, y cómo gestionar de forma masiva las actividades predeterminadas generadas en su Plan de Trabajo.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 14</span>
+      <span>Carga de Oficios Judiciales (MPJ)</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0143-oficio-mesa-entrada.png" alt="Gestión de Demandas - Nueva Demanda">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Mesa de Entrada: Nuevo Registro</div>
+        </div>
+        <div class="step-content">
+          Desde el panel principal de **Gestión de Demandas** en la Mesa de Entradas, iniciá el ingreso del oficio judicial presionando el botón azul **"+ Nueva Demanda"** en la esquina superior izquierda.
+        </div>
+        <div class="capture-reference">📸 Captura: 0143-oficio-mesa-entrada.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0144-oficio-seleccion-objetivo.png" alt="Paso 1: Selección de objetivo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Selección de Objetivo: Carga de Oficios</div>
+        </div>
+        <div class="step-content">
+          En el primer paso del asistente (*Objetivo*), seleccioná la tercera tarjeta: **"Carga de Oficios"** (Formulario especializado para oficios judiciales, medidas tutelares y comunicaciones del poder judicial) y hacé clic en *Siguiente*.
+        </div>
+        <div class="capture-reference">📸 Captura: 0144-oficio-seleccion-objetivo.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0145-oficio-clasificacion-circuito.png" alt="Paso 2: Información judicial y clasificación">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Clasificación y Datos del Oficio</div>
+        </div>
+        <div class="step-content">
+          En la sección de *Clasificación de la Medida*, elegí el circuito **"MPJ (Medida Penal)"**. Completá los campos obligatorios: **Fecha del Oficio**, **Fecha de Ingreso a SENAF**, y seleccioná la **Categoría de Información** para habilitar los correspondientes tipos de oficio.
+        </div>
+        <div class="capture-reference">📸 Captura: 0145-oficio-clasificacion-circuito.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0146-oficio-vinculo-legajo.png" alt="Vínculos con legajos y medidas">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Vincular con un Legajo Existente</div>
+        </div>
+        <div class="step-content">
+          Desplazate hasta la sección de *Vínculos con Legajos y Medidas*. Hacé clic en **"Agregar Vínculo"**, buscá el Legajo correspondiente (por ejemplo: `LEG-2026-0073`), y seleccioná el **Tipo de Vínculo** y escribí una **Justificación** formal del enlace.
+        </div>
+        <div class="capture-reference">📸 Captura: 0146-oficio-vinculo-legajo.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="5">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0147-oficio-adjunto-enviar.png" alt="Documentos adjuntos y enviar">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">Adjuntar Documentación y Enviar</div>
+        </div>
+        <div class="step-content">
+          En la sección de *Documentos Adjuntos*, arrastrá o seleccioná el archivo PDF o imagen digitalizada del oficio judicial original. Una vez subido con éxito, presioná el botón **"Enviar"** para guardar el registro.
+        </div>
+        <div class="capture-reference">📸 Captura: 0147-oficio-adjunto-enviar.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="6">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0148-oficio-exito-plan-trabajo.png" alt="Éxito y creación del Plan de Trabajo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <div class="step-title">Creación Automática del Plan de Trabajo</div>
+        </div>
+        <div class="step-content">
+          Al enviar el oficio de Penal Juvenil, se abre un modal de éxito indicando que la **Demanda #196** y la medida **MPJ - MED-2026-149** fueron creadas. En la sección inferior se detalla que se generaron automáticamente **5 actividades predeterminadas** basadas en las reglas de negocio cargadas en la base de datos para este tipo de oficio.
+        </div>
+        <div class="capture-reference">📸 Captura: 0148-oficio-exito-plan-trabajo.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+          <span class="tag success">Éxito</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="7">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0149-oficio-seleccion-actividades.png" alt="Selección múltiple de actividades">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">7</div>
+          <div class="step-title">Selección en Lote para Asignación</div>
+        </div>
+        <div class="step-content">
+          El modal te permite procesar las actividades en lote. Marcando las casillas de verificación de la columna izquierda, podés seleccionar varias actividades a la vez. Al hacerlo, se habilita la barra inferior con el botón **"Asignar Responsables"**.
+        </div>
+        <div class="capture-reference">📸 Captura: 0149-oficio-seleccion-actividades.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="8">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0150-oficio-transferir-equipo.png" alt="Modal de Asignación Masiva - Transferencia">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">8</div>
+          <div class="step-title">Transferencia Masiva a un Equipo</div>
+        </div>
+        <div class="step-content">
+          En la pestaña **"Transferir a Equipo"**, seleccioná el **Equipo Destino** (ej: `CAPITAL ZONA 1`), el Responsable en el equipo (opcional) y completá el **Motivo de la Transferencia** (mínimo 15 caracteres). Finalmente, hacé clic en **"Transferir a Equipo"**.
+        </div>
+        <div class="capture-reference">📸 Captura: 0150-oficio-transferir-equipo.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="9">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0151-oficio-equipo-actualizado.png" alt="Equipo actualizado en la tabla">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">9</div>
+          <div class="step-title">Actualización Inmediata de Asignación</div>
+        </div>
+        <div class="step-content">
+          Una vez ejecutada la transferencia, el listado de actividades del Plan de Trabajo se actualiza al instante en pantalla, mostrando que el equipo responsable ahora es **"CAPITAL ZONA 1"** para las tareas seleccionadas.
+        </div>
+        <div class="capture-reference">📸 Captura: 0151-oficio-equipo-actualizado.png</div>
+        <div class="step-tags">
+          <span class="tag success">Éxito</span>
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="10">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0152-oficio-asignacion-masiva.png" alt="Asignación masiva a usuarios">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">10</div>
+          <div class="step-title">Asignación Masiva de Responsables</div>
+        </div>
+        <div class="step-content">
+          Si elegís la pestaña **"Asignar Responsables"**, podés definir en lote quién será el **Responsable Principal** (ej: `UsuarioDirector`) y secundarios para todas las tareas que tengas seleccionadas a la vez. Al hacer clic en **"Asignar a Todas"**, el sistema distribuye el trabajo de forma masiva.
+        </div>
+        <div class="capture-reference">📸 Captura: 0152-oficio-asignacion-masiva.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+          <span class="tag success">Éxito</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="11">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0153-oficio-responsables-u.png" alt="Responsables U asignados en la tabla">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">11</div>
+          <div class="step-title">Usuario Responsable Asignado</div>
+        </div>
+        <div class="step-content">
+          Al completarse las asignaciones, la tabla final del Plan de Trabajo muestra para las actividades seleccionadas el icono circular **"U"** en la columna de *Responsables*, lo que confirma que el usuario en particular ya tiene asociadas dichas tareas bajo el equipo `CAPITAL ZONA 1`.
+        </div>
+        <div class="capture-reference">📸 Captura: 0153-oficio-responsables-u.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+          <span class="tag success">Éxito</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="12">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0154-bandeja-legajos-hover.png" alt="Hover en bandeja de legajos">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">12</div>
+          <div class="step-title">Verificación: Bandeja de Legajos</div>
+        </div>
+        <div class="step-content">
+          Si navegás a la **Bandeja de Legajos** global y buscás el legajo (ej: "pepe"), verás el legajo `LEG-2026-0073`. Al pasar el mouse (hover) sobre la columna de Medidas, un cuadro emergente (tooltip) te listará la medida de protección vinculada **"MED-2026-149 (MPJ)"** recién creada.
+        </div>
+        <div class="capture-reference">📸 Captura: 0154-bandeja-legajos-hover.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="13">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0155-bandeja-actividades-tab.png" alt="Control de legalidad de actividades">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">13</div>
+          <div class="step-title">Verificación: Bandeja de Actividades</div>
+        </div>
+        <div class="step-content">
+          Si entrás a la **Bandeja de Actividades** bajo la pestaña de **"Control de legalidad"**, las actividades creadas por el oficio se muestran en la columna **"Próximo a Vencer"** con su plazo correspondiente de 7 días, listas para ser tomadas por el equipo.
+        </div>
+        <div class="capture-reference">📸 Captura: 0155-bandeja-actividades-tab.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="14">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img src="../0156-bandeja-actividades-tabla.png" alt="Lista total de actividades del legajo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">14</div>
+          <div class="step-title">Ciclo de Trabajo y Derivaciones</div>
+        </div>
+        <div class="step-content">
+          En la vista detallada de la Bandeja de Actividades filtrada por el legajo `0073`, se listan todas las tareas del plan de acción. En la realidad institucional, una actividad puede sufrir múltiples derivaciones/asignaciones entre equipos y coordinadores hasta llegar al **técnico de campo o profesional** que elabora el informe final, siguiendo el circuito habitual del Plan de Trabajo.
+        </div>
+        <div class="capture-reference">📸 Captura: 0156-bandeja-actividades-tabla.png</div>
+        <div class="step-tags">
+          <span class="tag success">Éxito</span>
+          <span class="tag info">Información</span>
+        </div>
+        <div class="success-badge">🎉 ¡Felicitaciones! Has completado el circuito de carga de oficios de Penal Juvenil y asignación masiva de actividades.</div>
+      </div>
+    </div>
+
+    <div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA INTERACTIVA -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Simulá el proceso de carga de un oficio judicial para Penal Juvenil (MPJ) y asignación masiva de su plan de trabajo.</p>
+
+    <div class="practice-wrap">
+      <div class="login-sim-outer" style="max-width:100%; width:100%;">
+        <div class="login-sim-card" id="simCard" style="max-width: 650px; margin: 0 auto;">
+          
+          <!-- STEP 1 DE SIMULACION: SELECCIÓN -->
+          <div id="simPaso1">
+            <h3>Seleccionar Objetivo</h3>
+            <p style="font-size:0.95rem; margin-bottom:15px; color:var(--texto-suave);">Seleccione el tipo de objetivo para iniciar el registro.</p>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div class="sim-card-option" id="optProteccion" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;">
+                <strong>🛡️ Protección</strong><br><small style="color:var(--texto-suave);">Medidas de protección integral.</small>
+              </div>
+              <div class="sim-card-option" id="optOficioMpe" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;">
+                <strong>📄 Oficio judicial MPE/MPI</strong><br><small style="color:var(--texto-suave);">Vinculado a medidas activas.</small>
+              </div>
+              <div class="sim-card-option" id="optCargaOficio" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;">
+                <strong>⚖️ Carga de Oficios</strong><br><small style="color:var(--texto-suave);">Formulario especializado de oficios judiciales.</small>
+              </div>
+            </div>
+            <button class="sim-submit" id="btnSiguienteSim1" disabled style="margin-top:15px;">SIGUIENTE →</button>
+          </div>
+
+          <!-- STEP 2 DE SIMULACION: FORMULARIO -->
+          <div id="simPaso2" style="display:none;">
+            <h3>Carga de Oficio Judicial</h3>
+            
+            <div class="sim-field">
+              <label>Circuito *</label>
+              <div style="display:flex; gap:10px;">
+                <button type="button" class="btn btn-outline" id="btnCircuitoMPI" style="flex:1; padding:6px 0;">MPI</button>
+                <button type="button" class="btn btn-outline" id="btnCircuitoMPE" style="flex:1; padding:6px 0;">MPE</button>
+                <button type="button" class="btn btn-outline" id="btnCircuitoMPJ" style="flex:1; padding:6px 0;">MPJ</button>
+              </div>
+            </div>
+
+            <div class="sim-field">
+              <label>Legajo a Vincular *</label>
+              <select id="simLegajo">
+                <option value="">Seleccione un legajo</option>
+                <option value="LEG-2026-0073">LEG-2026-0073 - PEPE2 AWDS</option>
+                <option value="LEG-2026-0074">LEG-2026-0074 - JUAN PEREZ</option>
+              </select>
+            </div>
+
+            <div class="sim-field">
+              <label>Justificación del Vínculo *</label>
+              <textarea id="simJustificacion" placeholder="Escriba los motivos de la vinculación... (mínimo 20 caracteres)"></textarea>
+              <small id="charCountSim" style="color:var(--texto-suave);">0 / 20 caracteres</small>
+            </div>
+
+            <div class="sim-field">
+              <label>Documento Adjunto *</label>
+              <div id="dropZone" style="border:2px dashed #bbb; border-radius:6px; padding:20px; text-align:center; cursor:pointer; background:#fafafa;">
+                <span id="dropText">📎 Haz clic para simular adjuntar Oficio Judicial</span>
+              </div>
+            </div>
+
+            <button class="sim-submit" id="btnEnviarOficio" disabled>ENVIAR REGISTRO</button>
+          </div>
+
+          <!-- STEP 3 DE SIMULACION: PLAN DE TRABAJO AUTOMÁTICO -->
+          <div id="simPaso3" style="display:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:15px;">
+              <h3 style="color:#2e7d32; margin:0;">✔ Demanda Creada Exitosamente</h3>
+            </div>
+            
+            <div style="background:#e8f5e9; border:1px solid #c8e6c9; border-radius:6px; padding:12px; margin-bottom:15px; font-size:0.9rem;">
+              <strong>Demanda #196</strong> (Carga de Oficios) - Medida creada: <strong>MPJ - MED-2026-149</strong>
+            </div>
+
+            <h4>Plan de Trabajo <small style="font-weight:normal; color:var(--texto-suave);">(5 actividades creadas)</small></h4>
+            <p style="font-size:0.85rem; color:var(--texto-suave); margin-bottom:10px;">Seleccione actividades para realizar una asignación masiva.</p>
+
+            <table class="sim-table">
+              <thead>
+                <tr>
+                  <th style="width:30px;"><input type="checkbox" id="chkAllSim"></th>
+                  <th>Actividad</th>
+                  <th>Equipo</th>
+                  <th>Responsable</th>
+                </tr>
+              </thead>
+              <tbody id="simTableBody">
+                <tr>
+                  <td><input type="checkbox" class="chk-act-sim" data-id="1"></td>
+                  <td><strong>70 - MPJ - RECEPCION OFICIO CAD/CESAM</strong></td>
+                  <td class="team-td" data-id="1"><span class="sim-badge-team">Legales</span></td>
+                  <td class="resp-td" data-id="1">-</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="chk-act-sim" data-id="2"></td>
+                  <td><strong>62 - MPJ - INFORME PSICOLOGICO INICIAL (CAD)</strong></td>
+                  <td class="team-td" data-id="2"><span class="sim-badge-team">Legales</span></td>
+                  <td class="resp-td" data-id="2">-</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="chk-act-sim" data-id="3"></td>
+                  <td><strong>14 - MPJ - INFORME PSICOLOGICO EVOLUTIVO</strong></td>
+                  <td class="team-td" data-id="3"><span class="sim-badge-team">Legales</span></td>
+                  <td class="resp-td" data-id="3">-</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="chk-act-sim" data-id="4"></td>
+                  <td><strong>01 - MPJ - INFORME SOCIAL ADMISION</strong></td>
+                  <td class="team-td" data-id="4"><span class="sim-badge-team">Legales</span></td>
+                  <td class="resp-td" data-id="4">-</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div id="barAsignacionMasiva" style="margin-top:15px; padding:10px; background:#eef4fa; border-radius:6px; display:none; justify-content:space-between; align-items:center;">
+              <span id="txtSeleccionadas" style="font-weight:600; font-size:0.9rem;">0 actividades seleccionadas</span>
+              <button class="btn btn-primary" id="btnAbrirMasivo" style="padding:6px 12px; font-size:0.85rem;">Asignar Responsables</button>
+            </div>
+          </div>
+
+          <!-- STEP 4 DE SIMULACION: MODAL ASIGNACIÓN MASIVA -->
+          <div id="simPaso4" style="display:none;">
+            <h3>Asignación Masiva (<span id="countModal">3</span> actividades)</h3>
+            
+            <div class="sim-tab-header">
+              <button class="sim-tab-btn active" id="tabAsignar">Asignar Responsables</button>
+              <button class="sim-tab-btn" id="tabTransferir">Transferir a Equipo</button>
+            </div>
+
+            <!-- CONTENIDO ASIGNAR -->
+            <div id="paneAsignar">
+              <div class="sim-field">
+                <label>Responsable Principal *</label>
+                <select id="simRespPrincipal">
+                  <option value="">Seleccione un usuario</option>
+                  <option value="UsuarioDirector">UsuarioDirector (U)</option>
+                  <option value="UsuarioTecnico">UsuarioTecnico (T)</option>
+                </select>
+              </div>
+              <button class="sim-submit" id="btnEjecutarAsignar" disabled>ASIGNAR A TODAS</button>
+            </div>
+
+            <!-- CONTENIDO TRANSFERIR -->
+            <div id="paneTransferir" style="display:none;">
+              <div class="sim-field">
+                <label>Equipo Destino *</label>
+                <select id="simEquipoDestino">
+                  <option value="">Seleccione un equipo</option>
+                  <option value="CAPITAL ZONA 1">CAPITAL ZONA 1</option>
+                  <option value="INTERIOR ZONA A">INTERIOR ZONA A</option>
+                </select>
+              </div>
+              <div class="sim-field">
+                <label>Motivo de la Transferencia * (mínimo 15 caracteres)</label>
+                <textarea id="simMotivoTransf" placeholder="Describa el motivo..."></textarea>
+                <small id="charCountTransf" style="color:var(--texto-suave);">0 / 15 caracteres</small>
+              </div>
+              <button class="sim-submit" id="btnEjecutarTransferir" disabled style="background:var(--verde);">TRANSFERIR A EQUIPO</button>
+            </div>
+
+            <button class="btn btn-outline" id="btnVolverTabla" style="margin-top:15px; width:100%;">← Cancelar y volver a la tabla</button>
+          </div>
+
+          <div class="sim-success" id="oficioSuccess"></div>
+        </div>
+      </div>
+
+      <div class="checklist">
+        <h4>Checklist de la práctica</h4>
+        <ul>
+          <li id="chk1"><span class="check-icon">✓</span> Seleccionó "Carga de Oficios"</li>
+          <li id="chk2"><span class="check-icon">✓</span> Eligió circuito MPJ y envió formulario</li>
+          <li id="chk3"><span class="check-icon">✓</span> Seleccionó actividades en la tabla</li>
+          <li id="chk4"><span class="check-icon">✓</span> Realizó asignación o transferencia masiva</li>
+        </ul>
+        <span class="reset-link" onclick="resetSim()">↺ Reiniciar práctica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú principal</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 14;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica interactiva
+  let selectedObjective = "";
+  let selectedCircuito = "";
+  let fileAttached = false;
+  let selectedIds = [];
+  let currentTab = "asignar";
+
+  const optProteccion = document.getElementById('optProteccion');
+  const optOficioMpe = document.getElementById('optOficioMpe');
+  const optCargaOficio = document.getElementById('optCargaOficio');
+  const btnSiguienteSim1 = document.getElementById('btnSiguienteSim1');
+  
+  const simPaso1 = document.getElementById('simPaso1');
+  const simPaso2 = document.getElementById('simPaso2');
+  const simPaso3 = document.getElementById('simPaso3');
+  const simPaso4 = document.getElementById('simPaso4');
+  
+  const btnCircuitoMPI = document.getElementById('btnCircuitoMPI');
+  const btnCircuitoMPE = document.getElementById('btnCircuitoMPE');
+  const btnCircuitoMPJ = document.getElementById('btnCircuitoMPJ');
+  
+  const simLegajo = document.getElementById('simLegajo');
+  const simJustificacion = document.getElementById('simJustificacion');
+  const charCountSim = document.getElementById('charCountSim');
+  const dropZone = document.getElementById('dropZone');
+  const dropText = document.getElementById('dropText');
+  const btnEnviarOficio = document.getElementById('btnEnviarOficio');
+  
+  const chkAllSim = document.getElementById('chkAllSim');
+  const chkActs = document.querySelectorAll('.chk-act-sim');
+  const barAsignacionMasiva = document.getElementById('barAsignacionMasiva');
+  const txtSeleccionadas = document.getElementById('txtSeleccionadas');
+  const btnAbrirMasivo = document.getElementById('btnAbrirMasivo');
+  
+  const countModal = document.getElementById('countModal');
+  const tabAsignar = document.getElementById('tabAsignar');
+  const tabTransferir = document.getElementById('tabTransferir');
+  const paneAsignar = document.getElementById('paneAsignar');
+  const paneTransferir = document.getElementById('paneTransferir');
+  
+  const simRespPrincipal = document.getElementById('simRespPrincipal');
+  const btnEjecutarAsignar = document.getElementById('btnEjecutarAsignar');
+  
+  const simEquipoDestino = document.getElementById('simEquipoDestino');
+  const simMotivoTransf = document.getElementById('simMotivoTransf');
+  const charCountTransf = document.getElementById('charCountTransf');
+  const btnEjecutarTransferir = document.getElementById('btnEjecutarTransferir');
+  
+  const btnVolverTabla = document.getElementById('btnVolverTabla');
+  const oficioSuccess = document.getElementById('oficioSuccess');
+
+  function setChecked(id, on) {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('done', on);
+  }
+
+  function resetOptionBorders() {
+    [optProteccion, optOficioMpe, optCargaOficio].forEach(el => {
+      el.style.borderColor = '#ddd';
+      el.style.background = '#fff';
+    });
+  }
+
+  optProteccion.addEventListener('click', () => {
+    resetOptionBorders();
+    optProteccion.style.borderColor = 'var(--rojo)';
+    selectedObjective = "proteccion";
+    btnSiguienteSim1.disabled = false;
+  });
+
+  optOficioMpe.addEventListener('click', () => {
+    resetOptionBorders();
+    optOficioMpe.style.borderColor = 'var(--azul-primario)';
+    selectedObjective = "oficiompe";
+    btnSiguienteSim1.disabled = false;
+  });
+
+  optCargaOficio.addEventListener('click', () => {
+    resetOptionBorders();
+    optCargaOficio.style.borderColor = 'var(--verde)';
+    selectedObjective = "cargaoficios";
+    btnSiguienteSim1.disabled = false;
+  });
+
+  btnSiguienteSim1.addEventListener('click', () => {
+    if (selectedObjective === "cargaoficios") {
+      setChecked('chk1', true);
+      simPaso1.style.display = 'none';
+      simPaso2.style.display = 'block';
+    } else {
+      alert("Para este tutorial, seleccione la opción 'Carga de Oficios' correspondientes a oficios judiciales especializados.");
+    }
+  });
+
+  function resetCircuitoButtons() {
+    [btnCircuitoMPI, btnCircuitoMPE, btnCircuitoMPJ].forEach(btn => {
+      btn.className = 'btn btn-outline';
+      btn.style.background = '';
+      btn.style.color = '';
+    });
+  }
+
+  btnCircuitoMPI.addEventListener('click', () => {
+    resetCircuitoButtons();
+    btnCircuitoMPI.style.background = '#eef4fa';
+    selectedCircuito = "mpi";
+    setChecked('chk2', false);
+    checkFormCompletion();
+  });
+
+  btnCircuitoMPE.addEventListener('click', () => {
+    resetCircuitoButtons();
+    btnCircuitoMPE.style.background = '#eef4fa';
+    selectedCircuito = "mpe";
+    setChecked('chk2', false);
+    checkFormCompletion();
+  });
+
+  btnCircuitoMPJ.addEventListener('click', () => {
+    resetCircuitoButtons();
+    btnCircuitoMPJ.className = 'btn btn-primary';
+    selectedCircuito = "mpj";
+    setChecked('chk2', true);
+    checkFormCompletion();
+  });
+
+  simJustificacion.addEventListener('input', () => {
+    const len = simJustificacion.value.length;
+    charCountSim.textContent = `${len} / 20 caracteres`;
+    checkFormCompletion();
+  });
+
+  simLegajo.addEventListener('change', () => {
+    checkFormCompletion();
+  });
+
+  dropZone.addEventListener('click', () => {
+    fileAttached = true;
+    dropZone.style.background = '#e8f5e9';
+    dropZone.style.borderColor = '#81c784';
+    dropText.textContent = '📄 Oficio_Judicial_Firmado_MPJ.pdf (Adjunto)';
+    checkFormCompletion();
+  });
+
+  function checkFormCompletion() {
+    const isJustified = simJustificacion.value.length >= 20 && simLegajo.value !== "";
+    const isCircuitoOk = selectedCircuito === "mpj";
+    const ok = isJustified && isCircuitoOk && fileAttached;
+    btnEnviarOficio.disabled = !ok;
+  }
+
+  btnEnviarOficio.addEventListener('click', () => {
+    simPaso2.style.display = 'none';
+    simPaso3.style.display = 'block';
+  });
+
+  // GESTIÓN TABLA Y SELECCIÓN MASIVA
+  function updateTableSelection() {
+    selectedIds = [];
+    chkActs.forEach(chk => {
+      if (chk.checked) selectedIds.push(chk.dataset.id);
+    });
+    
+    const count = selectedIds.length;
+    if (count > 0) {
+      barAsignacionMasiva.style.display = 'flex';
+      txtSeleccionadas.textContent = `${count} actividad${count > 1 ? 'es' : ''} seleccionada${count > 1 ? 's' : ''}`;
+      setChecked('chk3', true);
+    } else {
+      barAsignacionMasiva.style.display = 'none';
+      setChecked('chk3', false);
+    }
+  }
+
+  chkAllSim.addEventListener('change', () => {
+    chkActs.forEach(chk => chk.checked = chkAllSim.checked);
+    updateTableSelection();
+  });
+
+  chkActs.forEach(chk => {
+    chk.addEventListener('change', () => {
+      updateTableSelection();
+    });
+  });
+
+  btnAbrirMasivo.addEventListener('click', () => {
+    countModal.textContent = selectedIds.length;
+    simPaso3.style.display = 'none';
+    simPaso4.style.display = 'block';
+  });
+
+  btnVolverTabla.addEventListener('click', () => {
+    simPaso4.style.display = 'none';
+    simPaso3.style.display = 'block';
+  });
+
+  // TABS EN EL MODAL MASIVO
+  tabAsignar.addEventListener('click', () => {
+    tabAsignar.classList.add('active');
+    tabTransferir.classList.remove('active');
+    paneAsignar.style.display = 'block';
+    paneTransferir.style.display = 'none';
+    currentTab = "asignar";
+  });
+
+  tabTransferir.addEventListener('click', () => {
+    tabTransferir.classList.add('active');
+    tabAsignar.classList.remove('active');
+    paneTransferir.style.display = 'block';
+    paneAsignar.style.display = 'none';
+    currentTab = "transferir";
+  });
+
+  // PANEL ASIGNAR
+  simRespPrincipal.addEventListener('change', () => {
+    btnEjecutarAsignar.disabled = simRespPrincipal.value === "";
+  });
+
+  btnEjecutarAsignar.addEventListener('click', () => {
+    selectedIds.forEach(id => {
+      const td = document.querySelector(`.resp-td[data-id="${id}"]`);
+      if (td) td.textContent = simRespPrincipal.value === "UsuarioDirector" ? "U" : "T";
+    });
+    finalizarMasivo("Asignación");
+  });
+
+  // PANEL TRANSFERIR
+  simMotivoTransf.addEventListener('input', () => {
+    const len = simMotivoTransf.value.length;
+    charCountTransf.textContent = `${len} / 15 caracteres`;
+    checkTransferirCompletion();
+  });
+
+  simEquipoDestino.addEventListener('change', () => {
+    checkTransferirCompletion();
+  });
+
+  function checkTransferirCompletion() {
+    const isJustifiedTransf = simMotivoTransf.value.length >= 15 && simEquipoDestino.value !== "";
+    btnEjecutarTransferir.disabled = !isJustifiedTransf;
+  }
+
+  btnEjecutarTransferir.addEventListener('click', () => {
+    selectedIds.forEach(id => {
+      const td = document.querySelector(`.team-td[data-id="${id}"]`);
+      if (td) td.innerHTML = `<span class="sim-badge-team" style="background:#4caf50;">${simEquipoDestino.value}</span>`;
+    });
+    finalizarMasivo("Transferencia");
+  });
+
+  function finalizarMasivo(tipo) {
+    simPaso4.style.display = 'none';
+    setChecked('chk4', true);
+    oficioSuccess.className = 'sim-success show';
+    oficioSuccess.innerHTML = `✅ ${tipo} masiva procesada con éxito para las ${selectedIds.length} actividades seleccionadas.`;
+  }
+
+  function resetSim() {
+    selectedObjective = "";
+    selectedCircuito = "";
+    fileAttached = false;
+    selectedIds = [];
+    currentTab = "asignar";
+    
+    resetOptionBorders();
+    btnSiguienteSim1.disabled = true;
+    
+    simPaso1.style.display = 'block';
+    simPaso2.style.display = 'none';
+    simPaso3.style.display = 'none';
+    simPaso4.style.display = 'none';
+    
+    resetCircuitoButtons();
+    simLegajo.value = "";
+    simJustificacion.value = "";
+    charCountSim.textContent = '0 / 20 caracteres';
+    
+    dropZone.style.background = '#fafafa';
+    dropZone.style.borderColor = '#bbb';
+    dropText.textContent = '📎 Haz clic para simular adjuntar Oficio Judicial';
+    
+    btnEnviarOficio.disabled = true;
+    
+    chkAllSim.checked = false;
+    chkActs.forEach(chk => chk.checked = false);
+    barAsignacionMasiva.style.display = 'none';
+    
+    tabAsignar.classList.add('active');
+    tabTransferir.classList.remove('active');
+    paneAsignar.style.display = 'block';
+    paneTransferir.style.display = 'none';
+    
+    simRespPrincipal.value = "";
+    btnEjecutarAsignar.disabled = true;
+    
+    simEquipoDestino.value = "";
+    simMotivoTransf.value = "";
+    charCountTransf.textContent = '0 / 15 caracteres';
+    btnEjecutarTransferir.disabled = true;
+    
+    // Restaurar tabla original
+    document.querySelectorAll('.team-td').forEach(td => {
+      td.innerHTML = '<span class="sim-badge-team">Legales</span>';
+    });
+    document.querySelectorAll('.resp-td').forEach(td => {
+      td.textContent = '-';
+    });
+    
+    oficioSuccess.className = 'sim-success';
+    oficioSuccess.innerHTML = '';
+    
+    ['chk1','chk2','chk3','chk4'].forEach(id => setChecked(id, false));
+  }
+</script>
+
+</body>
+</html>
