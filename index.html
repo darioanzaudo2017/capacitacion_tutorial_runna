@@ -1,208 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUNNA — Manual de Capacitación</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Centro de Tutoriales</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="app-shell">
 
-        <!-- ═══════════════════════════════════════
-             SIDEBAR
-        ═══════════════════════════════════════ -->
-        <aside class="sidebar" id="sidebar">
-
-            <div class="sidebar-brand">
-                <div class="brand-logo">
-                    <span class="brand-sigla">RU</span><span class="brand-sigla accent">NN</span><span class="brand-sigla">A</span>
-                </div>
-                <p class="brand-subtitle">Registro Único Nominal<br>Niñez y Adolescencia</p>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="sidebar-progress">
-                <div class="progress-label">
-                    <span>Tu progreso</span>
-                    <span id="progress-pct">0%</span>
-                </div>
-                <div class="progress-track">
-                    <div class="progress-fill" id="progress-fill"></div>
-                </div>
-            </div>
-
-            <nav class="sidebar-nav" id="main-nav">
-
-                <div class="nav-group">
-                    <span class="nav-group-label">Inicio</span>
-                    <a href="#intro" class="nav-item" data-section="intro">
-                        <span class="nav-icon">◈</span>
-                        <span class="nav-text">Introducción y Login</span>
-                        <span class="nav-check" id="check-intro">✓</span>
-                    </a>
-                    <a href="#flujo-general" class="nav-item" data-section="flujo-general">
-                        <span class="nav-icon">◉</span>
-                        <span class="nav-text">Mapa del Sistema</span>
-                        <span class="nav-check" id="check-flujo-general">✓</span>
-                    </a>
-                    <a href="#roles" class="nav-item" data-section="roles">
-                        <span class="nav-icon">👤</span>
-                        <span class="nav-text">Roles y Usuarios</span>
-                        <span class="nav-check" id="check-roles">✓</span>
-                    </a>
-                    <a href="#guia-modulos" class="nav-item" data-section="guia-modulos">
-                        <span class="nav-icon">📖</span>
-                        <span class="nav-text">Guía de Módulos</span>
-                        <span class="nav-check" id="check-guia-modulos">✓</span>
-                    </a>
-                    <a href="#equivalencias" class="nav-item" data-section="equivalencias">
-                        <span class="nav-icon">🔄</span>
-                        <span class="nav-text">Equivalencias (V vs N)</span>
-                        <span class="nav-check" id="check-equivalencias">✓</span>
-                    </a>
-                </div>
-
-                <div class="nav-group">
-                    <span class="nav-group-label">Flujo Principal</span>
-                    <a href="#mesa-entrada" class="nav-item" data-section="mesa-entrada">
-                        <span class="nav-icon">①</span>
-                        <span class="nav-text">Mesa de Entrada</span>
-                        <span class="nav-check" id="check-mesa-entrada">✓</span>
-                    </a>
-                    <a href="#asignacion" class="nav-item" data-section="asignacion">
-                        <span class="nav-icon">②</span>
-                        <span class="nav-text">Asignación</span>
-                        <span class="nav-check" id="check-asignacion">✓</span>
-                    </a>
-                    <a href="#constatacion" class="nav-item" data-section="constatacion">
-                        <span class="nav-icon">③</span>
-                        <span class="nav-text">Constatación</span>
-                        <span class="nav-check" id="check-constatacion">✓</span>
-                    </a>
-                    <a href="#evaluacion" class="nav-item" data-section="evaluacion">
-                        <span class="nav-icon">④</span>
-                        <span class="nav-text">Evaluación Técnica</span>
-                        <span class="nav-check" id="check-evaluacion">✓</span>
-                    </a>
-                </div>
-
-                <div class="nav-group">
-                    <span class="nav-group-label">Medidas de Protección</span>
-                    <a href="#proceso-mpi" class="nav-item" data-section="proceso-mpi">
-                        <span class="nav-icon">⑤</span>
-                        <span class="nav-text">Medida Integral (MPI)</span>
-                        <span class="nav-check" id="check-proceso-mpi">✓</span>
-                    </a>
-                    <a href="#proceso-mpe" class="nav-item" data-section="proceso-mpe">
-                        <span class="nav-icon">⑥</span>
-                        <span class="nav-text">Medida Excepcional (MPE)</span>
-                        <span class="nav-check" id="check-proceso-mpe">✓</span>
-                    </a>
-                    <a href="#proceso-mpj" class="nav-item" data-section="proceso-mpj">
-                        <span class="nav-icon">⑧</span>
-                        <span class="nav-text">Oficio Judicial (MPJ)</span>
-                        <span class="nav-check" id="check-proceso-mpj">✓</span>
-                    </a>
-                </div>
-
-                <div class="nav-group">
-                    <span class="nav-group-label">Guía de Interfaz</span>
-                    <a href="#interfaz-mesa-entrada" class="nav-item" data-section="interfaz-mesa-entrada">
-                        <span class="nav-icon">🖥️</span>
-                        <span class="nav-text">Mesa de Entrada</span>
-                        <span class="nav-check" id="check-interfaz-mesa-entrada">✓</span>
-                    </a>
-                    <a href="#interfaz-legajos" class="nav-item" data-section="interfaz-legajos">
-                        <span class="nav-icon">📁</span>
-                        <span class="nav-text">Pantalla de Legajos</span>
-                        <span class="nav-check" id="check-interfaz-legajos">✓</span>
-                    </a>
-                    <a href="#creacion-legajo-manual" class="nav-item" data-section="creacion-legajo-manual">
-                        <span class="nav-icon">➕</span>
-                        <span class="nav-text">Creación de Legajo Manual</span>
-                        <span class="nav-check" id="check-creacion-legajo-manual">✓</span>
-                    </a>
-                </div>
-
-
-
-                <div class="nav-group">
-                    <span class="nav-group-label">Seguimiento</span>
-                    <a href="#plan-trabajo" class="nav-item" data-section="plan-trabajo">
-                        <span class="nav-icon">⑦</span>
-                        <span class="nav-text">Plan de Trabajo</span>
-                        <span class="nav-check" id="check-plan-trabajo">✓</span>
-                    </a>
-                </div>
-
-            </nav>
-
-            <div class="sidebar-footer">
-                <button class="reset-btn" id="reset-progress-btn" title="Reiniciar progreso">↺ Reiniciar progreso</button>
-                <span class="version-tag">v2.0 · Manual Interactivo</span>
-            </div>
-        </aside>
-
-        <!-- ═══════════════════════════════════════
-             MAIN AREA
-        ═══════════════════════════════════════ -->
-        <div class="main-wrapper">
-
-            <!-- Top Bar -->
-            <header class="topbar">
-                <div class="topbar-left">
-                    <button class="hamburger" id="hamburger" aria-label="Menú">
-                        <span></span><span></span><span></span>
-                    </button>
-                    <nav class="breadcrumb" id="breadcrumb">
-                        <span class="breadcrumb-root">RUNNA</span>
-                        <span class="breadcrumb-sep">›</span>
-                        <span class="breadcrumb-current" id="breadcrumb-current">Introducción</span>
-                    </nav>
-                </div>
-                <div class="topbar-right">
-                    <div class="search-wrap">
-                        <span class="search-icon">⌕</span>
-                        <input type="text" id="search-input" placeholder="Buscar en el manual…" autocomplete="off">
-                        <div id="search-results" class="search-results"></div>
-                    </div>
-                    <a href="#flujo-general" class="topbar-map-btn" title="Ver Mapa del Sistema">
-                        <span>Mapa del Sistema</span>
-                        <span class="nav-icon">◉</span>
-                    </a>
-                    <div class="module-badge" id="module-badge">Módulo 1 / 8</div>
-                </div>
-            </header>
-
-            <!-- Content -->
-            <main class="content-area" id="content-area">
-                <!-- JS injects here -->
-            </main>
-
-            <!-- Bottom Nav -->
-            <footer class="bottom-nav" id="bottom-nav">
-                <button class="bnav-btn" id="btn-prev">← Anterior</button>
-                <button class="bnav-btn primary" id="btn-next">Siguiente →</button>
-            </footer>
-        </div>
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPE</small>
     </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">Inicio</a>
+  </nav>
+</header>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightbox-close">✕</button>
-        <img src="" alt="" id="lightbox-img">
+<div class="container">
+
+  <div class="hero">
+    <h1>Aprendé a usar RUNNA paso a paso</h1>
+    <p>Tutoriales interactivos con capturas reales del sistema para acompañar el flujo completo de una Medida de Protección Excepcional (MPE), desde el ingreso al sistema hasta el cierre del caso.</p>
+
+    <div class="stats-row">
+      <div class="stat">
+        <div class="num">12</div>
+        <div class="label">Etapas del flujo</div>
+      </div>
+      <div class="stat">
+        <div class="num">12</div>
+        <div class="label">Disponibles ahora</div>
+      </div>
+      <div class="stat">
+        <div class="num">140</div>
+        <div class="label">Capturas de referencia</div>
+      </div>
     </div>
+  </div>
 
-    <!-- Floating Button [New] -->
-    <a href="#flujo-general" class="fab-map" id="fab-map" title="Volver al Mapa del Sistema">
-        <span>◉</span>
+  <a class="module-card active" href="roles.html" style="display:flex; flex-direction:row; align-items:center; gap:18px; margin-bottom:10px;">
+    <div class="icon" style="font-size:2.2rem;">👥</div>
+    <div style="flex:1;">
+      <h3 style="margin-bottom:4px;">Roles y Responsabilidades</h3>
+      <p>Quién hace qué en RUNNA: Mesa de Entrada, Técnico/a, Director/a, Jefatura de Zona y Legales (Penal Juvenil y Protección).</p>
+    </div>
+    <div class="cta">Ver guía →</div>
+  </a>
+
+  <a class="module-card active" href="ejercicios-index.html" style="display:flex; flex-direction:row; align-items:center; gap:18px; margin-bottom:10px;">
+    <div class="icon" style="font-size:2.2rem;">📘</div>
+    <div style="flex:1;">
+      <h3 style="margin-bottom:4px;">Guía de Ejercicios Prácticos</h3>
+      <p>Casos simulados para practicar en el sistema real: Mesa de Entrada, Legajos MPI y Legajos MPE, con checklist de progreso.</p>
+    </div>
+    <div class="cta">Empezar →</div>
+  </a>
+
+  <div class="module-grid">
+
+    <a class="module-card active" href="01-login.html">
+      <div class="step-number-badge">1</div>
+      <div class="icon">🔐</div>
+      <h3>Login al sistema</h3>
+      <p>Autenticación de usuario técnico. Ingreso de usuario y contraseña para acceder a RUNNA.</p>
+      <div class="cta">Comenzar tutorial →</div>
     </a>
 
-    <!-- Toast -->
-    <div class="toast" id="toast"></div>
+    <a class="module-card active" href="02-mesa-de-entrada.html">
+      <div class="step-number-badge">2</div>
+      <div class="icon">📥</div>
+      <h3>Mesa de entrada</h3>
+      <p>Cómo buscar y filtrar demandas, y cómo crear y derivar una demanda de Protección.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
 
-    <script src="script.js"></script>
+    <a class="module-card active" href="03-constatacion.html">
+      <div class="step-number-badge">3</div>
+      <div class="icon">🔍</div>
+      <h3>Constatación</h3>
+      <p>El técnico investiga y documenta la demanda: respuestas, actividades y conexiones.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="04-evaluacion.html">
+      <div class="step-number-badge">4</div>
+      <div class="icon">⚖️</div>
+      <h3>Evaluación</h3>
+      <p>Valoración profesional, revisión de NNyA y decisión sobre el tipo de medida.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="05-autorizacion-director.html">
+      <div class="step-number-badge">5</div>
+      <div class="icon">✅</div>
+      <h3>Autorización del Director</h3>
+      <p>El Director revisa la solicitud del técnico y autoriza. Se crea el legajo automáticamente.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="06-bandeja-legajos.html">
+      <div class="step-number-badge">6</div>
+      <div class="icon">📋</div>
+      <h3>Bandeja de legajos</h3>
+      <p>Búsqueda, filtros y cómo leer los íconos de indicadores de la tabla.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="07-detalle-legajo-medida.html">
+      <div class="step-number-badge">7</div>
+      <div class="icon">📊</div>
+      <h3>Detalle de Legajo y Medida</h3>
+      <p>La ficha del legajo y el dashboard de la medida: etapas, módulos y plan de trabajo.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="08-apertura-medida.html">
+      <div class="step-number-badge">8</div>
+      <div class="icon">🔓</div>
+      <h3>Apertura de medida</h3>
+      <p>Registro formal en 3 pasos, y el camino de aprobaciones hasta la ratificación judicial.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="09-plan-de-trabajo.html">
+      <div class="step-number-badge">9</div>
+      <div class="icon">📝</div>
+      <h3>Plan de trabajo</h3>
+      <p>Crear actividades con el sistema jerárquico y seguirlas en "Mis Actividades".</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="10-cese-mpi.html">
+      <div class="step-number-badge">10a</div>
+      <div class="icon">❌</div>
+      <h3>Cese de MPI</h3>
+      <p>Cierre simple de una Medida de Protección Inmediata: solo formulario sin aprobaciones adicionales.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="10-cese-mpe.html">
+      <div class="step-number-badge">10b</div>
+      <div class="icon">❌</div>
+      <h3>Cese de MPE</h3>
+      <p>Cierre formal de una Medida Excepcional con circuito completo: Jefatura de Zona, Director y Legales.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="10-cese-mpj.html">
+      <div class="step-number-badge">10c</div>
+      <div class="icon">⚖️</div>
+      <h3>Cese de MPJ</h3>
+      <p>Cierre de Medida Penal Juvenil por oficio judicial del Poder Judicial.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+    <a class="module-card active" href="11-oficio-judicial-mpj.html">
+      <div class="step-number-badge">11</div>
+      <div class="icon">📄</div>
+      <h3>Carga de Oficios Judiciales</h3>
+      <p>Cómo registrar un oficio de Medida Penal Juvenil, clasificarlo, vincularlo al legajo y crear plan de trabajo.</p>
+      <div class="cta">Comenzar tutorial →</div>
+    </a>
+
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
 </body>
 </html>
