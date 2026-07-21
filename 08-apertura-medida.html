@@ -88,7 +88,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0066-final-paso1-inicio.png" alt="Paso 1: Información Básica">
+          <img class="zoomable" src="0066-final-paso1-inicio.png" alt="Paso 1: Información Básica">
         </div>
       </div>
       <div class="step-info">
@@ -110,7 +110,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0069-final-paso2-lleno.png" alt="Paso 2: Detalles de Intervención">
+          <img class="zoomable" src="0069-final-paso2-lleno.png" alt="Paso 2: Detalles de Intervención">
         </div>
       </div>
       <div class="step-info">
@@ -132,7 +132,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0079-interactiva-paso3-inicio.png" alt="Paso 3: Documentos y Configuración">
+          <img class="zoomable" src="0079-interactiva-paso3-inicio.png" alt="Paso 3: Documentos y Configuración">
         </div>
       </div>
       <div class="step-info">
@@ -154,7 +154,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0069-final-paso2-lleno.png" alt="El camino después de enviar">
+          <img class="zoomable" src="0069-final-paso2-lleno.png" alt="El camino después de enviar">
         </div>
       </div>
       <div class="step-info">
@@ -176,7 +176,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0142-etapa-cese-vacia.png" alt="Lo mismo aplica a Innovación, Prórroga y Cese">
+          <img class="zoomable" src="0142-etapa-cese-vacia.png" alt="Lo mismo aplica a Innovación, Prórroga y Cese">
         </div>
       </div>
       <div class="step-info">
@@ -297,6 +297,45 @@
   });
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+
 

@@ -53,7 +53,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0004-demandas-dashboard.png" alt="Gestión de demandas, vista general">
+            <img class="zoomable" src="0004-demandas-dashboard.png" alt="Gestión de demandas, vista general">
           </div>
         </div>
         <div class="step-info">
@@ -76,7 +76,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0006-demandas-busqueda-activa.png" alt="Búsqueda activa de demandas">
+            <img class="zoomable" src="0006-demandas-busqueda-activa.png" alt="Búsqueda activa de demandas">
           </div>
         </div>
         <div class="step-info">
@@ -98,7 +98,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0007-demandas-filtro-pendientes-hover.png" alt="Vistas rápidas de demandas">
+            <img class="zoomable" src="0007-demandas-filtro-pendientes-hover.png" alt="Vistas rápidas de demandas">
           </div>
         </div>
         <div class="step-info">
@@ -120,7 +120,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0008-demandas-modal-filtros.png" alt="Modal de filtros avanzados">
+            <img class="zoomable" src="0008-demandas-modal-filtros.png" alt="Modal de filtros avanzados">
           </div>
         </div>
         <div class="step-info">
@@ -142,7 +142,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0009-demandas-menu-columna.png" alt="Personalizar columnas de la tabla">
+            <img class="zoomable" src="0009-demandas-menu-columna.png" alt="Personalizar columnas de la tabla">
           </div>
         </div>
         <div class="step-info">
@@ -191,7 +191,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0078-captura-0078.png" alt="Elegir el objetivo de la demanda">
+            <img class="zoomable" src="0078-captura-0078.png" alt="Elegir el objetivo de la demanda">
           </div>
         </div>
         <div class="step-info">
@@ -214,7 +214,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0079-captura-0079.png" alt="Información general de la demanda">
+            <img class="zoomable" src="0079-captura-0079.png" alt="Información general de la demanda">
           </div>
         </div>
         <div class="step-info">
@@ -237,7 +237,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0081-captura-0081.png" alt="Demanda creada exitosamente">
+            <img class="zoomable" src="0081-captura-0081.png" alt="Demanda creada exitosamente">
           </div>
         </div>
         <div class="step-info">
@@ -259,7 +259,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0082-captura-0082.png" alt="Asignar la demanda">
+            <img class="zoomable" src="0082-captura-0082.png" alt="Asignar la demanda">
           </div>
         </div>
         <div class="step-info">
@@ -281,7 +281,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0083-captura-0083.png" alt="Modal derivar demanda">
+            <img class="zoomable" src="0083-captura-0083.png" alt="Modal derivar demanda">
           </div>
         </div>
         <div class="step-info">
@@ -303,7 +303,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0084-captura-0084.png" alt="La demanda pasa a Constatación">
+            <img class="zoomable" src="0084-captura-0084.png" alt="La demanda pasa a Constatación">
           </div>
         </div>
         <div class="step-info">
@@ -453,6 +453,45 @@
   });
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+
 

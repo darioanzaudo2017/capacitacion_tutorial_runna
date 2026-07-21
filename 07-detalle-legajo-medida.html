@@ -91,7 +91,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0018-legajo-detalle-vista-general.png" alt="Encabezado y pestaña General del legajo">
+            <img class="zoomable" src="0018-legajo-detalle-vista-general.png" alt="Encabezado y pestaña General del legajo">
           </div>
         </div>
         <div class="step-info">
@@ -113,7 +113,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0021-legajo-detalle-tab-asignaciones.png" alt="Las demás pestañas del legajo">
+            <img class="zoomable" src="0021-legajo-detalle-tab-asignaciones.png" alt="Las demás pestañas del legajo">
           </div>
         </div>
         <div class="step-info">
@@ -162,7 +162,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0038-medida-elementos-hover.png" alt="Encabezado de la medida">
+            <img class="zoomable" src="0038-medida-elementos-hover.png" alt="Encabezado de la medida">
           </div>
         </div>
         <div class="step-info">
@@ -184,7 +184,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0040-medida-tabla.png" alt="Etapas, módulos activos y plan de trabajo">
+            <img class="zoomable" src="0040-medida-tabla.png" alt="Etapas, módulos activos y plan de trabajo">
           </div>
         </div>
         <div class="step-info">
@@ -206,7 +206,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0138-medida-compartida-banner.png" alt="La medida compartida, en la práctica">
+            <img class="zoomable" src="0138-medida-compartida-banner.png" alt="La medida compartida, en la práctica">
           </div>
         </div>
         <div class="step-info">
@@ -228,7 +228,7 @@
         <div class="step-media">
           <div class="browser-frame">
             <div class="bf-bar"><span></span><span></span><span></span></div>
-            <img src="0139-vincular-legajo-modal.png" alt="Vincular un legajo a la medida">
+            <img class="zoomable" src="0139-vincular-legajo-modal.png" alt="Vincular un legajo a la medida">
           </div>
         </div>
         <div class="step-info">
@@ -347,6 +347,45 @@
   });
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+
 

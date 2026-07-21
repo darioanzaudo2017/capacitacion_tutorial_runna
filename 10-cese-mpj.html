@@ -45,7 +45,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0029-medida-encabezado.png" alt="Medida MPJ activa en legajo">
+          <img class="zoomable" src="0029-medida-encabezado.png" alt="Medida MPJ activa en legajo">
         </div>
       </div>
       <div class="step-info">
@@ -68,7 +68,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0039-medida-navegacion.png" alt="Etapas de la MPJ - Cierre">
+          <img class="zoomable" src="0039-medida-navegacion.png" alt="Etapas de la MPJ - Cierre">
         </div>
       </div>
       <div class="step-info">
@@ -95,7 +95,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0143-oficio-mesa-entrada.png" alt="Mesa de Entrada - Nuevo Oficio">
+          <img class="zoomable" src="0143-oficio-mesa-entrada.png" alt="Mesa de Entrada - Nuevo Oficio">
         </div>
       </div>
       <div class="step-info">
@@ -121,7 +121,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0145-oficio-clasificacion-circuito.png" alt="Clasificar oficio de cese">
+          <img class="zoomable" src="0145-oficio-clasificacion-circuito.png" alt="Clasificar oficio de cese">
         </div>
       </div>
       <div class="step-info">
@@ -437,6 +437,45 @@
   }
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+
 

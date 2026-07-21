@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -250,5 +250,44 @@
   initChecklists();
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+

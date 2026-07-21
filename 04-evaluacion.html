@@ -45,7 +45,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0091-captura-0091.png" alt="La demanda en estado Evaluación">
+          <img class="zoomable" src="0091-captura-0091.png" alt="La demanda en estado Evaluación">
         </div>
       </div>
       <div class="step-info">
@@ -67,7 +67,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0092-captura-0092.png" alt="Pantalla de evaluación">
+          <img class="zoomable" src="0092-captura-0092.png" alt="Pantalla de evaluación">
         </div>
       </div>
       <div class="step-info">
@@ -90,7 +90,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0093-captura-0093.png" alt="Pestaña NNyA Convivientes">
+          <img class="zoomable" src="0093-captura-0093.png" alt="Pestaña NNyA Convivientes">
         </div>
       </div>
       <div class="step-info">
@@ -112,7 +112,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0094-captura-0094.png" alt="Formulario completo de evaluación">
+          <img class="zoomable" src="0094-captura-0094.png" alt="Formulario completo de evaluación">
         </div>
       </div>
       <div class="step-info">
@@ -134,7 +134,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0095-captura-0095.png" alt="Elegir tipo de medida y autorizar">
+          <img class="zoomable" src="0095-captura-0095.png" alt="Elegir tipo de medida y autorizar">
         </div>
       </div>
       <div class="step-info">
@@ -276,6 +276,45 @@
   }
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+
 

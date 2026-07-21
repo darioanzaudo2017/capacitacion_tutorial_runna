@@ -45,7 +45,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0162-cese-mpe-etapa-cese-vacia.png" alt="Pestaña Cese vacía">
+          <img class="zoomable" src="0162-cese-mpe-etapa-cese-vacia.png" alt="Pestaña Cese vacía">
         </div>
       </div>
       <div class="step-info">
@@ -70,7 +70,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0163-cese-mpe-registro-intervencion.png" alt="Registro de Intervención - Pendiente Aprobación">
+          <img class="zoomable" src="0163-cese-mpe-registro-intervencion.png" alt="Registro de Intervención - Pendiente Aprobación">
         </div>
       </div>
       <div class="step-info">
@@ -100,7 +100,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0164-cese-mpe-modal-paso1-tipo-cese.png" alt="Modal Paso 1 - Información Personal + Tipo de Cese">
+          <img class="zoomable" src="0164-cese-mpe-modal-paso1-tipo-cese.png" alt="Modal Paso 1 - Información Personal + Tipo de Cese">
         </div>
       </div>
       <div class="step-info">
@@ -127,7 +127,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0165-cese-mpe-modal-paso2-detalles.png" alt="Modal Paso 2 - Detalles de Intervención">
+          <img class="zoomable" src="0165-cese-mpe-modal-paso2-detalles.png" alt="Modal Paso 2 - Detalles de Intervención">
         </div>
       </div>
       <div class="step-info">
@@ -154,7 +154,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0166-cese-mpe-modal-paso3-documentos.png" alt="Modal Paso 3 - Documentos y Configuración">
+          <img class="zoomable" src="0166-cese-mpe-modal-paso3-documentos.png" alt="Modal Paso 3 - Documentos y Configuración">
         </div>
       </div>
       <div class="step-info">
@@ -181,7 +181,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0167-cese-mpe-aprobacion-superior.png" alt="Etapa Aprobación de Superior - Director de Zona">
+          <img class="zoomable" src="0167-cese-mpe-aprobacion-superior.png" alt="Etapa Aprobación de Superior - Director de Zona">
         </div>
       </div>
       <div class="step-info">
@@ -212,7 +212,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0168-cese-mpe-informe-juridico.png" alt="Etapa Informe Jurídico - Equipo Legal">
+          <img class="zoomable" src="0168-cese-mpe-informe-juridico.png" alt="Etapa Informe Jurídico - Equipo Legal">
         </div>
       </div>
       <div class="step-info">
@@ -246,7 +246,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0162-cese-mpe-legajo-cerrada.png" alt="Medida MPE cerrada en legajo">
+          <img class="zoomable" src="0162-cese-mpe-legajo-cerrada.png" alt="Medida MPE cerrada en legajo">
         </div>
       </div>
       <div class="step-info">
@@ -491,6 +491,45 @@
   }
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+
 

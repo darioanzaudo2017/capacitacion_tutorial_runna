@@ -45,7 +45,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0096-captura-0096.png" alt="Demanda pendiente de autorización">
+          <img class="zoomable" src="0096-captura-0096.png" alt="Demanda pendiente de autorización">
         </div>
       </div>
       <div class="step-info">
@@ -68,7 +68,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0098-captura-0098.png" alt="El Director revisa la solicitud del técnico">
+          <img class="zoomable" src="0098-captura-0098.png" alt="El Director revisa la solicitud del técnico">
         </div>
       </div>
       <div class="step-info">
@@ -91,7 +91,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0099-captura-0099.png" alt="La demanda pasa a Admitida">
+          <img class="zoomable" src="0099-captura-0099.png" alt="La demanda pasa a Admitida">
         </div>
       </div>
       <div class="step-info">
@@ -114,7 +114,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0100-captura-0100.png" alt="Legajos creados automáticamente">
+          <img class="zoomable" src="0100-captura-0100.png" alt="Legajos creados automáticamente">
         </div>
       </div>
       <div class="step-info">
@@ -136,7 +136,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img src="0101-captura-0101.png" alt="El legajo listo para trabajar">
+          <img class="zoomable" src="0101-captura-0101.png" alt="El legajo listo para trabajar">
         </div>
       </div>
       <div class="step-info">
@@ -287,6 +287,45 @@
   }
 </script>
 
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      imageModal.classList.add('active');
+    });
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
 </body>
 </html>
+
 
