@@ -463,15 +463,15 @@
 const imageModal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const zoomableImages = document.querySelectorAll('.zoomable');
-  zoomableImages.forEach(img => {
-    img.addEventListener('click', function(e) {
-      e.stopPropagation();
-      modalImage.src = this.src;
-      modalImage.alt = this.alt;
-      imageModal.classList.add('active');
-    });
+// Set up zoom listeners for all zoomable images
+const zoomableImages = document.querySelectorAll('.zoomable');
+zoomableImages.forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', function(e) {
+    e.stopPropagation();
+    modalImage.src = this.src;
+    modalImage.alt = this.alt;
+    imageModal.classList.add('active');
   });
 });
 
@@ -479,12 +479,14 @@ function closeImageModal() {
   imageModal.classList.remove('active');
 }
 
+// Close modal when clicking outside the image
 imageModal.addEventListener('click', function(e) {
   if (e.target === imageModal) {
     closeImageModal();
   }
 });
 
+// Close modal with Escape key
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     closeImageModal();
@@ -493,5 +495,6 @@ document.addEventListener('keydown', function(e) {
 </script>
 </body>
 </html>
+
 
 
