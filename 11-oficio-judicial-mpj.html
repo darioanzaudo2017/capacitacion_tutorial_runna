@@ -44,7 +44,7 @@
   <div class="progress-wrap">
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label">
-      <span id="progressText">Paso 1 de 14</span>
+      <span id="progressText">Paso 1 de 16</span>
       <span>Carga de Oficios Judiciales (MPJ)</span>
     </div>
   </div>
@@ -64,7 +64,7 @@
           <div class="step-title">Mesa de Entrada: Nuevo Registro</div>
         </div>
         <div class="step-content">
-          Desde el panel principal de **Gestión de Demandas** en la Mesa de Entradas, iniciá el ingreso del oficio judicial presionando el botón azul **"+ Nueva Demanda"** en la esquina superior izquierda.
+          Desde el panel principal de <strong>Gestión de Demandas</strong> en la Mesa de Entradas, iniciá el ingreso del oficio judicial presionando el botón azul <strong>"+ Nueva Demanda"</strong> en la esquina superior izquierda.
         </div>
         <div class="capture-reference">📸 Captura: 0143-oficio-mesa-entrada.png</div>
         <div class="step-tags">
@@ -78,7 +78,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0144-oficio-seleccion-objetivo.png" alt="Paso 1: Selección de objetivo">
+          <img class="zoomable" src="0158-oficio-seleccion-objetivo-tarjetas.png" alt="Paso 1: tarjetas de objetivo">
         </div>
       </div>
       <div class="step-info">
@@ -87,9 +87,9 @@
           <div class="step-title">Selección de Objetivo: Carga de Oficios</div>
         </div>
         <div class="step-content">
-          En el primer paso del asistente (*Objetivo*), seleccioná la tercera tarjeta: **"Carga de Oficios"** (Formulario especializado para oficios judiciales, medidas tutelares y comunicaciones del poder judicial) y hacé clic en *Siguiente*.
+          En el primer paso del asistente (<em>Objetivo</em>) hay tres tarjetas: <strong>Protección Inicial</strong>, <strong>Oficio judicial de MPE, MPI vigente</strong> y <strong>Carga de Oficios Penal Juvenil</strong>. Para un oficio penal juvenil (el que abre una MPJ, cesa una medida o suma actividades), elegí la tercera y hacé clic en <em>Siguiente</em>. El oficio de MPE/MPI vigente se explica en el módulo siguiente.
         </div>
-        <div class="capture-reference">📸 Captura: 0144-oficio-seleccion-objetivo.png</div>
+        <div class="capture-reference">📸 Captura: 0158-oficio-seleccion-objetivo-tarjetas.png</div>
         <div class="step-tags">
           <span class="tag action">Acción</span>
         </div>
@@ -100,7 +100,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0145-oficio-clasificacion-circuito.png" alt="Paso 2: Información judicial y clasificación">
+          <img class="zoomable" src="0159-oficio-circuito-solo-mpj.png" alt="Paso 2: circuito MPJ fijo">
         </div>
       </div>
       <div class="step-info">
@@ -109,9 +109,9 @@
           <div class="step-title">Clasificación y Datos del Oficio</div>
         </div>
         <div class="step-content">
-          En la sección de *Clasificación de la Medida*, elegí el circuito **"MPJ (Medida Penal)"**. Completá los campos obligatorios: **Fecha del Oficio**, **Fecha de Ingreso a SENAF**, y seleccioná la **Categoría de Información** para habilitar los correspondientes tipos de oficio.
+          En <em>Clasificación de la Medida</em> el circuito ya viene fijo en <strong>MPJ (Medida Penal)</strong>: esta carga es solo para oficios penales juveniles; los de MPE o MPI vigente se cargan con la otra tarjeta. Completá <strong>Fecha del Oficio</strong> y <strong>Fecha de Ingreso a SENAF</strong>, y elegí la <strong>Categoría de Información</strong> para habilitar los <strong>Tipos de Oficio</strong>. El tipo de oficio define qué pasa al guardar: abre una MPJ, cesa una medida o agrega actividades al plan de la medida vinculada. La definición la toma el Poder Judicial, no SENAF.
         </div>
-        <div class="capture-reference">📸 Captura: 0145-oficio-clasificacion-circuito.png</div>
+        <div class="capture-reference">📸 Captura: 0159-oficio-circuito-solo-mpj.png</div>
         <div class="step-tags">
           <span class="tag action">Acción</span>
         </div>
@@ -122,19 +122,20 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0146-oficio-vinculo-legajo.png" alt="Vínculos con legajos y medidas">
+          <img class="zoomable" src="0160-oficio-aviso-cese.png" alt="Aviso de oficio de cese">
         </div>
       </div>
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">4</div>
-          <div class="step-title">Vincular con un Legajo Existente</div>
+          <div class="step-title">Si el oficio comunica un cese</div>
         </div>
         <div class="step-content">
-          Desplazate hasta la sección de *Vínculos con Legajos y Medidas*. Hacé clic en **"Agregar Vínculo"**, buscá el Legajo correspondiente (por ejemplo: `LEG-2026-0073`), y seleccioná el **Tipo de Vínculo** y escribí una **Justificación** formal del enlace.
+          Cuando la categoría elegida es de cese (por ejemplo <em>CESE MEDIDAS TUTELARES PROVISORIAS</em>), aparece un aviso azul: <strong>el cese lo dispone el juzgado</strong>; SENAF no lo aprueba ni lo visa, solo recibe la notificación. En <em>Vínculos</em> elegí el legajo y la medida que cesa: <strong>al guardar el oficio, esa medida pasa a Cerrada</strong>. Es lo esperado, no hay una aprobación posterior.
         </div>
-        <div class="capture-reference">📸 Captura: 0146-oficio-vinculo-legajo.png</div>
+        <div class="capture-reference">📸 Captura: 0160-oficio-aviso-cese.png</div>
         <div class="step-tags">
+          <span class="tag info">Información</span>
           <span class="tag action">Acción</span>
         </div>
       </div>
@@ -144,18 +145,18 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0147-oficio-adjunto-enviar.png" alt="Documentos adjuntos y enviar">
+          <img class="zoomable" src="0161-oficio-vinculo-legajo-medida.png" alt="Vínculos con legajos y medidas">
         </div>
       </div>
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">5</div>
-          <div class="step-title">Adjuntar Documentación y Enviar</div>
+          <div class="step-title">Vincular con un Legajo Existente</div>
         </div>
         <div class="step-content">
-          En la sección de *Documentos Adjuntos*, arrastrá o seleccioná el archivo PDF o imagen digitalizada del oficio judicial original. Una vez subido con éxito, presioná el botón **"Enviar"** para guardar el registro.
+          Desplazate hasta <em>Vínculos con Legajos y Medidas</em>. Hacé clic en <strong>Agregar Vínculo</strong>, buscá el legajo (por ejemplo <code>LEG-2026-0176</code>) y elegí la <strong>medida asociada</strong>: si el oficio abre una MPJ, el sistema puede crearla; si cesa una medida o suma actividades, elegí la medida correspondiente. En esta carga el <strong>tipo de vínculo</strong> (oficio judicial) y la justificación se completan solos: no hace falta escribirlos.
         </div>
-        <div class="capture-reference">📸 Captura: 0147-oficio-adjunto-enviar.png</div>
+        <div class="capture-reference">📸 Captura: 0161-oficio-vinculo-legajo-medida.png</div>
         <div class="step-tags">
           <span class="tag action">Acción</span>
         </div>
@@ -166,16 +167,38 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0148-oficio-exito-plan-trabajo.png" alt="Éxito y creación del Plan de Trabajo">
+          <img class="zoomable" src="0147-oficio-adjunto-enviar.png" alt="Documentos adjuntos y enviar">
         </div>
       </div>
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">6</div>
+          <div class="step-title">Adjuntar Documentación y Enviar</div>
+        </div>
+        <div class="step-content">
+          En la sección de <em>Documentos Adjuntos</em>, arrastrá o seleccioná el archivo PDF o imagen digitalizada del oficio judicial original. Una vez subido con éxito, presioná el botón <strong>"Guardar demanda"</strong> para guardar el registro.
+        </div>
+        <div class="capture-reference">📸 Captura: 0147-oficio-adjunto-enviar.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="7">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0148-oficio-exito-plan-trabajo.png" alt="Éxito y creación del Plan de Trabajo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">7</div>
           <div class="step-title">Creación Automática del Plan de Trabajo</div>
         </div>
         <div class="step-content">
-          Al enviar el oficio de Penal Juvenil, se abre un modal de éxito indicando que la **Demanda #196** y la medida **MPJ - MED-2026-149** fueron creadas. En la sección inferior se detalla que se generaron automáticamente **5 actividades predeterminadas** basadas en las reglas de negocio cargadas en la base de datos para este tipo de oficio.
+          Al enviar el oficio de Penal Juvenil, se abre un modal de éxito indicando que la <strong>Demanda #196</strong> y la medida <strong>MPJ - MED-2026-149</strong> fueron creadas. En la sección inferior se detalla que se generaron automáticamente <strong>5 actividades predeterminadas</strong> basadas en las reglas de negocio cargadas en la base de datos para este tipo de oficio.
         </div>
         <div class="capture-reference">📸 Captura: 0148-oficio-exito-plan-trabajo.png</div>
         <div class="step-tags">
@@ -185,46 +208,25 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="7">
-      <div class="step-media">
-        <div class="browser-frame">
-          <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0149-oficio-seleccion-actividades.png" alt="Selección múltiple de actividades">
-        </div>
-      </div>
-      <div class="step-info">
-        <div class="step-header">
-          <div class="step-number">7</div>
-          <div class="step-title">Selección en Lote para Asignación</div>
-        </div>
-        <div class="step-content">
-          El modal te permite procesar las actividades en lote. Marcando las casillas de verificación de la columna izquierda, podés seleccionar varias actividades a la vez. Al hacerlo, se habilita la barra inferior con el botón **"Asignar Responsables"**.
-        </div>
-        <div class="capture-reference">📸 Captura: 0149-oficio-seleccion-actividades.png</div>
-        <div class="step-tags">
-          <span class="tag action">Acción</span>
-        </div>
-      </div>
-    </div>
-
     <div class="step-view" data-step="8">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0150-oficio-transferir-equipo.png" alt="Modal de Asignación Masiva - Transferencia">
+          <img class="zoomable" src="0168-oficio-actividades-desde-bandeja.png" alt="Actividades de la demanda desde la Mesa de Entradas">
         </div>
       </div>
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">8</div>
-          <div class="step-title">Transferencia Masiva a un Equipo</div>
+          <div class="step-title">Ver y asignar las actividades desde la Mesa de Entradas</div>
         </div>
         <div class="step-content">
-          En la pestaña **"Transferir a Equipo"**, seleccioná el **Equipo Destino** (ej: `CAPITAL ZONA 1`), el Responsable en el equipo (opcional) y completá el **Motivo de la Transferencia** (mínimo 15 caracteres). Finalmente, hacé clic en **"Transferir a Equipo"**.
+          Las actividades del oficio se crean a nombre de quien lo cargó. No hace falta buscar el legajo: en la fila de la demanda de oficio, el ícono de actividades (y el cartel <em>Ver y asignar actividades</em> dentro de la demanda abierta) abre el listado, con el aviso de cuántas están <strong>sin reasignar</strong>. Seleccioná las que correspondan y usá <strong>Asignar Responsables</strong>. Se actualiza en el momento.
         </div>
-        <div class="capture-reference">📸 Captura: 0150-oficio-transferir-equipo.png</div>
+        <div class="capture-reference">📸 Captura: 0168-oficio-actividades-desde-bandeja.png</div>
         <div class="step-tags">
           <span class="tag action">Acción</span>
+          <span class="tag info">Información</span>
         </div>
       </div>
     </div>
@@ -233,16 +235,60 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0151-oficio-equipo-actualizado.png" alt="Equipo actualizado en la tabla">
+          <img class="zoomable" src="0149-oficio-seleccion-actividades.png" alt="Selección múltiple de actividades">
         </div>
       </div>
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">9</div>
+          <div class="step-title">Selección en Lote para Asignación</div>
+        </div>
+        <div class="step-content">
+          El modal te permite procesar las actividades en lote. Marcando las casillas de verificación de la columna izquierda, podés seleccionar varias actividades a la vez. Al hacerlo, se habilita la barra inferior con el botón <strong>"Asignar Responsables"</strong>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0149-oficio-seleccion-actividades.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="10">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0150-oficio-transferir-equipo.png" alt="Modal de Asignación Masiva - Transferencia">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">10</div>
+          <div class="step-title">Transferencia Masiva a un Equipo</div>
+        </div>
+        <div class="step-content">
+          En la pestaña <strong>"Transferir a Equipo"</strong>, seleccioná el <strong>Equipo Destino</strong> (ej: <code>CAPITAL ZONA 1</code>), el Responsable en el equipo (opcional) y completá el <strong>Motivo de la Transferencia</strong> (mínimo 15 caracteres). Finalmente, hacé clic en <strong>"Transferir a Equipo"</strong>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0150-oficio-transferir-equipo.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="11">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0151-oficio-equipo-actualizado.png" alt="Equipo actualizado en la tabla">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">11</div>
           <div class="step-title">Actualización Inmediata de Asignación</div>
         </div>
         <div class="step-content">
-          Una vez ejecutada la transferencia, el listado de actividades del Plan de Trabajo se actualiza al instante en pantalla, mostrando que el equipo responsable ahora es **"CAPITAL ZONA 1"** para las tareas seleccionadas.
+          Una vez ejecutada la transferencia, el listado de actividades del Plan de Trabajo se actualiza al instante en pantalla, mostrando que el equipo responsable ahora es <strong>"CAPITAL ZONA 1"</strong> para las tareas seleccionadas.
         </div>
         <div class="capture-reference">📸 Captura: 0151-oficio-equipo-actualizado.png</div>
         <div class="step-tags">
@@ -252,7 +298,7 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="10">
+    <div class="step-view" data-step="12">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -261,11 +307,11 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">10</div>
+          <div class="step-number">12</div>
           <div class="step-title">Asignación Masiva de Responsables</div>
         </div>
         <div class="step-content">
-          Si elegís la pestaña **"Asignar Responsables"**, podés definir en lote quién será el **Responsable Principal** (ej: `UsuarioDirector`) y secundarios para todas las tareas que tengas seleccionadas a la vez. Al hacer clic en **"Asignar a Todas"**, el sistema distribuye el trabajo de forma masiva.
+          Si elegís la pestaña <strong>"Asignar Responsables"</strong>, podés definir en lote quién será el <strong>Responsable Principal</strong> (ej: <code>UsuarioDirector</code>) y secundarios para todas las tareas que tengas seleccionadas a la vez. Al hacer clic en <strong>"Asignar a Todas"</strong>, el sistema distribuye el trabajo de forma masiva.
         </div>
         <div class="capture-reference">📸 Captura: 0152-oficio-asignacion-masiva.png</div>
         <div class="step-tags">
@@ -275,7 +321,7 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="11">
+    <div class="step-view" data-step="13">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -284,11 +330,11 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">11</div>
+          <div class="step-number">13</div>
           <div class="step-title">Usuario Responsable Asignado</div>
         </div>
         <div class="step-content">
-          Al completarse las asignaciones, la tabla final del Plan de Trabajo muestra para las actividades seleccionadas el icono circular **"U"** en la columna de *Responsables*, lo que confirma que el usuario en particular ya tiene asociadas dichas tareas bajo el equipo `CAPITAL ZONA 1`.
+          Al completarse las asignaciones, la tabla final del Plan de Trabajo muestra para las actividades seleccionadas el icono circular <strong>"U"</strong> en la columna de <em>Responsables</em>, lo que confirma que el usuario en particular ya tiene asociadas dichas tareas bajo el equipo <code>CAPITAL ZONA 1</code>.
         </div>
         <div class="capture-reference">📸 Captura: 0153-oficio-responsables-u.png</div>
         <div class="step-tags">
@@ -298,7 +344,7 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="12">
+    <div class="step-view" data-step="14">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -307,11 +353,11 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">12</div>
+          <div class="step-number">14</div>
           <div class="step-title">Verificación: Bandeja de Legajos</div>
         </div>
         <div class="step-content">
-          Si navegás a la **Bandeja de Legajos** global y buscás el legajo (ej: "pepe"), verás el legajo `LEG-2026-0073`. Al pasar el mouse (hover) sobre la columna de Medidas, un cuadro emergente (tooltip) te listará la medida de protección vinculada **"MED-2026-149 (MPJ)"** recién creada.
+          Si navegás a la <strong>Bandeja de Legajos</strong> global y buscás el legajo (ej: "pepe"), verás el legajo <code>LEG-2026-0073</code>. Al pasar el mouse (hover) sobre la columna de Medidas, un cuadro emergente (tooltip) te listará la medida de protección vinculada <strong>"MED-2026-149 (MPJ)"</strong> recién creada.
         </div>
         <div class="capture-reference">📸 Captura: 0154-bandeja-legajos-hover.png</div>
         <div class="step-tags">
@@ -321,7 +367,7 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="13">
+    <div class="step-view" data-step="15">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -330,11 +376,11 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">13</div>
+          <div class="step-number">15</div>
           <div class="step-title">Verificación: Bandeja de Actividades</div>
         </div>
         <div class="step-content">
-          Si entrás a la **Bandeja de Actividades** bajo la pestaña de **"Control de legalidad"**, las actividades creadas por el oficio se muestran en la columna **"Próximo a Vencer"** con su plazo correspondiente de 7 días, listas para ser tomadas por el equipo.
+          Si entrás a la <strong>Bandeja de Actividades</strong> bajo la pestaña de <strong>"Control de legalidad"</strong>, las actividades creadas por el oficio se muestran en la columna <strong>"Próximo a Vencer"</strong> con su plazo correspondiente de 7 días, listas para ser tomadas por el equipo.
         </div>
         <div class="capture-reference">📸 Captura: 0155-bandeja-actividades-tab.png</div>
         <div class="step-tags">
@@ -344,7 +390,7 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="14">
+    <div class="step-view" data-step="16">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -353,11 +399,11 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">14</div>
+          <div class="step-number">16</div>
           <div class="step-title">Ciclo de Trabajo y Derivaciones</div>
         </div>
         <div class="step-content">
-          En la vista detallada de la Bandeja de Actividades filtrada por el legajo `0073`, se listan todas las tareas del plan de acción. En la realidad institucional, una actividad puede sufrir múltiples derivaciones/asignaciones entre equipos y coordinadores hasta llegar al **técnico de campo o profesional** que elabora el informe final, siguiendo el circuito habitual del Plan de Trabajo.
+          En la vista detallada de la Bandeja de Actividades filtrada por el legajo <code>0073</code>, se listan todas las tareas del plan de acción. En la realidad institucional, una actividad puede sufrir múltiples derivaciones/asignaciones entre equipos y coordinadores hasta llegar al <strong>técnico de campo o profesional</strong> que elabora el informe final, siguiendo el circuito habitual del Plan de Trabajo.
         </div>
         <div class="capture-reference">📸 Captura: 0156-bandeja-actividades-tabla.png</div>
         <div class="step-tags">
@@ -368,7 +414,7 @@
       </div>
     </div>
 
-    <div class="stepper-controls">
+<div class="stepper-controls">
       <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
       <div class="dots" id="dots"></div>
       <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
@@ -559,6 +605,7 @@
 
   <div class="button-group">
     <a class="btn btn-outline" href="index.html">← Volver al menú principal</a>
+    <a class="btn btn-primary" href="11b-oficio-mpe-mpi-vigente.html">Siguiente: Oficio de MPE / MPI vigente →</a>
   </div>
 
 </div>
@@ -568,7 +615,7 @@
 </footer>
 
 <script>
-  const totalSteps = 14;
+  const totalSteps = 16;
   let currentStep = 1;
 
   function renderDots() {
