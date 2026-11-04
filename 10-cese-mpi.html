@@ -27,8 +27,8 @@
 
   <div class="tutorial-header">
     <div class="crumb">Etapa 10a de 13</div>
-    <h1>❌ Cese de Medida de Protección Inmediata (MPI)</h1>
-    <p>El cierre de una MPI se realiza en 3 etapas: Registro de Intervención (Pendiente de Informe de Cierre) → Seguimiento (Completado) → Cierre de Medida (Registro del Informe Final). Sin aprobaciones adicionales, solo el técnico completa el modal y la medida se cierra automáticamente.</p>
+    <h1>❌ Cese de Medida de Protección Integral (MPI)</h1>
+    <p>El cierre de una MPI es simple: se registra un <strong>informe de cierre</strong> con el tipo de cese y la fundamentación, y la medida queda <strong>Cerrada</strong> al enviarlo. No pasa por aprobación del Director, informe jurídico ni ratificación.</p>
   </div>
 
   <div class="progress-wrap">
@@ -54,12 +54,12 @@
           <div class="step-title">Paso 1 de 3: Registro de Intervención</div>
         </div>
         <div class="step-content">
-          En la ficha de la medida MPI, aparecen las <strong>Etapas de la Medida</strong>:
-          <br><strong>1. Registro de Intervención</strong> - Estado: <strong>"Pendiente de informe de cierre"</strong> ✓ 100% completado
-          <br><strong>2. Seguimiento</strong> - Bloqueado (gris)
-          <br><strong>3. Cierre de Medida</strong> - Pendiente
+          En la ficha de la medida MPI, la etapa <strong>Apertura</strong> ya está aprobada y muestra un único flujo de tres pasos:
+          <br><strong>1. Registro de Intervención</strong> - ya aprobado: la etapa figura <strong>pendiente del informe de cierre</strong>
+          <br><strong>2. Seguimiento</strong> - es donde se trabaja el <strong>Plan de Trabajo</strong>
+          <br><strong>3. Cierre de Medida</strong> - se habilita para registrar el informe de cierre
           <br>
-          Verás la sección "Apertura" con información de la intervención. Hacé clic en <strong>"Continuar"</strong> para avanzar al Paso 2.
+          Abrí la etapa <strong>Apertura</strong> y usá <strong>"Cargar / gestionar paso"</strong>. En el panel de la etapa, <em>Nota de aval, Informe jurídico y Ratificación</em> figuran tachados como <strong>"no aplica"</strong>.
         </div>
         <div class="capture-reference">📸 Captura: 0157-cese-mpi-etapa1-registro-intervencion.png</div>
         <div class="step-tags">
@@ -144,14 +144,19 @@
           Se abre el modal <strong>"Registrar Informe de Cierre"</strong>. Completá los siguientes campos:
           <br>
           <br><strong>• Tipo de Cese *:</strong> Dropdown obligatorio
-          <br>Opciones: "I. RESTITUCIÓN DE DERECHOS", "II. MAYORÍA DE EDAD", "III. CAMBIO DE SITUACIÓN", "IV. ARCHIVO DE MPI CESADA", etc.
+          <br>Opciones:
+          <br>&nbsp;&nbsp;I. Archivo de MPI - inicio de medida penal juvenil (MPJ)
+          <br>&nbsp;&nbsp;II. Archivo de MPI derivada al organismo local de protección
+          <br>&nbsp;&nbsp;III. Archivo de MPI cesada - valora MPE
+          <br>&nbsp;&nbsp;IV. Archivo de MPI cesada
+          <br>&nbsp;&nbsp;V. Archivo no pertinente
           <br>
           <br><strong>• Observaciones *:</strong> Campo de texto (textarea)
           <br>Descripción: "Complete la fundamentación del cierre de esta medida MPI. Describa los objetivos alcanzados, la situación estabilizada del NNyA y su familia, y las razones para el cierre de la intervención."
           <br>Validación: Mínimo 20 caracteres (se muestra contador)
           <br>
           <br><strong>• Adjuntos (Opcional):</strong> Drag & drop
-          <br>Podés adjuntar documentación complementaria
+          <br>Podés adjuntar documentación complementaria (por ejemplo, el informe en PDF)
         </div>
         <div class="capture-reference">📸 Captura: 0226-mpi-informe-de-cierre.png</div>
         <div class="step-tags">
@@ -173,12 +178,12 @@
           <div class="step-title">Finalización: MPI Estado CERRADA</div>
         </div>
         <div class="step-content">
-          Una vez que completaste el modal y hiciste clic en <strong>"Enviar Informe"</strong>, la MPI cambia inmediatamente a estado <strong>"CERRADA"</strong>.
+          Una vez que completaste el modal y hiciste clic en <strong>"Enviar Informe"</strong> (con el PDF cargado), la MPI cambia inmediatamente a estado <strong>"CERRADA"</strong>.
           <br>
           Esto se refleja en:
           <br>✓ La tabla de <strong>"Registro de Medidas Tomadas"</strong> del legajo
-          <br>✓ Estado de la medida aparece con fondo gris: <strong>CERRADA</strong>
-          <br>✓ La duración muestra "-1 días" (ya finalizada)
+          <br>✓ En la cabecera de la medida: <strong>«Cerrada desde»</strong> la fecha del cierre
+          <br>✓ Tipo de cese: el que elegiste (por ejemplo, <em>Archivo de MPI cesada</em>)
           <br>
           La medida ya no aparecerá en las pendientes de seguimiento.
         </div>
@@ -212,11 +217,12 @@
           <div class="sim-field">
             <label>Tipo de Cese *</label>
             <select id="tipoCeseMPI">
-              <option value="">Seleccione una opción</option>
-              <option value="archivo">I. ARCHIVO DE MPI CESADA</option>
+              <option value="">Seleccione un tipo de cese</option>
+              <option value="mpj">I. ARCHIVO DE MPI - INICIO MEDIDA PENAL JUVENIL (MPJ)</option>
+              <option value="organismo">II. ARCHIVO MPI DERIVADA AL ORGANISMO LOCAL DE PROTECCIÓN</option>
+              <option value="valora-mpe">III. ARCHIVO DE MPI CESADA - VALORA MPE</option>
               <option value="archivo-iv">IV. ARCHIVO DE MPI CESADA</option>
-              <option value="restitucion">II. RESTITUCIÓN DE DERECHOS</option>
-              <option value="cambio">III. CAMBIO DE SITUACIÓN</option>
+              <option value="no-pertinente">V. ARCHIVO NO PERTINENTE</option>
             </select>
           </div>
 
