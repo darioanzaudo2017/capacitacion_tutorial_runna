@@ -28,7 +28,7 @@
   <div class="tutorial-header">
     <div class="crumb">Etapa 10c de 13</div>
     <h1>⚖️ Cese de Medida Penal Juvenil (MPJ)</h1>
-    <p>El cese de una MPJ ocurre únicamente cuando el Poder Judicial emite un oficio de cese. No hay formulario técnico ni circuito de aprobaciones internas. Solo cuando el oficio es recibido y visado por Legales, la medida se cierra automáticamente.</p>
+    <p>El cese de una MPJ ocurre únicamente cuando el Poder Judicial emite un oficio de cese. No hay formulario técnico ni circuito de aprobaciones internas. El cese lo dispone el juzgado: al guardar el oficio de cese vinculado a la medida, esta se cierra automáticamente.</p>
   </div>
 
   <div class="progress-wrap">
@@ -95,7 +95,7 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0143-oficio-mesa-entrada.png" alt="Mesa de Entrada - Nuevo Oficio">
+          <img class="zoomable" src="0158-oficio-seleccion-objetivo-tarjetas.png" alt="Mesa de Entrada - Nueva Demanda">
         </div>
       </div>
       <div class="step-info">
@@ -104,12 +104,9 @@
           <div class="step-title">Recepción del Oficio de Cese en Mesa de Entrada</div>
         </div>
         <div class="step-content">
-          El Poder Judicial emite el <strong>oficio de cese</strong> de la MPJ. Este documento llega a la institución y se registra en la <strong>Mesa de Entradas</strong>. El técnico de mesa:
-          <br>✓ Crea un nuevo registro de "Nueva Demanda"
-          <br>✓ Selecciona objetivo <strong>"Oficio Judicial"</strong>
-          <br>✓ Completa los datos del oficio
+          El Poder Judicial emite el <strong>oficio de cese</strong> de la MPJ. Este documento llega a la institución y se registra en la <strong>Mesa de Entradas</strong>. El técnico de mesa:<br>✓ Crea una <strong>"Nueva Demanda"</strong><br>✓ Elige la tarjeta <strong>"Carga de Oficios Penal Juvenil"</strong><br>✓ Completa los datos del oficio
         </div>
-        <div class="capture-reference">📸 Captura: 0143-oficio-mesa-entrada.png</div>
+        <div class="capture-reference">📸 Captura: 0158-oficio-seleccion-objetivo-tarjetas.png</div>
         <div class="step-tags">
           <span class="tag nav">Navegación</span>
           <span class="tag action">Acción</span>
@@ -121,33 +118,22 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0145-oficio-clasificacion-circuito.png" alt="Clasificar oficio de cese">
+          <img class="zoomable" src="0160-oficio-aviso-cese.png" alt="Oficio de cese con el aviso">
         </div>
       </div>
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">4</div>
-          <div class="step-title">Clasificar Oficio de Cese → Visado de Legales → CERRADA</div>
+          <div class="step-title">Cargar el oficio de cese: la medida se cierra al guardar</div>
         </div>
         <div class="step-content">
-          En el formulario de carga del oficio, seleccionar:
-          <br><strong>• Circuito:</strong> MPJ (Medida Penal Juvenil)
-          <br><strong>• Tipo de Oficio:</strong> <strong>"CESE DE PLENO DERECHO A LA INTERVENCIÓN"</strong> (especifica que el juzgado ordena cesación)
-          <br><strong>• Fechas:</strong> Fecha del oficio, fecha de ingreso a SENAF
-          <br><strong>• Vínculos:</strong> Vincular a la Medida MPJ que será cesada
-          <br><strong>• Documentos:</strong> Adjuntar PDF del oficio firmado por el juzgado
-          <br><br>
-          Una vez registrado, <strong>Legales</strong> revisa y visa el oficio. En ese momento:
-          <br>✅ La <strong>Medida MPJ</strong> cambia automáticamente a estado <strong>"CERRADA"</strong>
-          <br>✅ <strong>NO hay</strong> pasos intermedios ni circuito de aprobaciones internas
-          <br>✅ El oficio judicial del juzgado es el único fundamento necesario
+          En el formulario de carga del oficio:<br><strong>• Circuito:</strong> ya viene fijo en MPJ (Medida Penal)<br><strong>• Categoría y Tipo de Oficio:</strong> una categoría de cese (por ejemplo <em>CESE MEDIDAS TUTELARES PROVISORIAS</em>) y el tipo que corresponda<br><strong>• Fechas:</strong> fecha del oficio y fecha de ingreso a SENAF<br><strong>• Vínculos:</strong> el <strong>legajo y la medida MPJ que cesa</strong><br><strong>• Documentos:</strong> el PDF del oficio firmado por el juzgado<br><br>Al elegir una categoría de cese aparece un aviso: <strong>el cese lo dispone el juzgado</strong>; SENAF no lo aprueba ni lo visa, solo recibe la notificación. Por eso, <strong>al guardar el oficio, la medida elegida pasa a "Cerrada"</strong>:<br>✅ No hay pasos intermedios ni circuito de aprobaciones internas<br>✅ El oficio judicial es el único fundamento necesario
         </div>
-        <div class="capture-reference">📸 Captura: 0145-oficio-clasificacion-circuito.png</div>
+        <div class="capture-reference">📸 Captura: 0160-oficio-aviso-cese.png</div>
         <div class="step-tags">
           <span class="tag action">Acción</span>
           <span class="tag success">Éxito</span>
-          <span class="tag legal">Legal</span>
-        </div>
+                  </div>
         <div class="success-badge">✅ Medida Penal Juvenil cesada por orden judicial del Poder Judicial.</div>
       </div>
     </div>
@@ -237,7 +223,7 @@
             <button class="sim-submit" id="btnRegistrarCeseMPJ" disabled>REGISTRAR OFICIO</button>
           </div>
 
-          <!-- PASO 3: VISADO Y CIERRE -->
+          <!-- PASO 3: GUARDADO Y CIERRE -->
           <div id="pasoCeseMPJ3" style="display:none;">
             <div style="background:#e8f5e9; border:1px solid #c8e6c9; border-radius:6px; padding:15px; margin-bottom:15px;">
               <strong style="color:#2e7d32;">✅ Oficio recibido y clasificado</strong><br>
@@ -245,9 +231,9 @@
             </div>
 
             <div class="sim-field">
-              <label>Ahora Legales debe visar el oficio</label>
-              <p style="font-size:0.9rem; color:var(--texto-suave); margin-bottom:12px;">El área legal revisa y valida que el oficio sea auténtico y esté correctamente fundamentado. Una vez visado, la medida se cierra automáticamente.</p>
-              <button class="sim-submit" id="btnVisarLegales" style="background:#673ab7; color:#fff;">⚖️ VISAR OFICIO (LEGALES)</button>
+              <label>El oficio se guarda y la medida se cierra</label>
+              <p style="font-size:0.9rem; color:var(--texto-suave); margin-bottom:12px;">El cese lo dispone el juzgado: SENAF no lo aprueba ni lo visa, solo recibe la notificación. Al guardar el oficio, la medida elegida se cierra automáticamente.</p>
+              <button class="sim-submit" id="btnVisarLegales" style="background:#673ab7; color:#fff;">✔ GUARDAR OFICIO</button>
             </div>
 
             <div class="sim-success" id="mpjSuccess"></div>
@@ -261,7 +247,7 @@
         <ul>
           <li id="chk1"><span class="check-icon">✓</span> Seleccionó oficio de cese</li>
           <li id="chk2"><span class="check-icon">✓</span> Completó formulario y adjuntó PDF</li>
-          <li id="chk3"><span class="check-icon">✓</span> Legales visó el oficio (MPJ Cerrada)</li>
+          <li id="chk3"><span class="check-icon">✓</span> Guardó el oficio vinculado a la MPJ (queda Cerrada)</li>
         </ul>
         <span class="reset-link" onclick="resetSimMPJ()">↺ Reiniciar práctica</span>
       </div>
@@ -399,7 +385,7 @@
     setChecked('chk3', true);
     btnVisarLegales.disabled = true;
     mpjSuccess.className = 'sim-success show';
-    mpjSuccess.innerHTML = '✅ Oficio visado por Legales. <strong>MPJ cerrada automáticamente</strong> en el sistema. Estado: CERRADA en el legajo.';
+    mpjSuccess.innerHTML = '✅ Oficio guardado. <strong>MPJ cerrada automáticamente</strong> en el sistema (el cese lo dispuso el juzgado). Estado: Cerrada en el legajo.';
   });
 
   function resetSimMPJ() {
