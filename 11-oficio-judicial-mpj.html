@@ -84,7 +84,7 @@
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">2</div>
-          <div class="step-title">Selección de Objetivo: Carga de Oficios</div>
+          <div class="step-title">Selección de Objetivo: Carga de Oficios Penal Juvenil</div>
         </div>
         <div class="step-content">
           En el primer paso del asistente (<em>Objetivo</em>) hay tres tarjetas: <strong>Protección Inicial</strong>, <strong>Oficio judicial de MPE, MPI vigente</strong> y <strong>Carga de Oficios Penal Juvenil</strong>. Para un oficio penal juvenil (el que abre una MPJ, cesa una medida o suma actividades), elegí la tercera y hacé clic en <em>Siguiente</em>. El oficio de MPE/MPI vigente se explica en el módulo siguiente.
@@ -173,7 +173,7 @@
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">6</div>
-          <div class="step-title">Adjuntar Documentación y Enviar</div>
+          <div class="step-title">Adjuntar Documentación y Guardar</div>
         </div>
         <div class="step-content">
           En la sección de <em>Documentos Adjuntos</em>, arrastrá o seleccioná el archivo PDF o imagen digitalizada del oficio judicial original. Una vez subido con éxito, presioná el botón <strong>"Guardar demanda"</strong> para guardar el registro.
@@ -437,13 +437,13 @@
             <p style="font-size:0.95rem; margin-bottom:15px; color:var(--texto-suave);">Seleccione el tipo de objetivo para iniciar el registro.</p>
             <div style="display:flex; flex-direction:column; gap:12px;">
               <div class="sim-card-option" id="optProteccion" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;">
-                <strong>🛡️ Protección</strong><br><small style="color:var(--texto-suave);">Medidas de protección integral.</small>
+                <strong>🛡️ Protección Inicial</strong><br><small style="color:var(--texto-suave);">Medidas de protección integral.</small>
               </div>
               <div class="sim-card-option" id="optOficioMpe" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;">
-                <strong>📄 Oficio judicial MPE/MPI</strong><br><small style="color:var(--texto-suave);">Vinculado a medidas activas.</small>
+                <strong>📄 Oficio judicial de MPE, MPI vigente</strong><br><small style="color:var(--texto-suave);">Oficios sobre medidas ya vigentes.</small>
               </div>
               <div class="sim-card-option" id="optCargaOficio" style="padding:12px; border:2px solid #ddd; border-radius:6px; cursor:pointer;">
-                <strong>⚖️ Carga de Oficios</strong><br><small style="color:var(--texto-suave);">Formulario especializado de oficios judiciales.</small>
+                <strong>⚖️ Carga de Oficios Penal Juvenil</strong><br><small style="color:var(--texto-suave);">Oficios judiciales del circuito penal juvenil.</small>
               </div>
             </div>
             <button class="sim-submit" id="btnSiguienteSim1" disabled style="margin-top:15px;">SIGUIENTE →</button>
@@ -494,7 +494,7 @@
             </div>
             
             <div style="background:#e8f5e9; border:1px solid #c8e6c9; border-radius:6px; padding:12px; margin-bottom:15px; font-size:0.9rem;">
-              <strong>Demanda #196</strong> (Carga de Oficios) - Medida creada: <strong>MPJ - MED-2026-149</strong>
+              <strong>Demanda #196</strong> (Carga de Oficios Penal Juvenil) - Medida creada: <strong>MPJ - MED-2026-149</strong>
             </div>
 
             <h4>Plan de Trabajo <small style="font-weight:normal; color:var(--texto-suave);">(5 actividades creadas)</small></h4>
@@ -593,7 +593,7 @@
       <div class="checklist">
         <h4>Checklist de la práctica</h4>
         <ul>
-          <li id="chk1"><span class="check-icon">✓</span> Seleccionó "Carga de Oficios"</li>
+          <li id="chk1"><span class="check-icon">✓</span> Seleccionó "Carga de Oficios Penal Juvenil"</li>
           <li id="chk2"><span class="check-icon">✓</span> Eligió circuito MPJ y envió formulario</li>
           <li id="chk3"><span class="check-icon">✓</span> Seleccionó actividades en la tabla</li>
           <li id="chk4"><span class="check-icon">✓</span> Realizó asignación o transferencia masiva</li>
@@ -741,7 +741,7 @@
       simPaso1.style.display = 'none';
       simPaso2.style.display = 'block';
     } else {
-      alert("Para este tutorial, seleccione la opción 'Carga de Oficios' correspondientes a oficios judiciales especializados.");
+      alert("Para este tutorial, seleccione la opción 'Carga de Oficios Penal Juvenil'.");
     }
   });
 
