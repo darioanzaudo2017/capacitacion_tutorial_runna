@@ -77,7 +77,7 @@
   <div class="progress-wrap">
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label">
-      <span id="progressText">Paso 1 de 6</span>
+      <span id="progressText">Paso 1 de 8</span>
       <span>Apertura de MPI</span>
     </div>
   </div>
@@ -134,12 +134,34 @@
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
-          <img class="zoomable" src="0221-mpi-apertura-paso2-detalles.png" alt="Modal Registro de Intervención MPI - Detalles">
+          <img class="zoomable" src="0224-mpi-medida-compartida.png" alt="Ficha de una medida compartida por dos NNyA">
         </div>
       </div>
       <div class="step-info">
         <div class="step-header">
           <div class="step-number">3</div>
+          <div class="step-title">Si la medida es compartida</div>
+        </div>
+        <div class="step-content">
+          Cuando la demanda pide la medida para <strong>varios NNyA del mismo SAC</strong>, se crea <strong>una sola medida</strong> y la ficha muestra el aviso <strong>«Medida compartida · 2 NNyAs alcanzados»</strong>: indica desde qué legajo estás trabajando (el primario) y, debajo, los otros NNyA que la medida también cubre. <strong>Cualquier cambio grupal impacta a todos</strong>. Cada NNyA conserva su propio legajo.
+        </div>
+        <div class="capture-reference">📸 Captura: 0224-mpi-medida-compartida.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0221-mpi-apertura-paso2-detalles.png" alt="Modal Registro de Intervención MPI - Detalles">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
           <div class="step-title">Pasos 1 y 2 del modal: datos y detalles</div>
         </div>
         <div class="step-content">
@@ -152,7 +174,7 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="4">
+    <div class="step-view" data-step="5">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -161,7 +183,7 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">4</div>
+          <div class="step-number">5</div>
           <div class="step-title">Paso 3: documentos y envío</div>
         </div>
         <div class="step-content">
@@ -174,7 +196,7 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="5">
+    <div class="step-view" data-step="6">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -183,7 +205,7 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">5</div>
+          <div class="step-number">6</div>
           <div class="step-title">El Jefe Zonal aprueba y la apertura queda completa</div>
         </div>
         <div class="step-content">
@@ -197,7 +219,29 @@
       </div>
     </div>
 
-    <div class="step-view" data-step="6">
+    <div class="step-view" data-step="7">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0225-mpi-flujo-documental-no-aplica.png" alt="Flujo documental de la MPI con pasos que no aplican">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">7</div>
+          <div class="step-title">Qué pasos no aplican en la MPI</div>
+        </div>
+        <div class="step-content">
+          Si abrís la etapa <strong>Apertura</strong> de una MPI, el <strong>flujo documental</strong> muestra <strong>Nota de aval, Informe jurídico y Ratificación</strong> tachados como <strong>"no aplica"</strong>. Solo cuentan el Informe inicial y la Nota de aprobación. Es la forma de confirmar que la MPI no pasa por Equipo Legal ni por el Juzgado.
+        </div>
+        <div class="capture-reference">📸 Captura: 0225-mpi-flujo-documental-no-aplica.png</div>
+        <div class="step-tags">
+          <span class="tag info">Información</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="8">
       <div class="step-media">
         <div class="browser-frame">
           <div class="bf-bar"><span></span><span></span><span></span></div>
@@ -206,7 +250,7 @@
       </div>
       <div class="step-info">
         <div class="step-header">
-          <div class="step-number">6</div>
+          <div class="step-number">8</div>
           <div class="step-title">Después: el Plan de Trabajo es igual al de la MPE</div>
         </div>
         <div class="step-content">
@@ -261,7 +305,7 @@
 </footer>
 
 <script>
-  const totalSteps = 6;
+  const totalSteps = 8;
   let currentStep = 1;
 
   function renderDots() {
