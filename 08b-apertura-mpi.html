@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNA · Tutorial: Apertura de MPI</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .timeline-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .timeline-node {
+    flex: 1;
+    min-width: 150px;
+    cursor: pointer;
+    border: 2px solid var(--gris-borde);
+    background: var(--card-bg);
+    padding: 16px 14px;
+    text-align: center;
+    font-size: 0.85rem;
+    position: relative;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .timeline-node:not(:last-child)::after {
+    content: "›";
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--gris-borde);
+    z-index: 2;
+  }
+  .timeline-node .tl-num {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--gris-borde);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .timeline-node.selected { border-color: var(--azul-primario); background: #eaf2fb; }
+  .timeline-node.selected .tl-num { background: var(--azul-primario); }
+  .timeline-node strong { display: block; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="badge-shield">🛡️</span>
+    <div>
+      RUNNA
+      <small>Centro de Tutoriales · MPI</small>
+    </div>
+  </div>
+  <nav>
+    <a href="roles.html">👥 Roles</a>
+    <a href="ejercicios-index.html">📝 Ejercicios</a>
+    <a href="index.html">← Volver al menú</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="tutorial-header">
+    <div class="crumb">Módulo MPI</div>
+    <h1>🔓 Apertura de Medida de Protección Integral (MPI)</h1>
+    <p>La MPI la toma la SENAF y su apertura es <strong>más simple que la de la MPE</strong>: el técnico registra la intervención y el <strong>Jefe Zonal</strong> la aprueba. No hay aval, informe jurídico ni ratificación judicial.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText">Paso 1 de 6</span>
+      <span>Apertura de MPI</span>
+    </div>
+  </div>
+
+  <div class="stepper" id="stepper">
+
+    <div class="step-view active" data-step="1">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0219-mpi-primer-paso-apertura.png" alt="Ficha de una MPI con el cartel Primer paso">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">La MPI tiene una apertura más simple</div>
+        </div>
+        <div class="step-content">
+          La <strong>Medida de Protección Integral (MPI)</strong> la toma la SENAF por sí misma: <strong>no pasa por aval, informe jurídico ni ratificación judicial</strong>. En la ficha de la medida (se crea sola cuando el Director autoriza la solicitud de MPI en la Evaluación) se ve una sola etapa, <strong>Apertura</strong>, el cartel <strong>«Primer paso: registrar la intervención de Apertura»</strong> y el mismo módulo de <strong>Plan de trabajo</strong> que la MPE. Tocá <strong>"Registrar intervención"</strong>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0219-mpi-primer-paso-apertura.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="2">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0220-mpi-gestion-apertura-grupal.png" alt="Apertura de MPI: Gestión de la etapa">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Gestión de la etapa: solo 3 pasos</div>
+        </div>
+        <div class="step-content">
+          En <strong>"Apertura · Gestión de la etapa"</strong> los pasos son únicamente <strong>Registro de Intervención → Seguimiento → Cierre de Medida</strong> (en la MPE son cuatro y distintos). El botón es <strong>"Cargar Apertura"</strong>. Si la demanda pidió la medida para <strong>varios NNyA</strong>, la medida es compartida y el sistema avisa <strong>«Etapa Apertura · GRUPAL — aplica a los 2 NNyAs vinculados»</strong>: cualquier cambio impacta a todos por igual.
+        </div>
+        <div class="capture-reference">📸 Captura: 0220-mpi-gestion-apertura-grupal.png</div>
+        <div class="step-tags">
+          <span class="tag nav">Navegación</span>
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="3">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0221-mpi-apertura-paso2-detalles.png" alt="Modal Registro de Intervención MPI - Detalles">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Pasos 1 y 2 del modal: datos y detalles</div>
+        </div>
+        <div class="step-content">
+          Se abre <strong>"Registro de Intervención MPI - Apertura"</strong>, de 3 pasos.<br><strong>Paso 1:</strong> Información básica. Todo viene autocompletado; solo confirmá la <strong>fecha de intervención</strong>.<br><strong>Paso 2:</strong> Detalles de la intervención. Elegí el <strong>Motivo</strong> y el <strong>Submotivo</strong> (el submotivo se habilita al elegir el motivo) y escribí la <strong>Intervención específica</strong> (obligatoria). La descripción detallada y el motivo de vulneraciones son opcionales.
+        </div>
+        <div class="capture-reference">📸 Captura: 0221-mpi-apertura-paso2-detalles.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="4">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0222-mpi-apertura-paso3-documentos.png" alt="Modal Paso 3 - Documentos de la apertura de MPI">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Paso 3: documentos y envío</div>
+        </div>
+        <div class="step-content">
+          <strong>1. Informe obligatorio</strong> (PDF, hasta 10 MB), que es <strong>obligatorio</strong> para guardar y enviar.<br><strong>2. Notificaciones y actas</strong> (opcional).<br><strong>3. Informes ampliatorios:</strong> Sí / No.<br>Botones: "Guardar Borrador" y <strong>"Enviar para Aprobación"</strong>. La etapa queda en <strong>"Pendiente aprobación registro"</strong>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0222-mpi-apertura-paso3-documentos.png</div>
+        <div class="step-tags">
+          <span class="tag action">Acción</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="5">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0223-mpi-apertura-aprobada.png" alt="Apertura de MPI aprobada">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">El Jefe Zonal aprueba y la apertura queda completa</div>
+        </div>
+        <div class="step-content">
+          El <strong>Jefe Zonal</strong> abre <strong>"Ver y Aprobar Apertura"</strong>, revisa lo cargado y elige <strong>"Aprobar Intervención"</strong> (o "Rechazar"). Al aprobar, la apertura queda <strong>completa</strong>: el Registro de Intervención figura como <strong>«Pendiente de informe de cierre»</strong> (100%), el <strong>Seguimiento</strong> pasa a <strong>Completado</strong> y solo queda <strong>Cierre de Medida</strong> como paso pendiente. <strong>No hay</strong> nota de aval, informe jurídico ni ratificación.
+        </div>
+        <div class="capture-reference">📸 Captura: 0223-mpi-apertura-aprobada.png</div>
+        <div class="step-tags">
+          <span class="tag jz">Jefe Zonal</span>
+          <span class="tag success">Éxito</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-view" data-step="6">
+      <div class="step-media">
+        <div class="browser-frame">
+          <div class="bf-bar"><span></span><span></span><span></span></div>
+          <img class="zoomable" src="0218-mpi-medida-pendiente-apertura.png" alt="Módulos de la MPI: Plan de trabajo">
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <div class="step-title">Después: el Plan de Trabajo es igual al de la MPE</div>
+        </div>
+        <div class="step-content">
+          Con la medida vigente se trabaja en el <strong>Plan de trabajo</strong> exactamente igual que en la MPE (agregar actividades, asignar responsables, comentar, completar): mirá el módulo <a href="09-plan-de-trabajo.html">Plan de Trabajo</a>. La MPI además tiene la solapa <strong>"Historial de seguimiento"</strong>. Para cerrar la medida, mirá <a href="10-cese-mpi.html">Cese de MPI</a>.
+        </div>
+        <div class="capture-reference">📸 Captura: 0218-mpi-medida-pendiente-apertura.png</div>
+        <div class="step-tags">
+          <span class="tag success">Éxito</span>
+        </div>
+        <div class="success-badge">✅ Ya sabés cómo se abre una MPI: una apertura simple, un Plan de Trabajo igual al de la MPE y un cierre con informe.</div>
+      </div>
+    </div>
+
+<div class="stepper-controls">
+      <button class="btn btn-outline" id="prevBtn" onclick="goStep(-1)">← Anterior</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn btn-primary" id="nextBtn" onclick="goStep(1)">Siguiente →</button>
+    </div>
+
+  </div>
+
+  <!-- PRACTICA: LINEA DE TIEMPO DE APROBACIONES -->
+  <div class="practice-section">
+    <h2>🖐️ Practicá vos mismo/a</h2>
+    <p class="lead">Hacé clic en cada paso para ver quién lo hace.</p>
+
+    <div class="timeline-row" id="timelineRow">
+      <div class="timeline-node" data-info="El técnico completa los 3 pasos (Información Básica, Detalles de Intervención, Documentos) y envía la intervención con el informe obligatorio en PDF.">
+        <div class="tl-num">1</div>
+        <strong>Registro de Intervención</strong>
+        Técnico
+      </div>
+      <div class="timeline-node" data-info="El Jefe Zonal revisa y aprueba (o rechaza) la intervención. Al aprobar, la apertura queda completa y la medida pasa a Seguimiento. No hace falta aval, informe jurídico ni ratificación.">
+        <div class="tl-num">2</div>
+        <strong>Aprobación</strong>
+        Jefe Zonal
+      </div>
+    </div>
+
+    <div class="practice-note" id="timelineInfo" style="margin-top:16px;">👆 Elegí una etapa para ver quién la hace.</div>
+  </div>
+
+  <div class="button-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+    <a class="btn btn-primary" href="10-cese-mpi.html">Siguiente: Cese de MPI →</a>
+  </div>
+
+</div>
+
+<footer class="app-footer">
+  Secretaría de Niñez, Adolescencia y Familia · Ministerio de Desarrollo Humano · Gobierno de Córdoba
+</footer>
+
+<script>
+  const totalSteps = 6;
+  let currentStep = 1;
+
+  function renderDots() {
+    const dotsEl = document.getElementById('dots');
+    dotsEl.innerHTML = '';
+    for (let i = 1; i <= totalSteps; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === currentStep ? ' active' : '');
+      d.onclick = () => { currentStep = i; render(); };
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function render() {
+    document.querySelectorAll('.step-view').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === currentStep);
+    });
+    document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+    document.getElementById('progressText').textContent = `Paso ${currentStep} de ${totalSteps}`;
+    document.getElementById('prevBtn').disabled = currentStep === 1;
+    document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Reiniciar ↺' : 'Siguiente →';
+    renderDots();
+  }
+
+  function goStep(delta) {
+    if (currentStep === totalSteps && delta === 1) {
+      currentStep = 1;
+    } else {
+      currentStep = Math.min(totalSteps, Math.max(1, currentStep + delta));
+    }
+    render();
+  }
+
+  render();
+
+  // Practica: linea de tiempo de aprobaciones
+  const timelineNodes = document.querySelectorAll('.timeline-node');
+  const timelineInfo = document.getElementById('timelineInfo');
+
+  timelineNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      timelineNodes.forEach(n => n.classList.remove('selected'));
+      node.classList.add('selected');
+      timelineInfo.innerHTML = node.dataset.info;
+    });
+  });
+</script>
+
+<!-- Image Zoom Modal -->
+<div id="imageModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+// Set up zoom listeners for all zoomable images
+const zoomableImages = document.querySelectorAll('.zoomable');
+zoomableImages.forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', function(e) {
+    e.stopPropagation();
+    modalImage.src = this.src;
+    modalImage.alt = this.alt;
+    imageModal.classList.add('active');
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove('active');
+}
+
+// Close modal when clicking outside the image
+imageModal.addEventListener('click', function(e) {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
+</body>
+</html>
+
+
+
